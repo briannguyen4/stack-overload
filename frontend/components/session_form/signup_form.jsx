@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SessionForm extends React.Component {
+class SignupForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -41,17 +41,21 @@ class SessionForm extends React.Component {
                 {this.renderErrors()}
                 <form onSubmit={this.handleSubmit}>
                     <label>Email
+                        <br/>
                         <input type="text"
                         value={this.state.email}
                         onChange={this.handleInput('email')}
                         />
                     </label>
+                    <br/>
                     <label>Password
+                        <br/>
                         <input type="password"
                         value={this.state.password}
                         onChange={this.handleInput('password')}
                         />
                     </label>
+                    <br/>
                     <button>{this.props.formType}</button>
                 </form>
             </div>
@@ -60,4 +64,4 @@ class SessionForm extends React.Component {
 
 }
 
-export default SessionForm;
+export default SignupForm;
