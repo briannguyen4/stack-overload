@@ -15,11 +15,16 @@ body {
     flex-direction: column;
 }
 
-.signup-headline {
+.signup-left-header {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 27px;
     font-weight: 400;
     color: #242729;
+}
+
+.signup-left-snippets {
+    display: flex;
+    align-items: center;
 }
 
 .signup-form-container {

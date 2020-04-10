@@ -54,15 +54,23 @@ class SignupForm extends React.Component {
         return (
             <div className="signup-body">
                 <div className="signup-left">
-                    <h1 className="signup-headline">Join the Stack Overload community</h1>
-                    <FontAwesomeIcon icon={faQuestionCircle} />
-                    <p>Stuck on a coding problem? Ask a question!</p>
-                    <FontAwesomeIcon icon={faCommentDots} />
-                    <p>Gain access to commenting and voting</p>
-                    <FontAwesomeIcon icon={faLaptopCode} />
-                    <p>Home to a large community of programmers</p>
-                    <FontAwesomeIcon icon={faSearchPlus} />
-                    <p>Search through a wide collection of questions</p>
+                    <h1 className="signup-left-header">Join the Stack Overload community</h1>
+                    <div className="signup-left-snippets">
+                        <FontAwesomeIcon icon={faQuestionCircle} />
+                        <p>Stuck on a coding problem? Ask a question!</p>
+                    </div>
+                    <div className="signup-left-snippets">
+                        <FontAwesomeIcon icon={faCommentDots} />
+                        <p>Gain access to commenting and voting</p>
+                    </div>
+                    <div className="signup-left-snippets">
+                        <FontAwesomeIcon icon={faLaptopCode} />
+                        <p>Home to a large community of programmers</p>
+                    </div>
+                    <div className="signup-left-snippets">
+                        <FontAwesomeIcon icon={faSearchPlus} />
+                        <p>Search through a wide collection of questions</p>
+                    </div>
                 </div>
                 <div className="signup-right">
                     <button className="demo-button" onClick={this.demoLogin}>Log in with Demo User</button>
