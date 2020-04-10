@@ -1,4 +1,10 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCommentDots } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { faSearchPlus } from '@fortawesome/free-solid-svg-icons';
+
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -49,9 +55,13 @@ class SignupForm extends React.Component {
             <div className="signup-body">
                 <div className="signup-left">
                     <h1 className="signup-headline">Join the Stack Overload community</h1>
+                    <FontAwesomeIcon icon={faQuestionCircle} />
                     <p>Stuck on a coding problem? Ask a question!</p>
-                    <p>Gain new privileges such as voting and commenting</p>
+                    <FontAwesomeIcon icon={faCommentDots} />
+                    <p>Gain access to commenting and voting</p>
+                    <FontAwesomeIcon icon={faLaptopCode} />
                     <p>Home to a large community of programmers</p>
+                    <FontAwesomeIcon icon={faSearchPlus} />
                     <p>Search through a wide collection of questions</p>
                 </div>
                 <div className="signup-right">
