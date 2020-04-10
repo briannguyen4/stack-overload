@@ -37,7 +37,7 @@ class SignupForm extends React.Component {
     demoLogin(e) {
         debugger
         e.preventDefault();
-        this.props.processForm({email: "demouser", password: "password"});
+        this.props.login({email: "demouser", password: "password"});
     }
 
     renderErrors() {
@@ -56,19 +56,19 @@ class SignupForm extends React.Component {
                 <div className="signup-left">
                     <h1 className="signup-left-header">Join the Stack Overload community</h1>
                     <div className="signup-left-snippets">
-                        <FontAwesomeIcon icon={faQuestionCircle} />
+                        <FontAwesomeIcon classname="icon" icon={faQuestionCircle} />
                         <p>Stuck on a coding problem? Ask a question!</p>
                     </div>
                     <div className="signup-left-snippets">
-                        <FontAwesomeIcon icon={faCommentDots} />
+                        <FontAwesomeIcon classname="icon" icon={faCommentDots} />
                         <p>Gain access to commenting and voting</p>
                     </div>
                     <div className="signup-left-snippets">
-                        <FontAwesomeIcon icon={faLaptopCode} />
+                        <FontAwesomeIcon classname="icon" icon={faLaptopCode} />
                         <p>Home to a large community of programmers</p>
                     </div>
                     <div className="signup-left-snippets">
-                        <FontAwesomeIcon icon={faSearchPlus} />
+                        <FontAwesomeIcon classname="icon" icon={faSearchPlus} />
                         <p>Search through a wide collection of questions</p>
                     </div>
                 </div>

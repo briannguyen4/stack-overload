@@ -13,6 +13,7 @@ body {
     width: 421px;
     display: flex;
     flex-direction: column;
+    margin-left: 275px;
 }
 
 .signup-left-header {
@@ -25,6 +26,13 @@ body {
 .signup-left-snippets {
     display: flex;
     align-items: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.icon {
+    border: 1px solid transparent;
+    padding-right: 10px;
 }
 
 .signup-form-container {
