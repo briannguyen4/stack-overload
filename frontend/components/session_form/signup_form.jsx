@@ -104,8 +104,10 @@ class SignupForm extends React.Component {
                                 />
                             </label>
                             <br/>
+                            <p className="signup-text">Passwords must contain at least eight characters, including at least 1 letter and 1 number.</p>
                             <button className="form-button">{this.props.formType}</button>
                         </form>
+                            <p className="signup-text">By clicking “Sign up”, you agree to our terms of service, privacy policy and cookie policy</p>
                     </div>
                 </div>
             </div>
