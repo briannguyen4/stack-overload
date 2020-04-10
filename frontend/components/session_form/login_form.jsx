@@ -9,6 +9,7 @@ class LoginForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
     }
 
     handleInput(type) {
@@ -25,6 +26,12 @@ class LoginForm extends React.Component {
         this.props.processForm(user);
     }
 
+    demoLogin(e) {
+        debugger
+        e.preventDefault();
+        this.props.processForm({email: "demouser", password: "password"});
+    }
+
     renderErrors() {
         return (
             <ul>
@@ -37,27 +44,38 @@ class LoginForm extends React.Component {
     
     render() {
         return (
-            <div>
-                {this.renderErrors()}
-                <form onSubmit={this.handleSubmit}>
-                    <label>Email
-                        <br/>
-                        <input type="text"
-                        value={this.state.email}
-                        onChange={this.handleInput('email')}
-                        />
-                    </label>
-                    <br/>
-                    <label>Password
-                        <br/>
-                        <input type="password"
-                        value={this.state.password}
-                        onChange={this.handleInput('password')}
-                        />
-                    </label>
-                    <br/>
-                    <button>{this.props.formType}</button>
-                </form>
+            <div className="login-body">
+
+                <div className="login-buttons">
+                    <button className="demo-button" onClick={this.demoLogin}>Log in with Demo User</button>
+                    <a href="https://github.com/briannguyen4/stack-overload/">
+                        <button className="github-button">Visit the Github Page</button>
+                    </a>
+
+                </div>
+                <div className="login-form-container">
+                    <form className="login-form" onSubmit={this.handleSubmit}>
+                        <label>Email 
+                            <br/>
+                            <input className="login-input" type="text"
+                            value={this.state.email}
+                            onChange={this.handleInput('email')}
+                            />
+                        </label>
+                        {this.renderErrors()}
+                        <label className="password-label">Password
+                            <br/>
+                            <input className="login-input" type="password"
+                            value={this.state.password}
+                            onChange={this.handleInput('password')}
+                            />
+                        </label>
+                        <input className="login-button" type="submit" value={this.props.formType}/>
+                    </form>
+                </div>
+                    <div className="signup-link">
+                        <p>Don't have an account? {this.props.link}</p>
+                    </div>
             </div>
         );
     }
