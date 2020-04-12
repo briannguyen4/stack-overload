@@ -9,7 +9,6 @@ import { ProtectedRoute } from '../util/route_util';
 const App = () => (
     <div>
         <header>
-            <h1>Stack Overload</h1>
             <NavbarContainer/>
         </header>
         <AuthRoute exact path='/' component={Splash} />

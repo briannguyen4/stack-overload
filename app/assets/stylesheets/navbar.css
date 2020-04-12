@@ -1,0 +1,118 @@
+header {
+    height: 52px;
+    display: block;
+    box-sizing: border-box;
+    border-top: 3px solid #f48024;
+    border-bottom: 1.5px solid #D9D9DA;
+}
+
+.navbar { 
+    background-color: #FAFAFB;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+} 
+
+.leftbutton {
+    display: flex;
+
+}
+
+.sidebar {
+    width: 44px;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: palegreen;
+    margin-left: 45px;
+    /* box-sizing: border-box; */
+    /* display: flex;
+    flex-shrink: 0; */
+    
+} 
+
+.logo {
+    height: auto;
+    width: 150px;
+    padding: 0px 8px;
+} 
+
+.rightbutton {
+    margin-right: 67.5px;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 33px;
+    align-self: center;
+}
+
+.login {
+    background-color: #E1ECF4;
+    font-size: 13px;
+    width: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #7aa7c7;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.7);
+    
+}
+   
+.signup {
+    background-color: #0095ff;
+    font-size: 13px;
+    width: 65px;
+    margin-left: 3.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.4);
+}
+
+
+.signup a {
+    color: white;
+    text-decoration: none;
+}
+
+.login a {
+    color: #39739d;
+    text-decoration: none;
+}
+
+.logo-image {
+    height: 100%;
+    width: 100%;
+    margin-top: 2px;
+}
+
+.searchbar-container {
+    width: 605px;
+    height: 32px;
+    border: 1px solid #bbc0c4;
+    margin-left: 278.5px;
+    margin-top: 7px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 18px;
+    color: #bbc0c4;
+    border: .6px solid #bbc0c4;
+    border-radius: 3px;
+}
+
+.searchbar {
+    width: 100%;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: transparent;   
+    border: 0.1px solid #bbc0c4;
+}
+
+.search-icon {
+    margin-top: 5px;
+    margin-left: 7px;
+    border: 1px solid transparent;
+    padding-right: 5px;
+}
