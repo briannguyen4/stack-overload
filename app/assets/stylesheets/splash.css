@@ -5,7 +5,7 @@
 }
 
 .splash-img{
-    height: 496px;
+    height: 500px;
     width: 100%;
     background-color: #ffcf10;
     text-align: center;
@@ -16,14 +16,45 @@
     bottom: 70%;
 }
 
+.splash-img-sentence {
+    margin-top: 25px;
+}
+
 .splash-img-header {
     font-family: 'Roboto Slab', serif; 
     font-size: 55px;
     color: #242729;
-
+    margin-top: -18px;
+    line-height: 72px;
 }
 
 .splash-img-text {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 21px;
+}
+
+.splash-bottom {
+    margin-top: -110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.splash-head {
+    font-family: 'Roboto Slab', serif; 
+    font-size: 34px;
+}   
+
+.splash-text p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17px;
+}
+
+.orange-bar {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    height: 8px;
+    width: 63.5px;
+    border-radius: 10px;
+    background-color: #F48024;
 }

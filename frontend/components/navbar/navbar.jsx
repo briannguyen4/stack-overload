@@ -40,9 +40,12 @@ class Navbar extends React.Component {
                                     <a href="#contact">Contact</a>
 						        </div>
                             </span>
-                            <span className="logo" href="#">
-						        <img src={window.logoURL} />
-					        </span>
+                            <Link to="/">
+                                <span className="logo" href="#">
+                                    <img src={window.logoURL} />
+                                </span>
+                            </Link>
+                        
 				        </div>
                         <div className="searchbar-container">
                             <div className="search-icon">
