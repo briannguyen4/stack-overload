@@ -1,4 +1,5 @@
 import React from 'react';
+import NavbarContainer from '../navbar/navbar_container';
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -49,8 +50,13 @@ class LoginForm extends React.Component {
     
     render() {
         return (
+            <>
+            <NavbarContainer />
             <div className="login-body">
-
+                <div>
+                    <img className="icon" src={window.iconURL}/>
+                </div>
+                
                 <div className="login-buttons">
                     <button className="demo-button" onClick={this.demoLogin}>Log in with Demo User</button>
                     <a href="https://github.com/briannguyen4/stack-overload/">
@@ -82,6 +88,7 @@ class LoginForm extends React.Component {
                         <p>Don't have an account? {this.props.link}</p>
                     </div>
             </div>
+            </>
         );
     }
 

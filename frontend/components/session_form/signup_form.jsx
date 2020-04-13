@@ -4,6 +4,7 @@ import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 import { faCommentDots } from '@fortawesome/free-solid-svg-icons';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 import { faSearchPlus } from '@fortawesome/free-solid-svg-icons';
+import NavbarContainer from '../navbar/navbar_container';
 
 
 class SignupForm extends React.Component {
@@ -35,7 +36,6 @@ class SignupForm extends React.Component {
     }
 
     demoLogin(e) {
-        debugger
         e.preventDefault();
         this.props.login({email: "demouser", password: "password"});
     }
@@ -52,24 +52,26 @@ class SignupForm extends React.Component {
     
     render() {
         return (
+            <>
+            <NavbarContainer />
             <div className="signup-body">
                 <div className="signup-left">
                     <h1 className="signup-left-header">Join the Stack Overload community</h1>
                     <div className="signup-left-snippets">
-                        <FontAwesomeIcon classname="icon" icon={faQuestionCircle} />
-                        <p>Stuck on a coding problem? Ask a question!</p>
+                        <div className="icon"><FontAwesomeIcon icon={faQuestionCircle} /></div>
+                        <p className="icon-snippet">Ask a question</p>
                     </div>
                     <div className="signup-left-snippets">
-                        <FontAwesomeIcon classname="icon" icon={faCommentDots} />
-                        <p>Gain access to commenting and voting</p>
+                        <div className="icon"><FontAwesomeIcon icon={faCommentDots} /></div>
+                        <p className="icon-snippet">Gain access to commenting and voting</p>
                     </div>
                     <div className="signup-left-snippets">
-                        <FontAwesomeIcon classname="icon" icon={faLaptopCode} />
-                        <p>Home to a large community of programmers</p>
+                        <div className="icon"><FontAwesomeIcon icon={faLaptopCode} /></div>
+                        <p className="icon-snippet">Home to a large community of programmers</p>
                     </div>
                     <div className="signup-left-snippets">
-                        <FontAwesomeIcon classname="icon" icon={faSearchPlus} />
-                        <p>Search through a wide collection of questions</p>
+                        <div className="icon"><FontAwesomeIcon icon={faSearchPlus} /></div>
+                        <p className="icon-snippet">Search through an extensive collection of questions</p>
                     </div>
                 </div>
                 <div className="signup-right">
@@ -105,12 +107,13 @@ class SignupForm extends React.Component {
                             </label>
                             <br/>
                             <p className="signup-text">Passwords must contain at least eight characters, including at least 1 letter and 1 number.</p>
-                            <button className="form-button">{this.props.formType}</button>
+                            <button className="form-button sb">{this.props.formType}</button>
                         </form>
                             <p className="signup-text">By clicking “Sign up”, you agree to our terms of service, privacy policy and cookie policy</p>
                     </div>
                 </div>
             </div>
+            </>
         );
     }
 

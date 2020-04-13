@@ -1,19 +1,19 @@
 import React from 'react';
-import NavbarContainer from './navbar/navbar_container';
 import Splash from './splash/splash';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
-import { AuthRoute } from '../util/route_util';
-import { ProtectedRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { Route } from 'react-router-dom';
+import QuestionIndexContainer from './question_index/question_index_container';
+import NavBarContainer from './navbar/navbar_container'
 
 const App = () => (
-    <div>
-        <header>
-            <NavbarContainer/>
-        </header>
+    <div> 
+        <NavBarContainer />
         <AuthRoute exact path='/' component={Splash} />
         <AuthRoute exact path='/login' component={LoginFormContainer} />
         <AuthRoute exact path='/signup' component={SignupFormContainer}/>
+        <Route exact path='/questions' component={QuestionIndexContainer} />
     </div>
 );
 

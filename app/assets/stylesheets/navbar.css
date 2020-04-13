@@ -1,67 +1,151 @@
-header {
-    height: 52px;
-    display: block;
-    box-sizing: border-box;
-    border-top: 3px solid #f48024;
-    border-bottom: 1.5px solid #D9D9DA;
+/* Universal class declaration (default) */
+* {
+
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+  
 }
 
-.navbar { 
-    background-color: #FAFAFB;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    
-} 
 
-.leftbutton {
-    display: flex;
-
+/* Removes margin of body */
+body {
+	margin-top: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+  
 }
 
-.sidebar {
-    width: 44px;
-    height: 100%;
-    box-sizing: border-box;
-    background-color: palegreen;
-    margin-left: 45px;
-    /* box-sizing: border-box; */
-    /* display: flex;
-    flex-shrink: 0; */
-    
-} 
+.top-bar {
+	background-color: #fafafb;
+	height: 50px;
+	width: 100%;
+	border-top: 3px solid #f48024;
+	position: fixed;
+	box-shadow: 0 1px 0 rgba(12,13,14,0.15);
+}
+
+.top-bar * {
+	box-sizing: border-box;
+}
+
+.header-wrapper {
+	display: flex;
+	height: 100%;
+	margin: 0px auto;
+	align-items: center;
+	max-width: 1280px;
+}
+
+.main-nav {
+	height: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.main-nav img{
+	max-width: 100%;
+	height: auto;
+}
+
+.header-wrapper span:hover{
+	background-color: #e4e6e8;
+	color: black;
+}
+.inline {
+	position: relative;
+	display: inline;
+}
+.side-bar {
+	width: 44px;
+	height: 100%;
+	display: flex;
+    cursor: pointer;
+}
+
+.side-bar:hover{
+	background-color: #e4e6e8;
+	color: black;
+}
+
+.burger {
+	display: inline;
+	margin: auto;
+}
+
+.bar1, .bar2, .bar3 {
+	width: 18px;
+	height: 2px;
+	background-color: #848d95;
+	margin: 3px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-3px, 3px);
+	transform: rotate(-45deg) translate(-3px, 3px);
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-4px, -4px);
+	transform: rotate(45deg) translate(-4px, -4px);
+}
+
+.drop-down {
+	top: 47px;
+	position: absolute;
+	overflow: auto;
+	z-index: 1;
+	display: none;
+}
+
+.drop-down a {
+	background-color: white;
+	display: block;
+	width: 240px;
+	height: 31px;
+	margin: auto;
+	padding: 4px 4px 4px 8px;
+}
+
+.drop-down a:hover {
+	background-color: #e4e6e8;
+}
+
+.show {
+	display: block;
+}
 
 .logo {
-    height: auto;
-    width: 150px;
-    padding: 0px 8px;
-} 
-
-.rightbutton {
-    margin-right: 67.5px;
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 33px;
-    align-self: center;
+	padding: 0px 8px;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	width: 166px;
 }
 
 .login {
     background-color: #E1ECF4;
     font-size: 13px;
-    width: 56px;
+    width: 58px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #7aa7c7;
     border-radius: 3px;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.7);
+    padding:  8px;
     
 }
    
 .signup {
     background-color: #0095ff;
     font-size: 13px;
-    width: 65px;
+    width: 67px;
     margin-left: 3.5px;
     display: flex;
     justify-content: center;
@@ -71,6 +155,14 @@ header {
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.4);
 }
 
+.rightbutton {
+    display: flex;
+    padding-left: 4px;
+    padding-right: 8px;
+	margin-left: auto;
+	margin-right: 15px;
+
+}
 
 .signup a {
     color: white;
@@ -81,38 +173,20 @@ header {
     color: #39739d;
     text-decoration: none;
 }
-
-.logo-image {
-    height: 100%;
-    width: 100%;
-    margin-top: 2px;
+ 
+.searchbar {
+	width: 607px;
+	color: #3c4146;
+	border: 0.8px solid #bbc0c4;
+	border-radius: 3px;
+	height: 33px;
 }
 
 .searchbar-container {
-    width: 605px;
-    height: 32px;
-    border: 1px solid #bbc0c4;
-    margin-left: 278.5px;
-    margin-top: 7px;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 18px;
-    color: #bbc0c4;
-    border: .6px solid #bbc0c4;
-    border-radius: 3px;
+	margin-left: 295px;
+
 }
 
-.searchbar {
-    width: 100%;
-    font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
-    border-left: transparent;   
-    border: 0.1px solid #bbc0c4;
-}
 
-.search-icon {
-    margin-top: 5px;
-    margin-left: 7px;
-    border: 1px solid transparent;
-    padding-right: 5px;
-}
+
+

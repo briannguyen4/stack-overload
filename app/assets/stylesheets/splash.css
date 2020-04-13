@@ -1,0 +1,29 @@
+.splash-content {
+    padding-top: 50px;
+    height: auto;
+    width: 100%;
+}
+
+.splash-img{
+    height: 496px;
+    width: 100%;
+    background-color: #ffcf10;
+    text-align: center;
+}
+
+#splash-text {
+    position: relative;
+    bottom: 70%;
+}
+
+.splash-img-header {
+    font-family: 'Roboto Slab', serif; 
+    font-size: 55px;
+    color: #242729;
+
+}
+
+.splash-img-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 21px;
+}

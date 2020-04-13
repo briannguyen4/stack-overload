@@ -1,52 +1,67 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
 
-const Navbar = ({ currentUser, logout }) => {
-    if (currentUser) {
-        return (
-            <div>
-            <button onClick={logout}>Log Out</button>
-            </div>
-        )
-    } else {
-        return (
-            <div className="navbar">
-                <div className="leftbutton">
-                    <div className="sidebar">
-                        <div className="dropdown-img">
-                            <FontAwesomeIcon icon={faBars} />
-                        </div>
-                        
-                    </div>
+class Navbar extends React.Component {
+    constructor(props) {
+        super(props);
+        this.dropDown = this.dropDown.bind(this);
+    }
 
-                    <div className="logo">
-                        <img className="logo-image" src={window.logoURL} />
-                    </div>
+    dropDown(e) {
+        e.preventDefault();
+        document.getElementById("my-x").classList.toggle("change");
+    }
+    
+    render() {
+        if (this.props.currentUser) {
+            return (
+                <div>
+                <button onClick={this.props.logout}>Log Out</button>    
                 </div>
-                
-                <div className="searchbar-container">
-                    <div className="search-icon">
-                        <FontAwesomeIcon icon={faSearch} />
+            )
+        } else {
+            return (
+                <header className="top-bar">
+			        <div className="header-wrapper">
+				        <div className="main-nav">
+					        <span className="side-bar" onClick={this.dropDown}>
+						        <div id="my-x" className="burger">
+                                    <div className="bar1"></div>
+                                    <div className="bar2"></div>
+                                    <div className="bar3"></div>
+						        </div>
+						        <div id="my-drop" className="drop-down">
+                                    <a href="#home">Home</a>
+                                    <a href="#about">About</a>
+                                    <a href="#contact">Contact</a>
+						        </div>
+                            </span>
+                            <span className="logo" href="#">
+						        <img src={window.logoURL} />
+					        </span>
+				        </div>
+                        <div className="searchbar-container">
+                            <div className="search-icon">
+                                    {/* <FontAwesomeIcon icon={faSearch} /> */}
+                            </div>
+                            <input className="searchbar" type="text" placeholder="Search..."></input>
+                        </div>
+                        <div className="rightbutton">
+                            <div className="login">
+                                <Link to="login" >Log in</Link>
+                            </div>
+                            <div className="signup">
+                                <Link to="signup" >Sign up</Link>
+                            </div>   
+                         </div>
                     </div>
-                    <input className="searchbar" type="text" placeholder="Search..."></input>
-                </div>
-            
-                <div className="rightbutton">
-                    <div className="login">
-                        <Link to="login" >Log in</Link>
-                    </div>
-                    <div className="signup">
-                        <Link to="signup" >Sign up</Link>
-                    </div>
-                </div>
-            </div>
-            
-        )
+		        </header>
+            )
+        }
     }
 }
 
