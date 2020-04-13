@@ -11,32 +11,61 @@ class AltNavbar extends React.Component {
     }
  
     render() {
-        return (
-            <header className="top-bar altbar">
-                <div className="header-wrapper">
-                    <div className="main-nav">
-                        <span className="logo" href="#">
-                            <img src={window.logoURL} />
-                        </span>
+        if (this.props.currentUser) {
+            return (
+                <header className="top-bar altbar">
+                    <div className="header-wrapper">
+                        <div className="main-nav">
+                            <Link to="/signup">
+                                <span className="logo" href="#">
+                                    <img src={window.logoURL} />
+                                </span>
+                            </Link>
+                        </div>
+                        <div className="searchbar-container">
+                            <div className="search-icon">
+                                    {/* <FontAwesomeIcon icon={faSearch} /> */}
+                            </div>
+                            <input className="searchbar" type="text" placeholder="Search..."></input>
+                        </div>
+                        <div className="rightbutton">
+                            <button>
+                                Profile
+                            </button>
+                            <div>
+                                <button onClick={this.props.logout}>Log Out</button>    
+                            </div>
+                        </div>
                     </div>
-                    <div className="searchbar-container">
-                        <div className="search-icon">
-                                <FontAwesomeIcon icon={faSearch} />
+                </header>
+                )
+        } else {
+            return (
+                <header className="top-bar altbar">
+                    <div className="header-wrapper">
+                        <div className="main-nav">
+                            <span className="logo" href="#">
+                                <img src={window.logoURL} />
+                            </span>
                         </div>
-                        <input className="searchbar" type="text" placeholder="Search..."></input>
+                        <div className="searchbar-container">
+                            <div className="search-icon">
+                                    {/* <FontAwesomeIcon icon={faSearch} /> */}
+                            </div>
+                            <input className="searchbar" type="text" placeholder="Search..."></input>
+                        </div>
+                        <div className="rightbutton">
+                            <div className="login">
+                                <Link to="login" >Log in</Link>
+                            </div>
+                            <div className="signup">
+                                <Link to="signup" >Sign up</Link>
+                            </div>   
+                            </div>
                     </div>
-                    <div className="rightbutton">
-                        <div className="login">
-                            <Link to="login" >Log in</Link>
-                        </div>
-                        <div className="signup">
-                            <Link to="signup" >Sign up</Link>
-                        </div>   
-                        </div>
-                </div>
-            </header>
-            )
-        
+                </header>
+                )
+            }
         }
 }
 
