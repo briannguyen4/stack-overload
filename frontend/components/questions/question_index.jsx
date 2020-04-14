@@ -21,6 +21,7 @@ class QuestionIndex extends React.Component {
                         <li>{question.title}</li>
                     </ul>   
                     ))}
+
             </div>
             </>
         );
