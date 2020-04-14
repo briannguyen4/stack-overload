@@ -5,7 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Question.destroy_all
 User.destroy_all
 
 demo = User.create({email: "demouser", password: "password"})
+user2 = User.create({email: "username", password: "password"})
+q1 = Question.create({title: "sample question", body: "this is a test to see if questions will render", author_id: demo.id})
+q2 = Question.create({title: "sample question2", body: "this is another test to see if this question will appear", author_id: user2.id})

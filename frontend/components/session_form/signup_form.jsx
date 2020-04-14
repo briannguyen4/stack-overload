@@ -115,6 +115,9 @@ class SignupForm extends React.Component {
                         </form>
                             <p className="signup-text">By clicking “Sign up”, you agree to our terms of service, privacy policy and cookie policy</p>
                     </div>
+                    <div className="signup-link">
+                        <p>Already have an account? {this.props.link}</p>
+                    </div>
                 </div>
             </div>
             </>
