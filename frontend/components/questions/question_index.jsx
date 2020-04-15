@@ -26,7 +26,6 @@ class QuestionIndex extends React.Component {
             </>
         );
     }
-
 }
 
 export default QuestionIndex;
