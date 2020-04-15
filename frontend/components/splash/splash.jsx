@@ -24,8 +24,8 @@ const Splash = () => (
                 <div className="splash-text">
                     <p>Welcome to Stack Overload, an open community for all coders.</p> 
                     <p>coders. Get answers immediately from a community of</p>
-                    <p>knowledgeable programmers. Search through a plethora of</p>
-                    <p>questions or ask your own!</p>
+                    <p>knowledgeable programmers. Search through a collection of</p>
+                    <p>questions or create an account to ask your own!</p>
                 </div>    
             </div>
         </div>
