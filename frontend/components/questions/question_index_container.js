@@ -6,8 +6,9 @@ import {} from '../../actions/session_actions';
 
 
 
-const mapStateToProps = () => {
+const mapStateToProps = (state) => {
     return {
+        questions: Object.values(state.entities.questions)
     };
 };
 
