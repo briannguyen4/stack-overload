@@ -24,12 +24,12 @@ export const createAnswer = (answer, questionId) => dispatch => {
 };
          
 export const requestAnswers = (questionId) => dispatch => {
-    return (APIUtil.fetchAnswers(questionId).then((answers) =>
+    return (APIUtil.getAnswers(questionId).then((answers) =>
             dispatch(receiveAnswers(answers)))
     );
 };
 
 export const requestAnswer = (questionId, answerId) => dispatch => {
-    return (AnswerAPIUtil.fetchAnswer(questionId, answerId)
+    return (APIUtil.getAnswer(questionId, answerId)
         .then(answer => dispatch(receiveAnswer(answer))));
 }
