@@ -1,11 +1,16 @@
 import React from 'react';
+import ReactDOM from "react-dom";
 import AltNavbarContainer from '../navbar/alt_navbar_container';
 
 class QuestionIndex extends React.Component {
     constructor(props) {
         super(props);
     }
-  
+    
+    componentDidMount() {
+        this.props.getQuestions();
+    }
+
     render() {
         return (
             <>
@@ -17,6 +22,8 @@ class QuestionIndex extends React.Component {
                         <li>{question.body}</li>
                     </ul>   
                     ))}
+
+                    
             </div>
             </>
         );
