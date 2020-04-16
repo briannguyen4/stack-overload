@@ -33,9 +33,9 @@ export const getQuestions = () => dispatch => {
     );
 };
 
-export const getQuestion = (question) => dispatch => {
+export const getQuestion = (questionId) => dispatch => {
     return (
-      APIUtil.getQuestion(question)
+      APIUtil.getQuestion(questionId)
         .then(question => dispatch(receiveQuestion(question)))
     );
 };

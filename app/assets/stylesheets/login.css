@@ -66,13 +66,13 @@
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     color: white;
     font-size: 13px;
-    width: 100%;
+    width: 103%;
     height: 35px;
     border: 1px solid transparent;
     border-radius: 3px;
-    margin-top: 15px;
     cursor: pointer; 
-    margin-top: -6px;
+    margin-top: -5px;
+    margin-left: 5px;
 }
 
 .form-button:hover {

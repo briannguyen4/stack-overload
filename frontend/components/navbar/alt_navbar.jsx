@@ -29,11 +29,11 @@ class AltNavbar extends React.Component {
                             <input className="searchbar" type="text" placeholder="Search..."></input>
                         </div>
                         <div className="rightbutton">
-                            <button>
+                            <button className="login">
                                 Profile
                             </button>
                             <div>
-                                <button onClick={this.props.logout}>Log Out</button>    
+                                <button className="logout" onClick={this.props.logout}>Log Out</button>    
                             </div>
                         </div>
                     </div>
