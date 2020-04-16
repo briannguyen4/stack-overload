@@ -1,0 +1,10 @@
+#sidebar{
+    position: fixed;
+    width: 210px;
+    top: 50px;
+    height: 100%;
+    z-index: 1;
+    background-color: white;
+    border-right: 1px solid #D6D9DC;
+}
+

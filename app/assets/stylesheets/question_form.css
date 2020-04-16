@@ -1,3 +1,71 @@
 .question-form-page {
     padding-top: 50px;
+    margin-left: 68.5px;
+}
+
+.form-header p {
+    font-size: 27px;
+    color: #242729;
+}
+
+.form-header {
+    margin-top: 50px;
+
+}
+
+.qform-container {
+    margin-top: 52px;
+    height: 500px;
+    width: 875px;
+    border: 1px solid lightgray;
+    background-color: #FFFFFF;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05), 0 20px 48px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.qform {
+    padding: 17px;
+    display: flex;
+    flex-direction: column;
+}
+
+.qform-label {
+    font-size: 15px;
+    color: #0c0d0e;
+    margin-left: 1px;
+}
+
+.qform-label p {
+    color: #3c4146;
+    font-size: 12px;
+    margin-top: 4px;
+    margin-left: 1px;
+}
+
+.qform-label input {
+    width: 100%;
+    height: 33px;
+    border: 1px solid #BBC0C4;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.quill {
+    height: 250px;
+}
+
+#qform-button {
+    height: 37px;
+    width: 146px;
+    margin-top: 130px;
+    margin-left: -17px;
+    background-color: #0095ff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.4);
+    color: white;
+}
+
+#qform-button:hover {
+    background-color: #0077cc;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import AltNavbarContainer from '../navbar/alt_navbar_container';
 import ReactQuill from 'react-quill';
-
+import { Link } from 'react-router-dom';
 
 class QuestionForm extends React.Component {
     constructor(props) {
@@ -38,29 +38,39 @@ class QuestionForm extends React.Component {
         <>
             <AltNavbarContainer />
             <div className="question-form-page">
-                <p>Ask a public question</p>
-                <form className="question-form" onSubmit={this.handleSubmit}>
-                    <div className="question-form-title">
-                        <label>Title
-                            <p>Be specific and imagine you're asking a question to another person</p>
-                            <input type="text" 
-                            name="title"
-                            onChange={this.handleInput("title")} 
-                            value={this.state.title} 
+                <div className='form-header'>
+                    <p>Ask a public question</p>
+                </div>
+                <div className="qform-container">
+                    <form className="qform" onSubmit={this.handleSubmit}>
+                        <div className="qform-title">
+                            <label className="qform-label"><strong>Title</strong>
+                                <p>Be specific and imagine you're asking a question to another person</p>
+                                <input type="text" 
+                                name="title"
+                                onChange={this.handleInput("title")} 
+                                value={this.state.title} 
+                                placeholder="e.g. Is there an R function for finding the index of an element in a vector?"
+                                />
+                            </label>
+                        </div>
+                        <div className="qform-body">
+                            <label className="qform-label"><strong>Body</strong>
+                                <p>Include all the information someone would need to answer your question</p>
+                            </label>
+                            <ReactQuill
+                            className="quill"
+                            value={this.state.body}
+                            onChange={this.handleChange}
                             />
-                        </label>
-                    </div>
-                    <div className="question-form-body">
-                        <label>Body
-                            <p>Include all the information someone would need to answer your question</p>
-                        </label>
-                        <ReactQuill
-                        value={this.state.body}
-                        onChange={this.handleChange}
-                        />
-                    </div> 
-                    <button>Post your question</button>
-                </form>
+                        </div> 
+                        <button id="qform-button">Post your question</button>
+                    </form>
+
+                </div>
+                <div className="qform-tips">
+
+                </div>
             </div>
         </>
         );

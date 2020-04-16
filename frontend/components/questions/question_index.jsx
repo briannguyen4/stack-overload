@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from "react-dom";
 import AltNavbarContainer from '../navbar/alt_navbar_container';
-import {Route} from 'react-router-dom';
-import QuestionShowContainer from './question_show_container';
+import { Link } from 'react-router-dom';
+
 
 class QuestionIndex extends React.Component {
     constructor(props) {
@@ -17,16 +16,19 @@ class QuestionIndex extends React.Component {
     render() {
         return (
             <>
-            {/* <Route exact path="/questions/:questionId" component={QuestionShowContainer} /> */}
             <AltNavbarContainer />
             <div className="questions-body">
-                <h1>Questions</h1>
+            <Link to="questions/new" >Ask Question</Link>
+                <h1>Top Questions</h1>
                 {this.props.questions.map((question, idx) => (
                   <ul key={idx}>
-                    <li>{question.title}hi</li>
+                    <Link to={`/questions/${question.id}`}>
+                        <li key={question.id}>
+                            {question.title}
+                        </li>
+                    </Link>
                   </ul>
                 ))}
-                    
             </div>
             </>
         );
