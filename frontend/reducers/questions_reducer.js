@@ -1,7 +1,6 @@
-
 import { RECEIVE_QUESTION, RECEIVE_QUESTIONS, REMOVE_QUESTION } from '../actions/question_actions';
 
-const questionsReducer = (state = {}, action) => {
+const questionReducer = (state = {}, action) => {
     Object.freeze(state);
     let newState;
     switch (action.type) {
@@ -20,4 +19,5 @@ const questionsReducer = (state = {}, action) => {
     }
 }
 
-export default questionsReducer;
+
+export default questionReducer;

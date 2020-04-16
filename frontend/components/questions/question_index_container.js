@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import React from 'react';
 import QuestionIndex from './question_index';
 import { getQuestions } from './../../actions/question_actions';
 import {} from '../../actions/session_actions';

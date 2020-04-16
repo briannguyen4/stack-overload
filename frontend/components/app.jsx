@@ -3,9 +3,10 @@ import Splash from './splash/splash';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import QuestionIndexContainer from './questions/question_index_container';
 import QuestionFormContainer from './questions/question_form_container';
+import QuestionShowContainer from './questions/question_show_container';
 
 
 const App = () => (
@@ -13,9 +14,13 @@ const App = () => (
         <AuthRoute exact path='/' component={Splash} />
         <AuthRoute exact path='/login' component={LoginFormContainer} />
         <AuthRoute exact path='/signup' component={SignupFormContainer}/>
-        <ProtectedRoute exact path='/' component={QuestionIndexContainer}/>
-        <Route exact path='/questions' component={QuestionIndexContainer} />
-        <Route exact path='/questions/new' component={QuestionFormContainer} />
+        <Switch>
+            <ProtectedRoute exact path='/questions/new' component={QuestionFormContainer} />
+            <Route exact path="/questions/:questionId" component={QuestionShowContainer} />
+            <Route exact path='/questions' component={QuestionIndexContainer} />
+            <ProtectedRoute exact path='/' component={QuestionIndexContainer}/>
+        </Switch>
+            
     </div>
 );
 

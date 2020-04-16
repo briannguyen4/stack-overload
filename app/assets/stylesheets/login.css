@@ -75,6 +75,10 @@
     margin-top: -6px;
 }
 
+.form-button:hover {
+    background-color: #0077CC;
+}
+
 .login-buttons {
     display: flex;
     flex-direction: column;

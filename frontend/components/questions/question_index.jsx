@@ -11,6 +11,14 @@ class QuestionIndex extends React.Component {
         this.props.getQuestions();
     }
 
+    // componentWillUpdate() {
+    //     this.props.getQuestions();
+    // }
+
+    //  componentDidUpdate() {
+    //     this.props.getQuestions();
+    // }
+
     render() {
         return (
             <>
@@ -18,17 +26,15 @@ class QuestionIndex extends React.Component {
             <div className="questions-body">
                 <h1>Questions</h1>
                 {this.props.questions.map((question, idx) => (
-                    <ul id="questions" key={idx}>
-                        <li>{question.body}</li>
-                    </ul>   
-                    ))}
-
+                  <ul key={idx}>
+                    <li>{question.title}hi</li>
+                  </ul>
+                ))}
                     
             </div>
             </>
         );
     }
-
 }
 
 export default QuestionIndex;

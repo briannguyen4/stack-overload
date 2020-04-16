@@ -1,12 +1,13 @@
 import { connect } from 'react-redux';
-import QuestionForm from './question_index';
+import QuestionForm from './question_form';
 import { createQuestion } from '../../actions/question_actions';
 
 
 
 const mapStateToProps = (state) => {
     return {
-      errors: state.errors.questions
+      errors: state.errors.question,
+      author_id: state.session.id
     };
   };
   
