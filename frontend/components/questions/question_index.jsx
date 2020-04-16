@@ -20,7 +20,7 @@ class QuestionIndex extends React.Component {
             <Sidebar />
             <AltNavbarContainer />
             <div className="questions-body">
-            <Link to="questions/new" >Ask Question</Link>
+                <Link to="questions/new" >Ask Question</Link>
                 <h1>Top Questions</h1>
                 {this.props.questions.map((question, idx) => (
                   <ul key={idx}>

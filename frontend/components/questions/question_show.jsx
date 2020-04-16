@@ -20,9 +20,10 @@ class QuestionShow extends React.Component {
           <>
             <AltNavbarContainer />
             <Sidebar />
-            <div className="question-show-page"></div>
-            <h1>question show page</h1>
-            <h2>{this.props.question.title}</h2>
+            <div className="question-show-page">
+              <h1>question show page</h1>
+              <h2>{this.props.question.title}</h2>
+            </div>
           </>
       )
       }
