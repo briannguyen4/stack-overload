@@ -15,7 +15,7 @@
 
 .qform-container {
     margin-top: 52px;
-    height: 500px;
+    height: 506px;
     width: 875px;
     border: 1px solid lightgray;
     background-color: #FFFFFF;
@@ -68,4 +68,8 @@
 
 #qform-button:hover {
     background-color: #0077cc;
+}
+
+.qerrors {
+    margin-top: 60px;
 }

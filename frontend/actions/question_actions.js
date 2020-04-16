@@ -5,6 +5,7 @@ export const RECEIVE_QUESTION = "RECEIVE_QUESTION";
 export const DELETE_QUESTION = "DELETE_QUESTION";
 export const RECEIVE_QUESTION_ERRORS = "RECEIEVE_QUESTION_ERRORS";
 export const REMOVE_QUESTION = 'REMOVE_QUESTION';
+export const CLEAR_QUESTION_ERRORS = 'CLEAR_QUESTION_ERRORS';
 
 export const receiveQuestions = questions => ({
     type: RECEIVE_QUESTIONS,
@@ -26,6 +27,10 @@ export const receiveQuestionErrors = errors => ({
     errors
 });
 
+export const clearQuestionErrors = () => ({
+    type: CLEAR_QUESTION_ERRORS
+});
+
 export const getQuestions = () => dispatch => {
     return (
       APIUtil.getQuestions()
@@ -44,7 +49,7 @@ export const createQuestion = (question) => dispatch => {
     return (
         APIUtil.createQuestion(question)
          .then(question => dispatch(receiveQuestion(question)),
-         errors => dispatch(receiveQuestionErrors(errors)))
+         errors => dispatch(receiveQuestionErrors(errors.responseJSON)))
     );
 }
 

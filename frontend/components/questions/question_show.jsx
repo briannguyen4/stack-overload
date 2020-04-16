@@ -1,6 +1,6 @@
 import React from 'react';
 import AltNavbarContainer from '../navbar/alt_navbar_container';
-import SideBar from '../navbar/sidebar';
+import Sidebar from '../navbar/sidebar';
 
 class QuestionShow extends React.Component {
     constructor(props) {
@@ -19,7 +19,7 @@ class QuestionShow extends React.Component {
         return (
           <>
             <AltNavbarContainer />
-            <SideBar />
+            <Sidebar />
             <div className="question-show-page"></div>
             <h1>question show page</h1>
             <h2>{this.props.question.title}</h2>

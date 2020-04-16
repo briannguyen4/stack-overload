@@ -33,6 +33,17 @@ class QuestionForm extends React.Component {
         this.setState({ body: value });
     }
   
+    renderErrors() {
+        debugger
+        return (
+          <ul className="qerrors">
+            {this.props.errors.map((error, i) => (
+              <li key={i}>{error}</li>
+            ))}
+          </ul>
+        );
+      }
+    
     render() {
         return (
         <>
@@ -64,6 +75,7 @@ class QuestionForm extends React.Component {
                             onChange={this.handleChange}
                             />
                         </div> 
+                        {this.renderErrors()}
                         <button id="qform-button">Post your question</button>
                     </form>
 

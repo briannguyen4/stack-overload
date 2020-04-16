@@ -1,6 +1,7 @@
 import React from 'react';
-import AltNavbarContainer from '../navbar/alt_navbar_container';
 import { Link } from 'react-router-dom';
+import AltNavbarContainer from '../navbar/alt_navbar_container';
+import Sidebar from '../navbar/sidebar';
 
 
 class QuestionIndex extends React.Component {
@@ -16,6 +17,7 @@ class QuestionIndex extends React.Component {
     render() {
         return (
             <>
+            <Sidebar />
             <AltNavbarContainer />
             <div className="questions-body">
             <Link to="questions/new" >Ask Question</Link>

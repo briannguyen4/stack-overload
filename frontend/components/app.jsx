@@ -7,7 +7,7 @@ import { Route, Switch } from 'react-router-dom';
 import QuestionIndexContainer from './questions/question_index_container';
 import QuestionFormContainer from './questions/question_form_container';
 import QuestionShowContainer from './questions/question_show_container';
-import SideBar from './navbar/sidebar';
+import Sidebar from './navbar/sidebar';
 
 
 const App = () => (
@@ -21,7 +21,7 @@ const App = () => (
             <Route exact path='/questions' component={QuestionIndexContainer} />
             <ProtectedRoute exact path='/' component={QuestionIndexContainer}/>
         </Switch>
-        <Route exact path="/sidebar" component={SideBar} />
+        <Route exact path="/sidebar" component={Sidebar} />
 
             
     </div>

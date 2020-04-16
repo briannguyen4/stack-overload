@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SideBar = () => (
+const Sidebar = () => (
     <>
   <div id='sidebar'>
     <Link to="/questions">
@@ -17,4 +17,4 @@ const SideBar = () => (
   </>
 );
 
-export default SideBar;
+export default Sidebar;
