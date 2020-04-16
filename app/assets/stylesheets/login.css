@@ -4,12 +4,16 @@
     margin-bottom: 3px;
 }
 
+body .login-body {
+    background-color: #EFF0F1;
+}
+
 .login-body {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 122px;
-
+    height: 750px;
 }
 
 .login-form-container {
