@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactQuill from "react-quill";
+import ReactQuill from 'react-quill';
 
 class AnswerForm extends React.Component {
     constructor(props) {
@@ -27,7 +27,6 @@ class AnswerForm extends React.Component {
         return (
             <div id="answer-form">
                 <form onSubmit={this.handleSubmit}>
-                    <br/>
                     <ReactQuill
                         onChange={this.handleChange}
                         value={this.state.body}

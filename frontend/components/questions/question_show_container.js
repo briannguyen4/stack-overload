@@ -9,13 +9,14 @@ const mapStateToProps = (state, ownProps) => {
     
     return {
         questionId: questionId,
-        question: question
+        question: question,
+        currentUserId: state.session.id
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        deleteQuestion: () => dispatch(deleteQuestion()),
+        deleteQuestion: question => dispatch(deleteQuestion(question)),
         getQuestion: questionId => dispatch(getQuestion(questionId))
     };
 }

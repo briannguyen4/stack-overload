@@ -1,4 +1,27 @@
 .question-show-page {
     padding-top: 50px;
     padding-left: 210px;
+    height: 650px;
+    margin-left: 25px;
+    margin-right: 70px;
+}
+
+.qshow-top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 26px;
+}
+
+.qshow-top p {
+    font-size: 27px;
+    color: #3c4146
+}
+
+.qshow-top div {
+    margin-top: -5px;
+}
+
+.qshow-form {
+    margin-top: 20px;
+    width: 750px;
 }

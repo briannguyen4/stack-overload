@@ -10,7 +10,7 @@ class Api::AnswersController < ApplicationController
     
     def show
         @answer = Answer.find(params[:id])
-        render '/api/answers/show', include: :author
+        render '/api/answers/show'
     end
 
     private

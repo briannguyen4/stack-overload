@@ -60,9 +60,9 @@ export const updateQuestion = (question) => dispatch => {
     );
 }
 
-export const deleteQuestion = (question) => dispatch => {
+export const deleteQuestion = (questionId) => dispatch => {
     return (
-        APIUtil.deleteQuestion(question)
+        APIUtil.deleteQuestion(questionId)
          .then(question => dispatch(removeQuestion(question)))
     );
 }

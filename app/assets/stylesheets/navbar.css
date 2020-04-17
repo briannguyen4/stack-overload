@@ -183,7 +183,7 @@
 }
 
 .logout {
-    background-color: #0095ff;
+    background-color: #bacedb;
     font-size: 13px;
 	width: 67px;
 	height: 33px;
@@ -191,14 +191,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid transparent;
+    border: 1px solid #39739d;
     border-radius: 3px;
 	box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.4);
-	color: white;
+	color: black;
 }
 
 .logout:hover {
-	background-color: #0077cc;
+	background-color: #7ca6c2;
 }
 
 

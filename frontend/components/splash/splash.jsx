@@ -1,5 +1,6 @@
 import React from 'react';
 import NavbarContainer from '../navbar/navbar_container';
+import Footer from '../main/footer';
 
 
 const Splash = () => (
@@ -30,6 +31,8 @@ const Splash = () => (
             </div>
         </div>
     </div>
+    <div className="splash-footer"><Footer/></div>
+
     </>
 );
         

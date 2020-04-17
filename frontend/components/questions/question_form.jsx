@@ -1,13 +1,12 @@
 import React from 'react';
 import AltNavbarContainer from '../navbar/alt_navbar_container';
 import ReactQuill from 'react-quill';
-import { Link } from 'react-router-dom';
+import Footer from '../main/footer';
 
 class QuestionForm extends React.Component {
     constructor(props) {
         super(props);
-        const author_id = this.props.author_id;
-        this.state = {title: '', body: '', author_id: author_id};
+        this.state = this.props.question
         this.handleInput = this.handleInput.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,8 +14,7 @@ class QuestionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const question = Object.assign({}, this.state);
-        this.props.createQuestion(question)
+        this.props.action(this.state)
          .then(({question})=> this.props.history.push(`/questions/${question.id}`)
       )
     }
@@ -34,7 +32,6 @@ class QuestionForm extends React.Component {
     }
   
     renderErrors() {
-        debugger
         return (
           <ul className="qerrors">
             {this.props.errors.map((error, i) => (
@@ -42,7 +39,11 @@ class QuestionForm extends React.Component {
             ))}
           </ul>
         );
-      }
+    }
+
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
     
     render() {
         return (
@@ -50,7 +51,8 @@ class QuestionForm extends React.Component {
             <AltNavbarContainer />
             <div className="question-form-page">
                 <div className='form-header'>
-                    <p>Ask a public question</p>
+                {this.props.formType === "Post your question" ? (
+                    <p>Ask a public question</p>) : null}
                 </div>
                 <div className="qform-container">
                     <form className="qform" onSubmit={this.handleSubmit}>
@@ -76,7 +78,7 @@ class QuestionForm extends React.Component {
                             />
                         </div> 
                         {this.renderErrors()}
-                        <button id="qform-button">Post your question</button>
+                        <button id="qform-button">{this.props.formType}</button>
                     </form>
 
                 </div>
@@ -84,6 +86,8 @@ class QuestionForm extends React.Component {
 
                 </div>
             </div>
+            <div className="qformfooter"><Footer/></div>
+
         </>
         );
     }

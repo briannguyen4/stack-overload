@@ -20,7 +20,7 @@ class Api::QuestionsController < ApplicationController
 
     def update
         @question = Question.find(params[:id])
-        if @question.update
+        if @question.update(question_params)
             render 'api/questions/show'
         else
             render json: @question.errors.full_messages, status: 422
@@ -30,7 +30,7 @@ class Api::QuestionsController < ApplicationController
     def destroy
         @question = Question.find(params[:id])
         @question.destroy
-        render 'api/questions/index'
+        render '/api/questions/show'
     end
 
     private

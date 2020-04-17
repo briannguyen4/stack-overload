@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AltNavbarContainer from '../navbar/alt_navbar_container';
-import Sidebar from '../navbar/sidebar';
+import Sidebar from '../main/sidebar';
+import Footer from '../main/footer';
 
 
 class QuestionIndex extends React.Component {
@@ -20,7 +21,9 @@ class QuestionIndex extends React.Component {
             <Sidebar />
             <AltNavbarContainer />
             <div className="questions-body">
-                <Link to="questions/new" >Ask Question</Link>
+                <div className="ask-question">
+                    <Link to="questions/new">Ask Question</Link>
+                </div>   
                 <h1>Top Questions</h1>
                 {this.props.questions.map((question, idx) => (
                   <ul key={idx}>
@@ -32,6 +35,7 @@ class QuestionIndex extends React.Component {
                   </ul>
                 ))}
             </div>
+            <Footer/>
             </>
         );
     }
