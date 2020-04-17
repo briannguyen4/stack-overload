@@ -24,6 +24,7 @@ class QuestionShow extends React.Component {
             <div className="question-show-page">
               <h1>question show page</h1>
               <h2>{this.props.question.title}</h2>
+              <h3>{this.props.question.body}</h3>
               <AnswerFormContainer questionId={this.props.questionId}/>
             </div>
 
