@@ -28,7 +28,7 @@ class QuestionIndex extends React.Component {
                         <Link to="questions/new">Ask Question</Link>
                     </div>   
                 </div>
-                {this.props.questions.map((question, idx) => (
+                {this.props.questions ? (this.props.questions.map((question, idx) => (
                 <div className="question-container">
                     <div className="q-vav">
                         <span className="q-num">0</span>
@@ -49,7 +49,7 @@ class QuestionIndex extends React.Component {
                         {question.author}
                     </div>
                 </div>
-                ))}
+                ))) : null}
             </div>
             <div className="splash-footer"><Footer/></div>
             </>
