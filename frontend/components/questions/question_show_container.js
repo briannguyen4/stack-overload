@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import QuestionShow from './question_show';
 import { getQuestion, deleteQuestion } from './../../actions/question_actions';
 

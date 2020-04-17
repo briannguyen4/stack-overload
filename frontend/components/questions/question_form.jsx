@@ -28,8 +28,8 @@ class QuestionForm extends React.Component {
         };
     }
 
-    handleChange(value) {
-        this.setState({ body: value });
+    handleChange(val) {
+        this.setState({ body: val });
     }
   
     renderErrors() {

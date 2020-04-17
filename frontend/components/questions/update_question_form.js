@@ -19,7 +19,7 @@ const mapStateToProps = (state ,ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
     action: question => dispatch(updateQuestion(question)),
-    fetchQuestion: questionId => dispatch(getQuestion(questionId)),
+    getQuestion: questionId => dispatch(getQuestion(questionId)),
     clearErrors: () => dispatch(clearQuestionErrors())
 });
 
