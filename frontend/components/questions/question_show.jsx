@@ -1,6 +1,7 @@
 import React from 'react';
 import AltNavbarContainer from '../navbar/alt_navbar_container';
 import Sidebar from '../navbar/sidebar';
+import AnswerFormContainer from '../answers/answer_form_container';
 
 class QuestionShow extends React.Component {
     constructor(props) {
@@ -23,7 +24,10 @@ class QuestionShow extends React.Component {
             <div className="question-show-page">
               <h1>question show page</h1>
               <h2>{this.props.question.title}</h2>
+              <AnswerFormContainer questionId={this.props.questionId}/>
             </div>
+
+            
           </>
       )
       }
@@ -32,4 +36,4 @@ class QuestionShow extends React.Component {
   
 }
 
-export default QuestionShow
+export default QuestionShow;

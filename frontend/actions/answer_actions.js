@@ -14,8 +14,8 @@ export const createAnswer = (answer, questionId) => dispatch => {
 };
          
 
-export const getAnswer = (questionId, answerId) => dispatch => {
-    return (APIUtil.getAnswer(questionId, answerId)
+export const getAnswer = (answerId, questionId) => dispatch => {
+    return (APIUtil.getAnswer(answerId, questionId)
         .then(answer => dispatch(receiveAnswer(answer)))
     );
 }

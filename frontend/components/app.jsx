@@ -8,6 +8,7 @@ import QuestionIndexContainer from './questions/question_index_container';
 import QuestionFormContainer from './questions/question_form_container';
 import QuestionShowContainer from './questions/question_show_container';
 import Sidebar from './navbar/sidebar';
+import AnswerFormContainer from './answers/answer_form_container';
 
 
 const App = () => (
@@ -22,6 +23,9 @@ const App = () => (
             <ProtectedRoute exact path='/' component={QuestionIndexContainer}/>
         </Switch>
         <Route exact path="/sidebar" component={Sidebar} />
+        <Route exact path="/answer" component={AnswerFormContainer} />
+
+        
 
             
     </div>

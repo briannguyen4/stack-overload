@@ -13,7 +13,6 @@ class Api::AnswersController < ApplicationController
         render '/api/answers/show', include: :author
     end
 
-
     private
     def answer_params
         params.require(:answer).permit(:body, :author_id, :question_id)

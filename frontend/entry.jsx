@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import getQuestion from './util/question_api_util'
+import getQuestion from './actions/question_actions'
 
 
 document.addEventListener('DOMContentLoaded', () => {
