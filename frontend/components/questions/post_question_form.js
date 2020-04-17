@@ -6,9 +6,13 @@ import { createQuestion, clearQuestionErrors } from '../../actions/question_acti
 
 const mapStateToProps = (state) => {
     return {
+      formType: 'Post your question',
       errors: state.errors.question,
-      author_id: state.session.id,
-      formType: 'Post your question'
+      question: {
+        title: "",
+        body: "",
+        author_id:  state.session.id
+      }
     };
   };
   

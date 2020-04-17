@@ -5,8 +5,8 @@ import QuestionForm from './question_form';
 const mapStateToProps = (state ,ownProps) => {
     const question = state.entities.questions[ownProps.match.params.questionId];
     return {
-        errors: state.errors.question,
         formType: 'Save Edits',
+        errors: state.errors.question,
         question: {
             id: question ? question.id : null,
             title: question ? question.title : null,
@@ -18,8 +18,8 @@ const mapStateToProps = (state ,ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchQuestion: questionId => dispatch(getQuestion(questionId)),
     action: question => dispatch(updateQuestion(question)),
+    fetchQuestion: questionId => dispatch(getQuestion(questionId)),
     clearErrors: () => dispatch(clearQuestionErrors())
 });
 

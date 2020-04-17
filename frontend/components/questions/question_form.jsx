@@ -10,6 +10,7 @@ class QuestionForm extends React.Component {
         this.handleInput = this.handleInput.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
     }
 
     handleSubmit(e) {
@@ -72,6 +73,7 @@ class QuestionForm extends React.Component {
                                 <p>Include all the information someone would need to answer your question</p>
                             </label>
                             <ReactQuill
+                            modules={this.modules}
                             className="quill"
                             value={this.state.body}
                             onChange={this.handleChange}

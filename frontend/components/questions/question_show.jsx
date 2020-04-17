@@ -44,13 +44,13 @@ class QuestionShow extends React.Component {
                   modules={{toolbar: false}}
                 />
               {this.props.question.author_id === this.props.currentUserId ? 
-                (<div>
+                (<div className="qshow-buttons">
                   <Link to={`/questions/${this.props.questionId}/edit`}>
-                    Edit
+                    edit
                   </Link>
-                  <button id="button2" onClick={this.deleteQuestion}>
-                    Delete
-                  </button>
+                  <a onClick={this.deleteQuestion}>
+                    delete
+                  </a>
                 </div>) : null}
 
               {/* <AnswerFormContainer questionId={this.props.questionId}/> */}

@@ -2,14 +2,14 @@
     padding-top: 50px;
     padding-left: 210px;
     height: 650px;
-    margin-left: 25px;
+    margin-left: 28px;
     margin-right: 70px;
 }
 
 .qshow-top {
     display: flex;
     justify-content: space-between;
-    margin-top: 26px;
+    margin-top: 28px;
 }
 
 .qshow-top p {
@@ -22,6 +22,27 @@
 }
 
 .qshow-form {
-    margin-top: 20px;
-    width: 750px;
+    margin-top: 44px;
+    margin-left: 33px;
+    height: 100px;
+    width: 650px;
 }
+
+.qshow-buttons {
+    color: #848d95;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+.qshow-buttons a {
+    text-decoration: none;
+    color: #848d95;
+    margin-right: 6px;
+}
+
+.qshow-buttons a:hover  {
+    color: #3C4656;
+}
+
