@@ -51,9 +51,9 @@ class LoginForm extends React.Component {
         return (
             <>
             <NavbarContainer />
-            <div className="login-body">
+            <div className="login">
                 <div>
-                    <img className="icon" src={window.iconURL}/>
+                    <img className="login-icon" src={window.iconURL}/>
                 </div>
                 
                 <div className="login-buttons">

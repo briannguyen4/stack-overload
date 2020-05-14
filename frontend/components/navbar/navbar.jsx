@@ -54,7 +54,7 @@ class Navbar extends React.Component {
                             <input className="searchbar" type="text" placeholder="Search..."></input>
                         </div>
                         <div className="rightbutton">
-                            <div className="login">
+                            <div className="logins">
                                 <Link to="login" >Log in</Link>
                             </div>
                             <div className="signup">

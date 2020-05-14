@@ -1,10 +1,4 @@
-.icon {
-  width: 50px;
-  height: auto;
-  margin-bottom: 3px;
-}
-
-.login-body {
+.login {
   background-color: #EFF0F1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,6 +14,25 @@
   height: 750px;
 }
 
+.login-icon {
+  width: 50px;
+  height: auto;
+  margin-bottom: 3px;
+}
+
+.login-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .login-form-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,7 +42,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: white;
-  width: 1310px;
+  width: 310px;
   height: 234px;
   padding: 24px;
   margin-top: 66px;
@@ -100,19 +113,6 @@
 
 .form-button:hover {
   background-color: #0077CC;
-}
-
-.login-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .demo-button {

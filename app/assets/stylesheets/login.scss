@@ -1,23 +1,27 @@
-.icon {
-    width: 50px;
-    height: auto;
-    margin-bottom: 3px;
-}
-
-.login-body {
+.login {
     background-color: #EFF0F1;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 122px;
     height: 750px;
+    &-icon {
+        width: 50px;
+        height: auto;
+        margin-bottom: 3px;
+    }
+    &-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .login-form-container {
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 1310px;
+    width: 310px;
     height: 234px;
     padding: 24px;
     margin-top: 66px;
@@ -78,12 +82,6 @@
 
 .form-button:hover {
     background-color: #0077CC;
-}
-
-.login-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .demo-button {

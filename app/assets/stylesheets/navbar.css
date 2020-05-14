@@ -112,7 +112,7 @@
 	width: 166px;
 }
 
-.login {
+.logins {
     background-color: #E1ECF4;
     font-size: 13px;
     width: 58px;
@@ -125,7 +125,7 @@
     padding:  8px;
 }
 
-.login:hover {
+.logins:hover {
 	background-color: #b3d3ea;
 }
    
