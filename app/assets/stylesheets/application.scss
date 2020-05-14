@@ -1,0 +1,84 @@
+/*
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ *, html, body {
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+ }
+
+html, body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	height: 100%;
+	width: 100%;
+}
+
+#root {
+	width: 100%;
+}
+
+footer {
+	height: 120px;
+	width: 100%;
+	margin-bottom: 0px;
+	background-color: #242729;
+	position: absolute;
+	margin-top:auto; 
+	z-index: 2;
+}
+
+.footer {
+	display: flex;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+.footer a {
+	text-decoration: none;
+}
+
+.footer a p {
+	font-size: 13px;
+	font-weight: bold;
+	color: #BBC0C4;
+	margin-left: 28px;
+	margin-top: 12px;
+}
+
+.footer a p:hover {
+	color: #F2F3F3;
+}
+
+.footer img {
+	height: 44px;
+	width: 44px;
+}
+
+.disclaimer p {
+	margin-left: 780px;
+	margin-top: 20px;
+	font-size: 11px;
+	color: #5F6467;
+}
+
+#github {
+	font-size: 11px;
+	color: #5F6467;
+	margin-left: 780px;
+	margin-top: 16px;
+}
+
+.error {
+	list-style: none;
+	color: #d1383d;
+	font-size: 12px;
+	
+}

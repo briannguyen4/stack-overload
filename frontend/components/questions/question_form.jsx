@@ -1,12 +1,11 @@
 import React from 'react';
 import AltNavbarContainer from '../navbar/alt_navbar_container';
 import ReactQuill from 'react-quill';
-import Footer from '../main/footer';
-
+import Footer from '../main/footer'; 
 class QuestionForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.question
+        this.state = this.props.question;
         this.handleInput = this.handleInput.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,10 +27,14 @@ class QuestionForm extends React.Component {
         };
     }
 
-    handleChange(val) {
-        this.setState({ body: val });
+    handleChange(value) {
+        this.setState({ body: value });
     }
   
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
+    
     renderErrors() {
         return (
           <ul className="qerrors">
@@ -42,10 +45,6 @@ class QuestionForm extends React.Component {
         );
     }
 
-    componentWillUnmount() {
-        this.props.clearErrors();
-    }
-    
     render() {
         return (
         <>
@@ -73,9 +72,10 @@ class QuestionForm extends React.Component {
                                 <p>Include all the information someone would need to answer your question</p>
                             </label>
                             <ReactQuill
-                            modules={this.modules}
                             className="quill"
-                            value={this.state.body}
+                            name="editor"  
+                            // value={this.state.body}
+                            value={this.state.body || ''}
                             onChange={this.handleChange}
                             />
                         </div> 

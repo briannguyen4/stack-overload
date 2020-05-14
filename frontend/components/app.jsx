@@ -11,7 +11,6 @@ import QuestionShowContainer from './questions/question_show_container';
 
 const App = () => (
     <>
-    <div> 
         <AuthRoute exact path='/' component={Splash} />
         <AuthRoute exact path='/login' component={LoginFormContainer} />
         <AuthRoute exact path='/signup' component={SignupFormContainer}/>
@@ -22,7 +21,6 @@ const App = () => (
             <Route exact path="/questions/:questionId" component={QuestionShowContainer} />
             <Route exact path='/questions' component={QuestionIndexContainer} />
         </Switch>        
-    </div>
     </>
 );
 

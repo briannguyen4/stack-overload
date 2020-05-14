@@ -1,78 +1,98 @@
 body .signup-body {
-    background-color: #EFF0F1;
+  background-color: #EFF0F1;
 }
 
 .signup-body {
-    display: flex;
-    padding-top: 50px;
-}
-.signup-right {
-    width: 316px;
-    margin-top: 14px;
-    margin-left: 58px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .signup-left {
-    width: 421px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 282px;
-    margin-top: 250px;
+  width: 421px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 250px;
 }
 
 .signup-left-header {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 27px;
-    font-weight: 400;
-    color: #242729;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 27px;
+  font-weight: 400;
+  color: #242729;
 }
 
 .signup-left-snippets {
-    display: flex;
-    color: #242729;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 15px;
-    margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #242729;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 15px;
+  margin-top: 25px;
 }
 
-
 .icon {
-    color: #0095FF;
-    font-size: 22px;
+  color: #0095FF;
+  font-size: 22px;
 }
 
 .icon-snippet {
-    margin-top: 3px;
-    margin-left: -15px;
+  margin-top: 3px;
+  margin-left: -15px;
+}
+
+.signup-right {
+  width: 316px;
+  margin-top: 14px;
+  margin-left: 58px;
+  margin-right: 10px;
 }
 
 .signup-form-container {
-    background-color: white;
-    padding: 24px;
-    width: 310px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 65px;
-    border-radius: 7px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05), 0 20px 48px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.1);
+  background-color: white;
+  padding: 24px;
+  width: 310px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 65px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 20px 48px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 20px 48px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .signup-form label {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 15px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
 }
 
 .signup-text {
-    font-family: arial;
-    color: #6a737c;
-    font-size: 12px;
+  font-family: arial;
+  color: #6a737c;
+  font-size: 12px;
 }
 
 .sb {
-    margin-top: 65px;
-    margin-bottom: 30px;
+  margin-top: 65px;
+  margin-bottom: 30px;
 }
-
+/*# sourceMappingURL=signup.css.map */

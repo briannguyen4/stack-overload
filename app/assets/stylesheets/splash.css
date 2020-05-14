@@ -1,64 +1,69 @@
-.splash-content {
-    padding-top: 50px;
-    height: auto;
-    width: 100%;
+.splash {
+  padding-top: 50px;
+  height: auto;
+  width: 100%;
 }
 
-.splash-img{
-    height: 500px;
-    width: 100%;
-    background-color: #ffcf10;
-    text-align: center;
+.splash-img {
+  display: inline-block;
+  height: 500px;
+  width: 100%;
+  background-color: #ffcf10;
+  text-align: center;
 }
 
-#splash-text {
-    position: relative;
-    bottom: 68%;
+.splash-img__text {
+  position: relative;
+  bottom: 69%;
 }
 
-.splash-img-sentence {
-    margin-top: 25px;
+.splash-img__text__header {
+  font-family: 'Roboto Slab', serif;
+  font-size: 55px;
+  color: #242729;
+  margin-top: -18px;
+  line-height: 72px;
 }
 
-.splash-img-header {
-    font-family: 'Roboto Slab', serif; 
-    font-size: 55px;
-    color: #242729;
-    margin-top: -18px;
-    line-height: 72px;
+.splash-img__text__sentence {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 21px;
 }
 
-.splash-img-text {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 21px;
+.splash-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -90px;
 }
 
-.splash-bottom {
-    margin-top: -110px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.splash-message__header {
+  font-family: 'Roboto Slab', serif;
+  font-size: 34px;
 }
 
-.splash-head {
-    font-family: 'Roboto Slab', serif; 
-    font-size: 34px;
-}   
-
-.splash-text p {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 17px;
+.splash-message__bar {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  height: 8px;
+  width: 63.5px;
+  border-radius: 10px;
+  background-color: #F48024;
 }
 
-.orange-bar {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    height: 8px;
-    width: 63.5px;
-    border-radius: 10px;
-    background-color: #F48024;
+.splash-message__text p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 17px;
 }
 
 .splash-footer {
-    margin-top: 322px;
+  margin-top: 100px;
 }
+/*# sourceMappingURL=splash.css.map */
