@@ -56,27 +56,27 @@ class LoginForm extends React.Component {
                     <img className="login-icon" src={window.iconURL}/>
                 </div>
                 
-                <div className="login-buttons">
-                    <button className="demo-button" onClick={this.demoLogin}>Log in with Demo User</button>
+                <div className="login__buttons">
+                    <button className="login__buttons__demo" onClick={this.demoLogin}>Log in with Demo User</button>
                     <a href="https://github.com/briannguyen4/stack-overload/">
-                        <button className="github-button">Visit the Github Page</button>
+                        <button className="login__buttons__git">Visit the Github Page</button>
                     </a>
 
                 </div>
-                <div className="login-form-container">
-                    <form className="login-form" onSubmit={this.handleSubmit}>
+                <div className="login__form-container">
+                    <form className="login__form" onSubmit={this.handleSubmit}>
                         <label>Email 
                             <br/>
-                            <input className="login-input" type="text"
+                            <input className="login__form__input" type="text"
                             value={this.state.email}
                             onChange={this.handleInput('email')}
                             />
                         </label>
                         <div></div>
                         {this.renderErrors()}
-                        <label className="password-label">Password
+                        <label>Password
                             <br/>
-                            <input className="login-input" type="password"
+                            <input className="login__form__input" type="password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                             />
@@ -84,9 +84,9 @@ class LoginForm extends React.Component {
                         <input className="form-button" type="submit" value={this.props.formType}/>
                     </form>
                 </div>
-                    <div className="signup-link">
-                        <p>Don't have an account? {this.props.link}</p>
-                    </div>
+                <div className="login__signup">
+                    <p>Don't have an account? {this.props.link}</p>
+                </div>
             </div>
             </>
         );

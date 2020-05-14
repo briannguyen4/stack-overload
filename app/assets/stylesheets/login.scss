@@ -10,11 +10,6 @@
         height: auto;
         margin-bottom: 3px;
     }
-    &-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
 .login-form-container {
@@ -82,6 +77,12 @@
 
 .form-button:hover {
     background-color: #0077CC;
+}
+
+.login-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .demo-button {
