@@ -10,6 +10,37 @@
         height: auto;
         margin-bottom: 3px;
     }
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__demo {
+            background-color: #FFFFFF;
+            color: #3c4146;
+            width: 310px;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            height: 35px;
+            margin-top: 12px;
+            cursor: pointer;
+            &:hover {
+                background-color: #fafafb;
+            }
+        }
+        &__git {
+            background-color: #2F3337;
+            color: white;
+            width: 310px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            height: 35px;
+            margin-top: 12px;
+            cursor: pointer;
+            &:hover {
+                background-color: #242729;
+            }
+        }
+    }
 }
 
 .login-form-container {
@@ -77,41 +108,4 @@
 
 .form-button:hover {
     background-color: #0077CC;
-}
-
-.login-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.demo-button {
-    background-color: #FFFFFF;
-    color: #3c4146;
-    width: 310px;
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    height: 35px;
-    margin-top: 12px;
-    cursor: pointer;
-}
-
-.demo-button:hover {
-    background-color: #fafafb;
-}
-
-
-
-.github-button {
-    background-color: #2F3337;
-    color: white;
-    width: 310px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    height: 35px;
-    margin-top: 12px;
-    cursor: pointer;
-}
-.github-button:hover {
-    background-color: #242729;
 }
