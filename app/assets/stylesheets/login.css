@@ -63,7 +63,71 @@
   background-color: #242729;
 }
 
-.login-form-container {
+.login__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 255px;
+}
+
+.login__form label {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.login__form__input {
+  width: 261px;
+  padding: .6em .7em;
+  border: 1px solid #BBC0C4;
+  border-radius: 3px;
+  color: var(--fc-dark);
+  font-size: 13px;
+  margin-top: 5px;
+  margin-bottom: 22px;
+  margin-right: 5px;
+}
+
+.login__form__btn {
+  background-color: #0095FF;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: white;
+  font-size: 13px;
+  width: 103%;
+  height: 35px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: -5px;
+  margin-left: 5px;
+}
+
+.login__form__btn:hover {
+  background-color: #0077CC;
+}
+
+.login__signup-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+.login__form-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,69 +143,5 @@
   border-radius: 7px;
   -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 20px 48px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 20px 48px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1);
-}
-
-.login-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 255px;
-}
-
-.login-form label {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  margin-left: 10px;
-}
-
-.login-input {
-  width: 261px;
-  padding: .6em .7em;
-  border: 1px solid #BBC0C4;
-  border-radius: 3px;
-  color: var(--fc-dark);
-  font-size: 13px;
-  margin-top: 5px;
-  margin-bottom: 22px;
-  margin-right: 5px;
-}
-
-.signup-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  margin-top: 40px;
-}
-
-.form-button {
-  background-color: #0095FF;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  color: white;
-  font-size: 13px;
-  width: 103%;
-  height: 35px;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  cursor: pointer;
-  margin-top: -5px;
-  margin-left: 5px;
-}
-
-.form-button:hover {
-  background-color: #0077CC;
 }
 /*# sourceMappingURL=login.css.map */
