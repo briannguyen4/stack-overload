@@ -10,9 +10,9 @@ const Splash = () => (
             <img src={window.splashURL}/>
             <div className="splash-img__text">
                 <h1 className="splash-img__text__header">We &#60;3 people who code</h1>
-                <p className="splash-img__text">We build products that empower developers</p>
-                <p className="splash-img__text">and connect them to solutions that enable</p>
-                <p className="splash-img__text">productivity, growth, and discovery.</p>
+                <p className="splash-img__text__sentence">We build products that empower developers</p>
+                <p className="splash-img__text__sentence">and connect them to solutions that enable</p>
+                <p className="splash-img__text__sentence">productivity, growth, and discovery.</p>
             </div>
         </div>
         <div className="splash-message">
