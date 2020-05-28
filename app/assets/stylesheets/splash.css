@@ -1,6 +1,6 @@
 .splash {
   padding-top: 50px;
-  width: 98vw;
+  width: 98.9vw;
 }
 
 .splash-img {
@@ -52,7 +52,7 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 695px) {
   .splash-img img {
     width: 0px;
   }
@@ -70,6 +70,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin-top: 64px;
+  margin-bottom: 48px;
 }
 
 .splash-message__header {
