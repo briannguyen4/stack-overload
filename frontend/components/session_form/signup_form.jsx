@@ -79,7 +79,7 @@ class SignupForm extends React.Component {
                     </div>
                 </div>
                 <div className="signup-right">
-                    <button className="demo-button" onClick={this.demoLogin}>Log in with Demo User</button>
+                    <button className="signup-demo" onClick={this.demoLogin}>Log in with Demo User</button>
                     <a href="https://github.com/briannguyen4/stack-overload/">
                         <button className="github-button">Visit the Github Page</button>
                     </a>
