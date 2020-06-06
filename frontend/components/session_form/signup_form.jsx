@@ -58,37 +58,37 @@ class SignupForm extends React.Component {
         return (
             <>
             <NavbarContainer />
-            <div className="signup-body">
+            <div className="signup">
                 <div className="signup-left">
-                    <h1 className="signup-left-header">Join the Stack Overload community</h1>
-                    <div className="signup-left-snippets">
-                        <div className="icon"><FontAwesomeIcon icon={faQuestionCircle} /></div>
-                        <p className="icon-snippet">Ask a question</p>
+                    <h1 className="signup-left__header">Join the Stack Overload community</h1>
+                    <div className="signup-left__snippet">
+                        <div className="signup-left__icon"><FontAwesomeIcon icon={faQuestionCircle} /></div>
+                        <p className="signup-left__text">Ask a question</p>
                     </div>
-                    <div className="signup-left-snippets">
-                        <div className="icon"><FontAwesomeIcon icon={faCommentDots} /></div>
-                        <p className="icon-snippet">Gain access to commenting and voting</p>
+                    <div className="signup-left__snippet">
+                        <div className="signup-left__icon"><FontAwesomeIcon icon={faCommentDots} /></div>
+                        <p className="signup-left__text">Gain access to commenting and voting</p>
                     </div>
-                    <div className="signup-left-snippets">
-                        <div className="icon"><FontAwesomeIcon icon={faLaptopCode} /></div>
-                        <p className="icon-snippet">Home to a large community of programmers</p>
+                    <div className="signup-left__snippet">
+                        <div className="signup-left__icon"><FontAwesomeIcon icon={faLaptopCode} /></div>
+                        <p className="signup-left__text">Home to a large community of programmers</p>
                     </div>
-                    <div className="signup-left-snippets">
-                        <div className="icon"><FontAwesomeIcon icon={faSearchPlus} /></div>
-                        <p className="icon-snippet">Search through an extensive collection of questions</p>
+                    <div className="signup-left__snippet">
+                        <div className="signup-left__icon"><FontAwesomeIcon icon={faSearchPlus} /></div>
+                        <p className="signup-left__text">Search through an extensive collection of questions</p>
                     </div>
                 </div>
                 <div className="signup-right">
-                    <button className="signup-demo" onClick={this.demoLogin}>Log in with Demo User</button>
+                    <button className="signup-right__demo" onClick={this.demoLogin}>Log in with Demo User</button>
                     <a href="https://github.com/briannguyen4/stack-overload/">
-                        <button className="github-button">Visit the Github Page</button>
+                        <button className="signup-right__git">Visit the Github Page</button>
                     </a>
-                    <div className="signup-form-container">
+                    <div className="signup-right__form">
                         {this.renderErrors()}
-                        <form className="signup-form" onSubmit={this.handleSubmit}>
+                        <form onSubmit={this.handleSubmit}>
                             <label>Display name
                                 <br/>
-                                <input className="login-input" type="text"
+                                <input type="text"
                                 value={this.state.display_name}
                                 onChange={this.handleInput('display_name')}
                                 />
@@ -96,7 +96,7 @@ class SignupForm extends React.Component {
                             <br/>
                             <label>Email
                                 <br/>
-                                <input className="login-input" type="text"
+                                <input type="text"
                                 value={this.state.email}
                                 onChange={this.handleInput('email')}
                                 />
@@ -104,18 +104,18 @@ class SignupForm extends React.Component {
                             <br/>
                             <label>Password
                                 <br/>
-                                <input className="login-input" type="password"
+                                <input type="password"
                                 value={this.state.password}
                                 onChange={this.handleInput('password')}
                                 />
                             </label>
                             <br/>
-                            <p className="signup-text">Passwords must contain at least eight characters, including at least 1 letter and 1 number.</p>
+                            <p>Passwords must contain at least eight characters, including at least 1 letter and 1 number.</p>
                             <button className="form-button sb">{this.props.formType}</button>
                         </form>
-                            <p className="signup-text">By clicking “Sign up”, you agree to our terms of service, privacy policy and cookie policy</p>
+                            <p>By clicking “Sign up”, you agree to our terms of service, privacy policy and cookie policy</p>
                     </div>
-                    <div className="signup-link">
+                    <div className="signup-right__login">
                         <p>Already have an account? {this.props.link}</p>
                     </div>
                 </div>
