@@ -20,7 +20,7 @@ const App = () => (
             <ProtectedRoute exact path='/questions/new' component={PostQuestion} />
             <Route exact path="/questions/:questionId" component={QuestionShowContainer} />
             <Route exact path='/questions' component={QuestionIndexContainer} />
-        </Switch>        
+        </Switch>         
     </>
 );
 
