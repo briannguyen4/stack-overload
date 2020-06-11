@@ -147,17 +147,16 @@
 
 .signup {
   background-color: #EFF0F1;
+  padding-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 50px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .signup-left {
-  background-color: greenyellow;
   width: 421px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,7 +165,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 250px;
+  margin-top: 240px;
+  padding: 10px;
 }
 
 .signup-left__header {
@@ -174,6 +174,8 @@
   font-size: 27px;
   font-weight: 400;
   color: #242729;
+  line-height: 1;
+  margin: 5px 0px;
 }
 
 .signup-left__snippet {
@@ -183,7 +185,7 @@
   color: #242729;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 15px;
-  margin-top: 25px;
+  margin-top: 24px;
 }
 
 .signup-left__icon {
@@ -193,7 +195,7 @@
 
 .signup-left__text {
   margin-top: 3px;
-  margin-left: -15px;
+  margin-left: 15px;
 }
 
 .signup-right {

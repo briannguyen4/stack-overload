@@ -113,27 +113,29 @@
 
 .signup {
     background-color: #EFF0F1;
-    display: flex;
     padding-top: 50px;
+    display: flex;
     justify-content: center;
     &-left {
-        background-color: greenyellow;
         width: 421px;
         display: flex;
         flex-direction: column;
-        margin-top: 250px;
+        margin-top: 240px;
+        padding: 10px;
         &__header {
             font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
             font-size: 27px;
             font-weight: 400;
             color: #242729;
+            line-height: 1;
+            margin: 5px 0px;
         }
         &__snippet {
             display: flex;
             color: #242729;
             font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
             font-size: 15px;
-            margin-top: 25px;
+            margin-top: 24px;
         }
         &__icon {
             color: #0095FF;
@@ -141,7 +143,7 @@
         }
         &__text {
             margin-top: 3px;
-            margin-left: -15px;
+            margin-left: 15px;
         }
     }
     &-right {

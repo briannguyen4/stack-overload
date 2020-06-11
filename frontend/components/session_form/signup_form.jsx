@@ -63,7 +63,7 @@ class SignupForm extends React.Component {
                     <h1 className="signup-left__header">Join the Stack Overload community</h1>
                     <div className="signup-left__snippet">
                         <div className="signup-left__icon"><FontAwesomeIcon icon={faQuestionCircle} /></div>
-                        <p className="signup-left__text">Ask a question</p>
+                        <p className="signup-left__text">Get unstuck - ask a question</p>
                     </div>
                     <div className="signup-left__snippet">
                         <div className="signup-left__icon"><FontAwesomeIcon icon={faCommentDots} /></div>
