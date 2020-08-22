@@ -160,7 +160,7 @@
     text-decoration: none;
 }
 
-.login a {
+.logins a {
     color: #39739d;
     text-decoration: none;
 }
@@ -182,7 +182,7 @@
 	margin-right: 100px;
 }
 
-.logout {
+.logout .altlogin {
     background-color: #b1d1e6;
     font-size: 13px;
 	width: 67px;

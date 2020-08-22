@@ -25,7 +25,7 @@ class AltNavbar extends React.Component {
                             <input className="searchbar" type="text" placeholder="Search..."></input>
                         </div>
                         <div className="rightbutton">
-                            <button className="login">
+                            <button className="alt_login">
                                 Profile
                             </button>
                             <div>
