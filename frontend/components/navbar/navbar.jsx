@@ -13,58 +13,51 @@ class Navbar extends React.Component {
 
     dropDown(e) {
         e.preventDefault();
-        document.getElementById("my-x").classList.toggle("change");
+        document.getElementById("dropdown").classList.toggle("change");
     }
     
     render() {
-        if (this.props.currentUser) {
-            return (
-                <div>
-                <button onClick={this.props.logout}>Log Out</button>    
-                </div>
-            )
-        } else {
-            return (
-                <header className="top-bar">
-			        <div className="header-wrapper">
-				        <div className="main-nav">
-					        <span className="side-bar" onClick={this.dropDown}>
-						        <div id="my-x" className="burger">
-                                    <div className="bar1"></div>
-                                    <div className="bar2"></div>
-                                    <div className="bar3"></div>
-						        </div>
-						        <div id="my-drop" className="drop-down">
-                                    <a href="#home">Home</a>
-                                    <a href="#about">About</a>
-                                    <a href="#contact">Contact</a>
-						        </div>
+        return (
+            <header className="main-nav">
+                <div className="nav-container">
+                    <div className="nav-container__left">
+                        <span className="dropdown" onClick={this.dropDown}>
+                            <div id="dropdown" className="dropdown__button">
+                                <div className="bar1"></div>
+                                <div className="bar2"></div>
+                                <div className="bar3"></div>
+                            </div>
+                            <div id="my-drop" className="drop-down">
+                                <a href="#home">Home</a>
+                                <a href="#about">About</a>
+                                <a href="#contact">Contact</a>
+                            </div>
+                        </span>
+                        <Link to="/">
+                            <span className="logo" href="#">
+                                <img src={window.logoURL} />
                             </span>
-                            <Link to="/">
-                                <span className="logo" href="#">
-                                    <img src={window.logoURL} />
-                                </span>
-                            </Link>
-                        
-				        </div>
-                        <div className="searchbar-container">
-                            <div className="search-icon">
-                                    {/* <FontAwesomeIcon icon={faSearch} /> */}
-                            </div>
-                            <input className="searchbar" type="text" placeholder="Search..."></input>
-                        </div>
-                        <div className="rightbutton">
-                            <div className="logins">
-                                <Link to="login" >Log in</Link>
-                            </div>
-                            <div className="signup">
-                                <Link to="signup" >Sign up</Link>
-                            </div>   
-                         </div>
+                        </Link>
+                    
                     </div>
-		        </header>
-            )
-        }
+                    <div className="searchbar-container">
+                        <div className="search-icon">
+                                {/* <FontAwesomeIcon icon={faSearch} /> */}
+                        </div>
+                        <input className="searchbar" type="text" placeholder="Search..."></input>
+                    </div>
+                    <div className="rightbutton">
+                        <div className="logins">
+                            <Link to="login" >Log in</Link>
+                        </div>
+                        <div className="signup">
+                            <Link to="signup" >Sign up</Link>
+                        </div>   
+                        </div>
+                </div>
+            </header>
+        )
+        
     }
 }
 
