@@ -99,3 +99,9 @@
     font-size: 11px;
     margin-top: 3px;
 }
+
+#question-body {
+    border: white;
+    margin-left: 100px;
+    height: 60px
+}

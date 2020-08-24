@@ -43,6 +43,7 @@ class QuestionShow extends React.Component {
                   readOnly={true}
                   modules={{toolbar: false}}
                 />
+
               {this.props.question.author_id === this.props.currentUserId ? 
                 (<div className="qshow-buttons">
                   <Link to={`/questions/${this.props.questionId}/edit`}>
@@ -56,9 +57,8 @@ class QuestionShow extends React.Component {
               {/* <AnswerFormContainer questionId={this.props.questionId}/> */}
             </div>
             <Footer/>
-            
           </>
-        )
+        );
       }
     }
 

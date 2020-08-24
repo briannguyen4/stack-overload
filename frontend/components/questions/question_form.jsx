@@ -1,7 +1,9 @@
 import React from 'react';
+import ReactDOM from "react-dom";
 import AltNavbarContainer from '../navbar/alt_navbar_container';
-import ReactQuill from 'react-quill';
 import Footer from '../main/footer'; 
+import ReactQuill, { Quill } from "react-quill";
+
 class QuestionForm extends React.Component {
     constructor(props) {
         super(props);
@@ -9,6 +11,33 @@ class QuestionForm extends React.Component {
         this.handleInput = this.handleInput.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.modules = {
+            clipboard: {
+                matchVisual: false
+            },
+            toolbar: [
+              [{ font: [] }],
+              [{ size: ["small", false, "large", "huge"] }],
+              ["bold", "italic", "underline"],
+              [{ list: "ordered" }, { list: "bullet" }],
+              [{ align: [] }],
+              [{ color: [] }, { background: [] }],
+              ["clean"]
+            ]
+          };
+      
+          this.formats = [
+            "font",
+            "size",
+            "bold",
+            "italic",
+            "underline",
+            "list",
+            "bullet",
+            "align",
+            "color",
+            "background"
+          ];
 
     }
 
@@ -72,11 +101,11 @@ class QuestionForm extends React.Component {
                                 <p>Include all the information someone would need to answer your question</p>
                             </label>
                             <ReactQuill
-                            className="quill"
-                            name="editor"  
-                            // value={this.state.body}
-                            value={this.state.body || ''}
-                            onChange={this.handleChange}
+                                theme="snow"
+                                modules={this.modules}
+                                formats={this.formats}
+                                onChange={this.handleChange}
+                                value={this.state.body}
                             />
                         </div> 
                         {this.renderErrors()}
