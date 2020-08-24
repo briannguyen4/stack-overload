@@ -11,22 +11,21 @@ class QuestionForm extends React.Component {
         this.handleInput = this.handleInput.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.modules = {
-            clipboard: {
-                matchVisual: false
-            },
+        this.modules = {   
             toolbar: [
+              ["bold", "italic"],
               [{ font: [] }],
-              [{ size: ["small", false, "large", "huge"] }],
-              ["bold", "italic", "underline"],
+              ['link'],
+              ['blockquote', 'code-block', 'image'],
+              [{ size: ["small", false,  "large"] }],
               [{ list: "ordered" }, { list: "bullet" }],
-              [{ align: [] }],
               [{ color: [] }, { background: [] }],
+              [{ align: [] }],
               ["clean"]
             ]
-          };
+        }
       
-          this.formats = [
+        this.formats = [
             "font",
             "size",
             "bold",
@@ -38,7 +37,6 @@ class QuestionForm extends React.Component {
             "color",
             "background"
           ];
-
     }
 
     handleSubmit(e) {
@@ -106,7 +104,6 @@ class QuestionForm extends React.Component {
                             <ReactQuill
                                 theme="snow"
                                 modules={this.modules}
-                                formats={this.formats}
                                 onChange={this.handleChange}
                                 value={this.state.body}
                             />

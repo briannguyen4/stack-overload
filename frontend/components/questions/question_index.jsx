@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 import AltNavbarContainer from '../navbar/alt_navbar_container';
 import Sidebar from '../main/sidebar';
 import Footer from '../main/footer';
-import ReactQuill from 'react-quill';
-import QuestionShow from './question_show';
-
 
 class QuestionIndex extends React.Component {
     constructor(props) {
@@ -18,6 +15,7 @@ class QuestionIndex extends React.Component {
 
 
     render() {
+        var parse = require('html-react-parser');
         return (
                 <>
                 <Sidebar />
@@ -46,13 +44,7 @@ class QuestionIndex extends React.Component {
                                     </li>
                                 </Link>
                                 <li className="question-body">
-                                    {/* <ReactQuill
-                                        id={`question-body`}
-                                        value={question.body}
-                                        readOnly={true}
-                                        modules={{toolbar: false}}
-                                        /> */}
-                                        <div dangerouslySetInnerHTML={{__html: question.body}}></div>
+                                        <div>{parse(question.body)}</div>
                                 </li>
                             </ul>
                             <div>
