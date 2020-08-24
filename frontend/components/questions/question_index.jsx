@@ -46,12 +46,13 @@ class QuestionIndex extends React.Component {
                                     </li>
                                 </Link>
                                 <li className="question-body">
-                                    <ReactQuill
+                                    {/* <ReactQuill
                                         id={`question-body`}
                                         value={question.body}
                                         readOnly={true}
                                         modules={{toolbar: false}}
-                                        />
+                                        /> */}
+                                        <div dangerouslySetInnerHTML={{__html: question.body}}></div>
                                 </li>
                             </ul>
                             <div>

@@ -102,6 +102,7 @@
 
 #question-body {
     border: white;
-    margin-left: 100px;
-    height: 60px
+    margin-left: 90px;
+    max-height: 60px;
+
 }
