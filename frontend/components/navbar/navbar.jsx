@@ -38,7 +38,6 @@ class Navbar extends React.Component {
                                 <img src={window.logoURL} />
                             </span>
                         </Link>
-                    
                     </div>
                     <div className="searchbar-container">
                         <div className="search-icon">
@@ -46,11 +45,11 @@ class Navbar extends React.Component {
                         </div>
                         <input className="searchbar" type="text" placeholder="Search..."></input>
                     </div>
-                    <div className="rightbutton">
-                        <div className="logins">
+                    <div className="nav-right">
+                        <div className="nav-right__loginbtn">
                             <Link to="login" >Log in</Link>
                         </div>
-                        <div className="signup">
+                        <div className="nav-right__signupbtn">
                             <Link to="signup" >Sign up</Link>
                         </div>   
                         </div>
