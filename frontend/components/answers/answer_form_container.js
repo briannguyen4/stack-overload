@@ -5,20 +5,19 @@ import AnswerForm from './answer_form';
 
 
 const mapStateToProps = (state, ownProps) => {
-    return({
+    return {
         answer: {
             body: "",
             question_id: ownProps.questionId,
             author_id: state.session.id
         },
-    
-    questionId: ownProps.questionId 
-    }); 
+        questionId: ownProps.questionId 
+    }; 
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    getQuestion: questionId => dispatch(getQuestion(questionId)),
-    createAnswer: (answer, questionId) => dispatch(createAnswer(answer, questionId))
+    action: (answer, questionId) => dispatch(createAnswer(answer, questionId)),
+    getQuestion: questionId => dispatch(getQuestion(questionId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AnswerForm);

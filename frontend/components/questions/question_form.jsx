@@ -24,19 +24,6 @@ class QuestionForm extends React.Component {
               ["clean"]
             ]
         }
-      
-        this.formats = [
-            "font",
-            "size",
-            "bold",
-            "italic",
-            "underline",
-            "list",
-            "bullet",
-            "align",
-            "color",
-            "background"
-          ];
     }
 
     handleSubmit(e) {
@@ -99,6 +86,7 @@ class QuestionForm extends React.Component {
                                 <p>Include all the information someone would need to answer your question</p>
                             </label>
                             <ReactQuill
+                                className="questionquill"
                                 theme="snow"
                                 modules={this.modules}
                                 onChange={this.handleChange}
