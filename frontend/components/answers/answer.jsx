@@ -9,7 +9,7 @@ class Answer extends React.Component {
     }
 
     componentDidMount() {
-      this.props.getQuestion(this.props.questionId);
+      this.props.getAnswer(this.props.questionId);
     }
 
     deleteQuestion() {
@@ -58,7 +58,6 @@ class Answer extends React.Component {
       }
     }
 
-  
 }
 
 export default Answer;
