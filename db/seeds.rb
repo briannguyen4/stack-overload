@@ -8,9 +8,9 @@
 Question.destroy_all
 User.destroy_all
 
-demo_user = User.create({email: "demouser", password: "password"})
-user = User.create({email: "email", password: "password"})
-user2 = User.create({email: "email1", password: "password"})
+demo_user = User.create({email: "demouser@email.com", password: "password"})
+user = User.create({email: "email@email.com", password: "password"})
+user2 = User.create({email: "email1@email.com", password: "password"})
 
 q1 = Question.create({title: "Whats different between == and === ?", body: "Hello, whats the difference between == and === in JavaScript? I've seen != and !== operators as well. Are there more operators?", author_id: demo_user.id})
 q2 = Question.create({title: "What are ownProps in react-redux?", body: "This is a test to see if I can properly create a question", author_id: demo_user.id})
