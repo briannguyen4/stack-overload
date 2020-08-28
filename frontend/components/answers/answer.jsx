@@ -19,7 +19,7 @@ class Answer extends React.Component {
           <>
             <div className="answer-show">
               <ReactQuill
-                  className="answerquill"
+                  className="quill-answer"
                   value={this.props.answer.body}
                   readOnly={true}
                   modules={{toolbar: false}}
