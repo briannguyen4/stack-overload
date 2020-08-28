@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import AltNavbarContainer from '../navbar/alt_navbar_container';
 import Sidebar from '../main/sidebar';
 import Footer from '../main/footer';
+import AnswerContainer from '../answers/answer_container';
 import AnswerFormContainer from '../answers/answer_form_container';
 import ReactQuill from 'react-quill';
 
@@ -54,9 +55,19 @@ class QuestionShow extends React.Component {
                   </a>
                 </div>) : null}
 
+                  {this.props.question.answers ? 
+                    (<ul>
+                        <p>{this.props.question.answers.length} Answers</p>
+                        {this.props.question.answers.map((answer, idx) => (
+                        <li key={`answer${idx}`}>
+                          <AnswerContainer questionId={this.props.questionId} answer={answer}/>
+                        </li>
+                      ))}
+                      </ul>): null}
+
               <AnswerFormContainer questionId={this.props.questionId}/>
+              <Footer/>
             </div>
-            <Footer/>
           </>
         );
       }
