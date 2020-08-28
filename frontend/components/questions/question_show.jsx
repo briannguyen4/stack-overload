@@ -30,8 +30,8 @@ class QuestionShow extends React.Component {
           <>
           <AltNavbarContainer id="qsidebar"/>
           <Sidebar />
-          <div className="question-show-page">
-            <div className="qshow-top">
+          <div className="question-show">
+            <div className="question-show-top">
               <p>{this.props.question.title}</p>
               <div className="ask-question">
                   <Link to="questions/new">Ask Question</Link>
@@ -39,14 +39,14 @@ class QuestionShow extends React.Component {
             </div>
             
             <ReactQuill
-                className="qshow-form"
+                className="question-show__question"
                 value={this.props.question.body}
                 readOnly={true}
                 modules={{toolbar: false}}
             />
 
             {this.props.question.author_id === this.props.currentUserId ? 
-              (<div className="qshow-buttons">
+              (<div className="question-show__buttons">
                 <Link to={`/questions/${this.props.questionId}/edit`}>
                   edit
                 </Link>
@@ -55,15 +55,15 @@ class QuestionShow extends React.Component {
                 </a>
               </div>) : null}
 
-                {this.props.question.answers ? 
-                  (<ul>
-                      <p>{this.props.question.answers.length} Answers</p>
-                      {this.props.question.answers.map((answer, idx) => (
-                      <li key={`answer${idx}`}>
-                        <AnswerContainer questionId={this.props.questionId} answer={answer}/>
-                      </li>
-                    ))}
-                    </ul>): null}
+              {this.props.question.answers ? 
+                (<ul>
+                    <p>{this.props.question.answers.length} Answers</p>
+                    {this.props.question.answers.map((answer, idx) => (
+                    <li key={`answer${idx}`}>
+                      <AnswerContainer questionId={this.props.questionId} answer={answer}/>
+                    </li>
+                  ))}
+                  </ul>): null}
 
             <AnswerFormContainer questionId={this.props.questionId}/>
             <Footer/>

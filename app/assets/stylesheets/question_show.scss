@@ -1,0 +1,44 @@
+.question-show {
+    padding-top: 50px;
+    padding-left: 210px;
+    height: 650px;
+    margin-left: 28px;
+    margin-right: 70px;
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 28px;
+        p {
+            font-size: 27px;
+            color: #3c4146
+        }
+        div {
+            margin-top: -5px;
+        }
+    }
+    &__question {
+        margin-top: 44px;
+        margin-left: 33px;
+        height: 100px;
+        width: 650px;
+    }
+    &__buttons {
+        color: #848d95;
+        font-size: 13px;
+        cursor: pointer;
+        margin-top: 5px;
+        margin-left: 50px;
+        a {
+            text-decoration: none;
+            color: #848d95;
+            margin-right: 6px;
+            &:hover  {
+                color: #3C4656;
+            }
+        }
+    }
+}
+
+
+
+
