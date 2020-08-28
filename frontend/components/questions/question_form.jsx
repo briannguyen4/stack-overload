@@ -41,9 +41,6 @@ class QuestionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // let parsed = this.state.body;
-        // this.setState({body: parsed});
-        // debugger
         this.props.action(this.state)
          .then(({question})=> this.props.history.push(`/questions/${question.id}`)
       )

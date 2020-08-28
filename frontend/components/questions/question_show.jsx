@@ -54,7 +54,7 @@ class QuestionShow extends React.Component {
                   </a>
                 </div>) : null}
 
-              {/* <AnswerFormContainer questionId={this.props.questionId}/> */}
+              <AnswerFormContainer questionId={this.props.questionId}/>
             </div>
             <Footer/>
           </>
