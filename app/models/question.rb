@@ -11,5 +11,7 @@ class Question < ApplicationRecord
         foreign_key: :question_id,
         class_name: :Answer
 
+    has_many :votes, as: :voteable, dependent: :destroy
+
 end
   
