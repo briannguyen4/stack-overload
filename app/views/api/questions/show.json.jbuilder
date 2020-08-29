@@ -1,1 +1,1 @@
-json.extract! @question, :id, :title, :body, :author_id, :answers
+json.partial! "api/questions/question", question: @question
