@@ -6,13 +6,11 @@ const receiveAnswer = (answer) => ({
     answer,
 });
 
-
 export const createAnswer = (answer, questionId) => dispatch => {
     return (APIUtil.createAnswer(answer, questionId)
         .then(answer => dispatch(receiveAnswer(answer)))
     );
-};
-         
+}; 
 
 export const getAnswer = (answerId, questionId) => dispatch => {
     return (APIUtil.getAnswer(answerId, questionId)
