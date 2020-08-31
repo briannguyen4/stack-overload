@@ -1,3 +1,7 @@
+.questions-container {
+    display: flex;
+}
+
 .questions-body {
     /* display: relative; */
     padding-top: 50px;
@@ -5,7 +9,6 @@
 }
 
 .questions-main {
-    height: 100%;
     width: 750px;
     padding-top: 22px;
     padding-left: 25px;

@@ -1,4 +1,4 @@
-.main-nav {
+.main-nav-container {
 	background-color: #fafafb;
 	height: 50px;
 	width: 100%;
@@ -6,13 +6,11 @@
 	position: fixed;
 	box-shadow: 0 1px 0 rgba(12,13,14,0.15);
 	z-index: 2;
-	box-sizing: border-box;
 }
 
-.nav-container {
+.main-nav {
 	display: flex;
 	height: 100%;
-	margin: 0px auto;
 	align-items: center;
 	max-width: 1280px;
 	&__left { 
@@ -188,4 +186,21 @@
 
 .logout:hover {
 	background-color: #7ca6c2;
+}
+
+.alt-nav-container {
+	background-color: #fafafb;
+	height: 50px;
+	width: 100%;
+	border-top: 3px solid #f48024;
+	position: fixed;
+	box-shadow: 0 1px 0 rgba(12,13,14,0.15);
+	z-index: 2;
+}
+
+.alt-nav {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	max-width: 1280px;
 }

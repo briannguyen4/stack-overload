@@ -18,9 +18,9 @@ class Navbar extends React.Component {
     
     render() {
         return (
-            <header className="main-nav">
-                <div className="nav-container">
-                    <div className="nav-container__left">
+            <header className="main-nav-container">
+                <div className="main-nav">
+                    <div className="main-nav__left">
                         <span className="dropdown" onClick={this.dropDown}>
                             <div id="dropdown" className="dropdown__button">
                                 <div className="bar1"></div>

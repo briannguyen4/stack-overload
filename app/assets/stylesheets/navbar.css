@@ -1,4 +1,4 @@
-.main-nav {
+.main-nav-container {
   background-color: #fafafb;
   height: 50px;
   width: 100%;
@@ -7,23 +7,20 @@
   -webkit-box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15);
           box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15);
   z-index: 2;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
-.nav-container {
+.main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  margin: 0px auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   max-width: 1280px;
 }
 
-.nav-container__left {
+.main-nav__left {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,5 +233,27 @@
 
 .logout:hover {
   background-color: #7ca6c2;
+}
+
+.alt-nav-container {
+  background-color: #fafafb;
+  height: 50px;
+  width: 100%;
+  border-top: 3px solid #f48024;
+  position: fixed;
+  -webkit-box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15);
+          box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15);
+  z-index: 2;
+}
+
+.alt-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1280px;
 }
 /*# sourceMappingURL=navbar.css.map */

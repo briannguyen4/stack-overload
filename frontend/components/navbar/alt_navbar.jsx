@@ -9,9 +9,9 @@ class AltNavbar extends React.Component {
     render() {
         if (this.props.currentUser) {
             return (
-                <header className="top-bar altbar">
-                    <div className="header-wrapper">
-                        <div className="main-nav">
+                <header className="alt-nav-container">
+                    <div className="alt-nav">
+                        <div className="alt-nav-container__left">
                             <Link to="/signup">
                                 <span className="logo" href="#">
                                     <img src={window.logoURL} />
