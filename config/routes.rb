@@ -12,6 +12,7 @@ Rails.application.routes.draw do
           post 'upvote', controller: 'votes', as: :upvote
           post 'downvote', controller: 'votes', as: :downvote
         end
+      end
     end
 
   end
