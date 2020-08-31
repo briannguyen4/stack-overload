@@ -1,4 +1,5 @@
 import * as APIUtil from '../util/question_api_util';
+import * as VoteAPIUtil from '../util/vote_api_util';
 
 export const RECEIVE_QUESTIONS = "RECEIEVE_QUESTIONS";
 export const RECEIVE_QUESTION = "RECEIVE_QUESTION";
@@ -66,4 +67,20 @@ export const deleteQuestion = (questionId) => dispatch => {
          .then(question => dispatch(removeQuestion(question)))
     );
 }
+
+export const upvoteQuestion = (questionId) => {
+    return dispatch => {
+        return VoteAPIUtil.questionUpvote(questionId)
+            .then((payload) => dispatch(receiveQuestion(payload)))
+    }
+}
+
+export const downvoteQuestion = (questionId) => {
+    return dispatch => {
+        return VoteAPIUtil.questionDownvote(questionId)
+            .then((payload) => dispatch(receiveQuestion(payload)))
+    }
+}
+
+
 
