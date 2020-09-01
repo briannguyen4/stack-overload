@@ -11,6 +11,7 @@ class QuestionShow extends React.Component {
     constructor(props) {
       super(props);
       this.deleteQuestion = this.deleteQuestion.bind(this);
+      this.upvote = this.upvote.bind(this);
     }
 
     componentDidMount() {
@@ -20,6 +21,10 @@ class QuestionShow extends React.Component {
     deleteQuestion() {
       this.props.deleteQuestion(this.props.questionId)
        .then( () => this.props.history.push('/questions'))
+    }
+
+    upvote() {
+      this.props.upvote(this.props.questionId)
     }
 
     render() {
@@ -45,6 +50,8 @@ class QuestionShow extends React.Component {
                   readOnly={true}
                   modules={{toolbar: false}}
               />
+
+              <button onClick={this.upvote}>Upvote</button>
 
               {this.props.question.author_id === this.props.currentUserId ? 
                 (<div className="question-show__buttons">

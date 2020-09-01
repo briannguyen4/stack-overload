@@ -71,14 +71,14 @@ export const deleteQuestion = (questionId) => dispatch => {
 export const upvoteQuestion = (questionId) => {
     return dispatch => {
         return VoteAPIUtil.questionUpvote(questionId)
-            .then((payload) => dispatch(receiveQuestion(payload)))
+            .then((question) => dispatch(receiveQuestion(question)))
     }
 }
 
 export const downvoteQuestion = (questionId) => {
     return dispatch => {
         return VoteAPIUtil.questionDownvote(questionId)
-            .then((payload) => dispatch(receiveQuestion(payload)))
+            .then((question) => dispatch(receiveQuestion(question)))
     }
 }
 
