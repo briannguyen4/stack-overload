@@ -12,6 +12,8 @@ class QuestionShow extends React.Component {
       super(props);
       this.deleteQuestion = this.deleteQuestion.bind(this);
       this.upvote = this.upvote.bind(this);
+      this.downvote = this.downvote.bind(this);
+
     }
 
     componentDidMount() {
@@ -25,6 +27,10 @@ class QuestionShow extends React.Component {
 
     upvote() {
       this.props.upvote(this.props.questionId)
+    }
+
+    downvote() {
+      this.props.downvote(this.props.questionId)
     }
 
     render() {
@@ -52,6 +58,8 @@ class QuestionShow extends React.Component {
               />
 
               <button onClick={this.upvote}>Upvote</button>
+              <button onClick={this.downvote}>Downvote</button>
+              <div>{this.props.score}</div>
 
               {this.props.question.author_id === this.props.currentUserId ? 
                 (<div className="question-show__buttons">
