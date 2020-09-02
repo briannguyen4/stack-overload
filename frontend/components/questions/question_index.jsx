@@ -55,7 +55,7 @@ class QuestionIndex extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="splash-footer"><Footer/></div>
+                <Footer/>
                 </>
                 )
     }
