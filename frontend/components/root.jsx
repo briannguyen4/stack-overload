@@ -7,9 +7,11 @@ const Root = ({ store }) => {
     // debugger
     return(
         <Provider store={store}>
-        <HashRouter>
-            <App />
-        </HashRouter>
+            <body className="body">
+                <HashRouter>
+                    <App/>
+                </HashRouter>
+            </body>
         </Provider>
     )
     

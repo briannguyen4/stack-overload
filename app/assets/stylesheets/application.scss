@@ -22,8 +22,11 @@ html, body {
 	width: 100%;
 }
 
-#root {
-	width: 100%;
+.body {
+	min-width: 1264px;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
 }
 
 footer {
@@ -31,8 +34,8 @@ footer {
 	width: 100%;
 	background-color: #242729;
 	position: absolute;
-	margin-top:auto; 
-	z-index: 2;
+	margin-top: auto; 
+	bottom: 0;
 }
 
 .footer {

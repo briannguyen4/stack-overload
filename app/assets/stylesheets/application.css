@@ -21,8 +21,16 @@ html, body {
   width: 100%;
 }
 
-#root {
-  width: 100%;
+.body {
+  min-width: 1264px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
 }
 
 footer {
@@ -31,7 +39,7 @@ footer {
   background-color: #242729;
   position: absolute;
   margin-top: auto;
-  z-index: 2;
+  bottom: 0;
 }
 
 .footer {
