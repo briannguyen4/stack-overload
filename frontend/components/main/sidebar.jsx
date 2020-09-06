@@ -6,7 +6,7 @@ import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 const Sidebar = () => (
   <>
   <div className="sidebar">
-    <div className="sidebar-container">
+    <div className="sidebar-content">
       <div className="home">
         <Link to="/questions">
           <li>Home</li>

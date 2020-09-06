@@ -1,10 +1,12 @@
 .question-show-container {
-    display: flex;
     padding-top: 50px;
+    width: 100vh;
 }
 
 .question-show {
     padding: 24px;
+    margin-left: 164px;
+    max-width: 1051px;
     &-top {
         display: flex;
         justify-content: space-between;

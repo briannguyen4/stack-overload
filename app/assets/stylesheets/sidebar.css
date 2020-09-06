@@ -1,26 +1,20 @@
 .sidebar{
-    width: 210px;
-    top: 50px;
+    width: 164px;
     height: 100vh;
-    z-index: 1;
-    background-color: white;
+    position: relative;
     border-right: 1px solid #D6D9DC;
 }
 
-.qsidebar {
-    height: auto;
+.sidebar-content {
+    width: auto;
+    padding-top: 24px;
 }
 
-.sidebar-container {
-    margin-top: 32px;
-    margin-left: 43px;
-}
-
-.sidebar-container li {
+.sidebar-content li {
     list-style: none;
 }
 
-.sidebar-container p {
+.sidebar-content p {
     font-size: 11px;
     color: #6a737c;
     margin-top: 24px;

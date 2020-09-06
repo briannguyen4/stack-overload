@@ -1,12 +1,12 @@
 .question-show-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-top: 50px;
+  width: 100vh;
 }
 
 .question-show {
   padding: 24px;
+  margin-left: 164px;
+  max-width: 1051px;
 }
 
 .question-show-top {
