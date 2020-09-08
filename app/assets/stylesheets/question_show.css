@@ -72,8 +72,8 @@
   color: #848d95;
   font-size: 13px;
   cursor: pointer;
-  margin-top: 5px;
-  margin-left: 50px;
+  margin-top: 16px;
+  padding-top: 4px;
 }
 
 .question-show__buttons a {
