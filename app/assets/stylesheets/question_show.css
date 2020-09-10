@@ -60,11 +60,11 @@
   display: -ms-flexbox;
   display: flex;
   border-top: 1px solid #e4e6e8;
+  border-bottom: 1px solid #e4e6e8;
 }
 
 .question-show__question {
-  width: 650px;
-  background-color: lightgreen;
+  width: 800px;
 }
 
 .question-show__buttons {
