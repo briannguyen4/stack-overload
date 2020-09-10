@@ -63,7 +63,6 @@
 }
 
 .question-show__question {
-  height: 100px;
   width: 650px;
   background-color: lightgreen;
 }
