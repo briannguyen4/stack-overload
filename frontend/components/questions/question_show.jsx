@@ -51,18 +51,14 @@ class QuestionShow extends React.Component {
               </div>
               <div className="question-show-left">
                 <div className="vote-placeholder"></div>
-                <ReactQuill
-                    className="question-show__question"
+                <div className="question-show__question">
+                 <ReactQuill
                     value={this.props.question.body}
                     readOnly={true}
                     modules={{toolbar: false}}
-                />
+                  />
 
-                {/* <button onClick={this.upvote}>Upvote</button>
-                <button onClick={this.downvote}>Downvote</button>
-                <div>{this.props.score}</div> */}
-
-                {this.props.question.author_id === this.props.currentUserId ? 
+                  {this.props.question.author_id === this.props.currentUserId ? 
                   (<div className="question-show__buttons">
                     <Link to={`/questions/${this.props.questionId}/edit`}>
                       edit
@@ -71,6 +67,12 @@ class QuestionShow extends React.Component {
                       delete
                     </a>
                   </div>) : null}
+                </div>
+
+                {/* <button onClick={this.upvote}>Upvote</button>
+                <button onClick={this.downvote}>Downvote</button>
+                <div>{this.props.score}</div> */}
+                
               </div>
                   {this.props.question.answers ? 
                     (<div className="question-show__answers">
