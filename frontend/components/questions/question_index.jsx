@@ -13,7 +13,6 @@ class QuestionIndex extends React.Component {
         this.props.getQuestions();
     }
 
-
     render() {
         var parse = require('html-react-parser');
         return (
