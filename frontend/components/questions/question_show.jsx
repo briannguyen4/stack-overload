@@ -44,46 +44,47 @@ class QuestionShow extends React.Component {
             <Sidebar />
             <div className="question-show">
               <div className="question-show-top">
-                <p>{this.props.question.title}</p>
+                <p className="question-show-top__title">{this.props.question.title}</p>
                 <div>
                     <Link to="questions/new">Ask Question</Link>
                 </div>   
               </div>
-              
-              <ReactQuill
-                  className="question-show__question"
-                  value={this.props.question.body}
-                  readOnly={true}
-                  modules={{toolbar: false}}
-              />
+              <div className="question-show-left">
+                <div className="vote-placeholder"></div>
+                <ReactQuill
+                    className="question-show__question"
+                    value={this.props.question.body}
+                    readOnly={true}
+                    modules={{toolbar: false}}
+                />
 
-              <button onClick={this.upvote}>Upvote</button>
-              <button onClick={this.downvote}>Downvote</button>
-              <div>{this.props.score}</div>
+                {/* <button onClick={this.upvote}>Upvote</button>
+                <button onClick={this.downvote}>Downvote</button>
+                <div>{this.props.score}</div> */}
 
-              {this.props.question.author_id === this.props.currentUserId ? 
-                (<div className="question-show__buttons">
-                  <Link to={`/questions/${this.props.questionId}/edit`}>
-                    edit
-                  </Link>
-                  <a onClick={this.deleteQuestion}>
-                    delete
-                  </a>
-                </div>) : null}
+                {this.props.question.author_id === this.props.currentUserId ? 
+                  (<div className="question-show__buttons">
+                    <Link to={`/questions/${this.props.questionId}/edit`}>
+                      edit
+                    </Link>
+                    <a onClick={this.deleteQuestion}>
+                      delete
+                    </a>
+                  </div>) : null}
+              </div>
+                  {this.props.question.answers ? 
+                    (<div className="question-show__answers">
+                        <p className="question-show__answers__header">{this.props.question.answers.length} Answers</p>
+                        <ul>
+                          {this.props.question.answers.map((answer, idx) => (
+                          <li key={`answer${idx}`}>
+                            <AnswerContainer questionId={this.props.questionId} answer={answer}/>
+                          </li>
+                          ))}
+                        </ul>
+                      </div>): null}
 
-                {this.props.question.answers ? 
-                  (<div className="question-show__answers">
-                      <p className="question-show__answers__header">{this.props.question.answers.length} Answers</p>
-                      <ul>
-                        {this.props.question.answers.map((answer, idx) => (
-                        <li key={`answer${idx}`}>
-                          <AnswerContainer questionId={this.props.questionId} answer={answer}/>
-                        </li>
-                        ))}
-                      </ul>
-                    </div>): null}
-
-              <AnswerFormContainer questionId={this.props.questionId}/>
+                <AnswerFormContainer questionId={this.props.questionId}/>
             </div>
           </div>
           <Footer/>
