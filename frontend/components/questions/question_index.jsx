@@ -43,8 +43,8 @@ class QuestionIndex extends React.Component {
                                             <br/>
                                         </li>
                                     </Link>
-                                    <li className="question-body">
-                                            <div>{parse(question.body)}</div>
+                                    <li>
+                                            <div className="question-body">{parse(question.body)}</div>
                                     </li>
                                 </ul>
                                 <div>
