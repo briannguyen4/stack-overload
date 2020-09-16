@@ -14,7 +14,6 @@ class QuestionIndex extends React.Component {
     }
 
     truncate(str) {
-        debugger
         return (str.length > 225) ? str.substr(0, 224) + ' ...' : str;
     }
 
