@@ -13,6 +13,11 @@ class QuestionIndex extends React.Component {
         this.props.getQuestions();
     }
 
+    truncate(str) {
+        debugger
+        return (str.length > 225) ? str.substr(0, 224) + ' ...' : str;
+    }
+
     render() {
         var parse = require('html-react-parser');
         return (
@@ -43,7 +48,7 @@ class QuestionIndex extends React.Component {
                                         </li>
                                     </Link>
                                     <li>
-                                            <div className="question-body">{parse(question.body)}</div>
+                                        <div className="question-body">{parse(this.truncate(question.body))}</div>
                                     </li>
                                 </ul>
                                 <div>
