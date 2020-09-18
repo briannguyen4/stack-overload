@@ -3,14 +3,16 @@ import QuestionShow from './question_show';
 import { getQuestion, deleteQuestion, upvoteQuestion, downvoteQuestion } from './../../actions/question_actions';
 
 const mapStateToProps = (state, ownProps) => {
-    const questionId = parseInt(ownProps.match.params.questionId);
-    const question = state.entities.questions[questionId] || {};
-    // const score = state.entities.questions[questionId].votes_score.score;
     
+    const questionId = parseInt(ownProps.match.params.questionId);
+    const question = state.entities.questions[questionId] || {votes: {score: 0}};
+    // const score = state.entities.questions[questionId].votes.score || {}
+    
+
     return {
         questionId: questionId,
         question: question,
-        currentUserId: state.session.id, 
+        currentUserId: state.session.id 
         // score: score
     };
 };

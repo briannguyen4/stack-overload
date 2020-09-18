@@ -50,7 +50,14 @@ class QuestionShow extends React.Component {
                 </div>   
               </div>
               <div className="question-show-left">
-                <div className="vote-placeholder"></div>
+              <div className="vote-placeholder">
+                  {this.props.question.votes ? 
+                    (<div>{this.props.question.votes.score}</div>
+                    ) : null}
+                 {/* <button onClick={this.upvote}>Upvote</button>
+                  <button onClick={this.downvote}>Downvote</button> */}
+                
+              </div>
                 <div className="question-show__question">
                  <ReactQuill
                     value={this.props.question.body}
@@ -69,9 +76,6 @@ class QuestionShow extends React.Component {
                   </div>) : null}
                 </div>
 
-                {/* <button onClick={this.upvote}>Upvote</button>
-                <button onClick={this.downvote}>Downvote</button>
-                <div>{this.props.score}</div> */}
               </div>
                   {this.props.question.answers ? 
                     (<div className="question-show__answers">
