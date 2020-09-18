@@ -42,22 +42,28 @@
         display: flex;
         border-top: 1px solid #e4e6e8;
         border-bottom: 1px solid #e4e6e8;
+        &__votes {
+            margin-right: 16px;
+            width: 36px;
+            height: 100px;
+            background-color: seagreen;
+        }
     }
     &__question {
         width: 800px;
-    }
-    &__buttons {
-        color: #848d95;
-        font-size: 13px;
-        cursor: pointer;
-        margin-top: 16px;
-        padding-top: 4px;
-        a {
-            text-decoration: none;
+        &__buttons {
             color: #848d95;
-            margin-right: 6px;
-            &:hover  {
-                color: #3C4656;
+            font-size: 13px;
+            cursor: pointer;
+            margin-top: 16px;
+            padding-top: 4px;
+            a {
+                text-decoration: none;
+                color: #848d95;
+                margin-right: 6px;
+                &:hover  {
+                    color: #3C4656;
+                }
             }
         }
     }
@@ -73,12 +79,7 @@
     }
 }
 
-.vote-placeholder {
-    margin-right: 16px;
-    width: 36px;
-    height: 100px;
-    background-color: skyblue;
-}
+
 
 
 
