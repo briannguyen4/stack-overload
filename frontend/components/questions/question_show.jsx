@@ -49,16 +49,21 @@ class QuestionShow extends React.Component {
                     <Link to="questions/new">Ask Question</Link>
                 </div>   
               </div>
+              
               <div className="question-show-left">
-                <div className="question-show-left__votes">
                     {this.props.question.votes ? 
-                      (<div>
-                        <button onClick={this.upvote}>Upvote</button>
+                      (<div className="question-show-left__votes">
+
+                        <div class="arrow-up"></div>
                         <div>{this.props.question.votes.score}</div>
-                        <button onClick={this.downvote}>Downvote</button>
+                        <div class="arrow-down"></div>
+
+                        {/* <button onClick={this.upvote}>Upvote</button>
+                        <div>{this.props.question.votes.score}</div>
+                        <button onClick={this.downvote}>Downvote</button> */}
                       </div>
                       ) : null}
-                </div>
+            
                 <div className="question-show__question">
                  <ReactQuill
                     value={this.props.question.body}

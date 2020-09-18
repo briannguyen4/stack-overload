@@ -105,4 +105,20 @@
 .question-show__answers ul {
   list-style-type: none;
 }
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #BBC0C4;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #BBC0C4;
+}
 /*# sourceMappingURL=question_show.css.map */
