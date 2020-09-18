@@ -53,14 +53,9 @@ class QuestionShow extends React.Component {
               <div className="question-show-left">
                     {this.props.question.votes ? 
                       (<div className="question-show-left__votes">
-
-                        <div class="arrow-up"></div>
+                        <div class="arrow-up" onClick={this.upvote}></div>
                         <div>{this.props.question.votes.score}</div>
-                        <div class="arrow-down"></div>
-
-                        {/* <button onClick={this.upvote}>Upvote</button>
-                        <div>{this.props.question.votes.score}</div>
-                        <button onClick={this.downvote}>Downvote</button> */}
+                        <div class="arrow-down" onClick={this.downvote}></div>
                       </div>
                       ) : null}
             
