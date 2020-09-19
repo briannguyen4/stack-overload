@@ -1,5 +1,5 @@
 .question-show-container {
-  max-width: 1280px;
+  max-width: 1260px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7,6 +7,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .question-show {
@@ -58,6 +61,7 @@
   margin-left: 33px;
   height: 100px;
   width: 650px;
+  background-color: green;
 }
 
 .question-show__buttons {

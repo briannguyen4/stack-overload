@@ -1,7 +1,8 @@
 .question-show-container {
-    max-width: 1280px;
+    max-width: 1260px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .question-show {
@@ -42,6 +43,7 @@
         margin-left: 33px;
         height: 100px;
         width: 650px;
+        background-color: green;
     }
     &__buttons {
         color: #848d95;

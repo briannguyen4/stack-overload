@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,aAAa,CAAC,GAAG,CAAC;EACd,MAAM,EAAE,eAAe;CAC1B;;AAED,AAAA,aAAa,CAAC;EACV,MAAM,EAAE,qBAAqB;CAChC",
+    "mappings": "AAAA,AAAA,aAAa,CAAC;EACV,gBAAgB,EAAE,MAAM;CAC3B",
     "sources": [
         "answers.scss"
     ],

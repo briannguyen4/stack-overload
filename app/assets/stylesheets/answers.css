@@ -1,8 +1,4 @@
-.quill-answer div {
-  border: 1px transparent;
-}
-
-.ql-container {
-  border: 1px solid transparent;
+.quill-answer {
+  background-color: silver;
 }
 /*# sourceMappingURL=answers.css.map */
