@@ -11,7 +11,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        getAnswer: (answerId, questionId) => dispatch(getAnswer(answerId, questionId))
+        getAnswer: (answerId, questionId) => dispatch(getAnswer(answerId, questionId)),
+        upvote: questionId => dispatch(upvoteQuestion(questionId)),
+        downvote: questionId => dispatch(downvoteQuestion(questionId))
     };
 }
 
