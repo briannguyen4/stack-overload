@@ -11,6 +11,14 @@ class Answer extends React.Component {
       this.props.getAnswer(this.props.answer.id, this.props.questionId);
     }
 
+    upvote() {
+      // this.props.upvote(this.props.questionId)
+    }
+
+    downvote() {
+      // this.props.downvote(this.props.questionId)
+    }
+
     render() {
       if (this.props.answer === undefined) {
         return null;
@@ -18,8 +26,12 @@ class Answer extends React.Component {
         return (
           <>
             <div className="answer-show">
+              <div className="question-show-left__votes">
+                <div className="question-show-left__votes__upvote" onClick={this.upvote}></div>
+                <div className="question-show-left__votes__score"></div>
+                <div className="question-show-left__votes__downvote" onClick={this.downvote}></div>
+              </div>
               <ReactQuill
-                  className="quill-answer"
                   value={this.props.answer.body}
                   readOnly={true}
                   modules={{toolbar: false}}
