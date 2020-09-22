@@ -12,11 +12,11 @@ class Answer extends React.Component {
     }
 
     upvote() {
-      // this.props.upvote(this.props.questionId)
+      this.props.upvote(this.props.questionId, this.props.answer.id)
     }
 
     downvote() {
-      // this.props.downvote(this.props.questionId)
+      this.props.downvote(this.props.questionId, this.props.answer.id)
     }
 
     render() {
@@ -26,11 +26,13 @@ class Answer extends React.Component {
         return (
           <>
             <div className="answer-show">
-              <div className="question-show-left__votes">
-                <div className="question-show-left__votes__upvote" onClick={this.upvote}></div>
-                <div className="question-show-left__votes__score"></div>
-                <div className="question-show-left__votes__downvote" onClick={this.downvote}></div>
-              </div>
+            {this.props.answer.votes ? 
+              (<div className="question-show-left__votes">
+                  <div className="question-show-left__votes__upvote" onClick={this.upvote}></div>
+                  <div className="question-show-left__votes__score">{this.props.answer.votes.score}</div>
+                  <div className="question-show-left__votes__downvote" onClick={this.downvote}></div>
+                </div>
+                ) : null}
               <ReactQuill
                   value={this.props.answer.body}
                   readOnly={true}

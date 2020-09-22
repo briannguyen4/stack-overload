@@ -11,5 +11,8 @@ class Answer < ApplicationRecord
 
     has_many :votes, as: :voteable, dependent: :destroy
 
+    def score
+        votes.sum(:value)
+    end
 end
   
