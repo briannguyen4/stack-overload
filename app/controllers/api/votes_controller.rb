@@ -11,21 +11,7 @@ class Api::VotesController < ApplicationController
 
     private
     def add_vote(val)
-        if params[:question_id].present?
-            @question = Question.includes(:votes).find(params[:question_id])
-            @vote = @question.votes.where(user_id: current_user.id).first 
-            if @vote
-                if @vote.value == val
-                    @vote.destroy!
-                else  
-                    @vote.update_attribute(:value, val)
-                end
-            else
-                @vote = current_user.votes.create({value: val, voteable: @question})
-            end
-            @score = @question.score
-            render '/api/questions/show'
-        elsif params[:answer_id].present?
+        if params[:answer_id].present?
             @answer = Answer.includes(:votes).find(params[:answer_id])
             @vote = @answer.votes.where(user_id: current_user.id).first
             if @vote
@@ -37,7 +23,22 @@ class Api::VotesController < ApplicationController
             else  
                 @vote = current_user.votes.create({value: val, voteable: @answer})
             end
+            @score = @answer.score
             render '/api/answers/show'
+        elsif params[:question_id].present?
+                @question = Question.includes(:votes).find(params[:question_id])
+                @vote = @question.votes.where(user_id: current_user.id).first 
+                if @vote
+                    if @vote.value == val
+                        @vote.destroy!
+                    else  
+                        @vote.update_attribute(:value, val)
+                    end
+                else
+                    @vote = current_user.votes.create({value: val, voteable: @question})
+                end
+                @score = @question.score
+                render '/api/questions/show'
         end
     end
 end
