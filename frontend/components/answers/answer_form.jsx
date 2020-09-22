@@ -34,7 +34,6 @@ class AnswerForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger
         this.props.action(this.state, this.props.questionId)
     }
     

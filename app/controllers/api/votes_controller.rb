@@ -12,7 +12,7 @@ class Api::VotesController < ApplicationController
     private
     def add_vote(val)
         if params[:answer_id].present?
-            @answer = Answer.includes(:votes).find(params[:answer_id])
+            @answer = Answer.includes(:votes).find_by(params[:answer_id])
             @vote = @answer.votes.where(user_id: current_user.id).first
             if @vote
                 if @vote.value == val
