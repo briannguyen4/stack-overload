@@ -89,7 +89,7 @@ class QuestionShow extends React.Component {
                         <ul>
                           {this.props.question.answers.map((answer, idx) => (
                           <li className="question-show__answers__answer" key={`answer${idx}`}>
-                            <AnswerContainer questionId={this.props.questionId} answer={answer}/>
+                            <AnswerContainer questionId={this.props.questionId} answer={answer} answerId={answer.id}/>
                           </li>
                           ))}
                         </ul>
