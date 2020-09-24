@@ -78,7 +78,7 @@ class QuestionShow extends React.Component {
                 </div>
 
               </div>
-                  {/* {this.props.question.answers ? 
+                  {this.props.question.answers ? 
                     (<div className="question-show__answers">
                       {this.props.question.answers.length === 1 ? (
                         <p className="question-show__answers__header">1 Answer</p>
@@ -93,7 +93,7 @@ class QuestionShow extends React.Component {
                           </li>
                           ))}
                         </ul>
-                      </div>): null} */}
+                      </div>): null}
 
                 <AnswerFormContainer questionId={this.props.questionId}/>
             </div>
