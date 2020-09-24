@@ -13,3 +13,10 @@ export const getAnswer = (answer_id, question_id) => (
     })
 );
 
+
+export const getAnswers = (question_id) => (
+    $.ajax({
+        url: `api/questions/${question_id}/answers/`,
+        method: 'GET'
+    })
+);
