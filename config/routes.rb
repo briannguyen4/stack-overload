@@ -7,7 +7,7 @@ Rails.application.routes.draw do
         post 'upvote', controller: 'votes', as: :upvote
         post 'downvote', controller: 'votes', as: :downvote
       end
-      resources :answers, only: [:create, :show] do
+      resources :answers, only: [:create, :show, :index] do
         member do
           post 'upvote', controller: 'votes', as: :upvote
           post 'downvote', controller: 'votes', as: :downvote
