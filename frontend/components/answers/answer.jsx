@@ -5,6 +5,8 @@ import ReactQuill from 'react-quill';
 class Answer extends React.Component {
     constructor(props) {
       super(props);
+      this.upvote = this.upvote.bind(this);
+      this.downvote = this.downvote.bind(this);
     }
 
     componentDidMount() {
@@ -26,13 +28,13 @@ class Answer extends React.Component {
         return (
           <>
             <div className="answer-show">
-            {/* {this.props.answer ?  */}
-              {/* // (<div className="question-show-left__votes">
-              //     <div className="question-show-left__votes__upvote" onClick={this.upvote}></div>
-              //     <div className="question-show-left__votes__score">{this.props.answer.votes.score}</div>
-              //     <div className="question-show-left__votes__downvote" onClick={this.downvote}></div>
-              //   </div>
-                // ) : null} */}
+            {this.props.answer ? 
+              (<div className="question-show-left__votes">
+                  <div className="question-show-left__votes__upvote" onClick={this.upvote}></div>
+                  <div className="question-show-left__votes__score">{this.props.answer.score}</div>
+                  <div className="question-show-left__votes__downvote" onClick={this.downvote}></div>
+                </div>
+                ) : null}
               <ReactQuill
                   value={this.props.answer.body}
                   readOnly={true}
