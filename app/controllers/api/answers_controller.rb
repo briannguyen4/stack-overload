@@ -14,12 +14,6 @@ class Api::AnswersController < ApplicationController
         render '/api/answers/show'
     end
 
-    def index
-        question = Question.find(params[:question_id])
-        @answers = question.answers
-        render 'api/answers/index'
-    end
-
     private
     def answer_params
         params.require(:answer).permit(:body, :author_id, :question_id)
