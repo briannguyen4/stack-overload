@@ -11,8 +11,7 @@ const mapStateToProps = (state, ownProps) => {
     // }
     return {
         questionId: ownProps.questionId,
-        answer: ownProps.answer,
-        score: answer.score
+        answer: ownProps.answer
     };
 };
 

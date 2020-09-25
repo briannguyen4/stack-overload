@@ -27,7 +27,7 @@ class Answer extends React.Component {
             {this.props.answer ? 
               (<div className="question-show-body__votes">
                   <div className="question-show-body__votes__upvote" onClick={this.upvote}></div>
-                  <div className="question-show-body__votes__score">{this.props.score}</div>
+                  <div className="question-show-body__votes__score">{this.props.answer.score}</div>
                   <div className="question-show-body__votes__downvote" onClick={this.downvote}></div>
                 </div>
                 ) : null}
