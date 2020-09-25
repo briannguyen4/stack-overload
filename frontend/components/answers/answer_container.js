@@ -6,10 +6,9 @@ const mapStateToProps = (state, ownProps) => {
     const answerId = ownProps.answerId
     const answer = state.entities.answers[answerId] || {};
     // let score = 0;
-    // if (typeof state.entities != "undefined ") {
+    // if (typeof state.entities.answers != "undefined ") {
     //     score = state.entities.answers[answerId].score
     // }
-
     return {
         questionId: ownProps.questionId,
         answer: ownProps.answer,
