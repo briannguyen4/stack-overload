@@ -17,6 +17,7 @@ class QuestionShow extends React.Component {
     }
 
     componentDidMount() {
+      debugger
       this.props.getQuestion(this.props.questionId);
     }
 
@@ -34,6 +35,7 @@ class QuestionShow extends React.Component {
     }
 
     render() {
+      debugger
       if (this.props.question === undefined) {
         return null;
       } else {

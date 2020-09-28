@@ -4,6 +4,22 @@ import { Link } from 'react-router-dom';
 class AltNavbar extends React.Component {
     constructor(props) {
         super(props);
+        this.updateSearch = this.updateSearch.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.state = {
+            search: ''
+        }
+    }
+
+    updateSearch(e) {
+        this.setState({ search: e.target.value.substr(0, 100) });
+    }
+
+    handleSubmit() {
+        e.preventDefault();
+        this.props.search
+        this.props.history.push(`/search/q=${this.state.searchTerm}`)
+        this.setState({ searchTerm: '' });
     }
  
     render() {
@@ -22,7 +38,13 @@ class AltNavbar extends React.Component {
                             <div className="search-icon">
                                     {/* <FontAwesomeIcon icon={faSearch} /> */}
                             </div>
-                            <input className="searchbar" type="text" placeholder="Search..."></input>
+                            <input 
+                                className="searchbar" 
+                                type="text" 
+                                placeholder="Search..."
+                                value={this.state.search} 
+                                onChange={this.updateSearch}>
+                            </input>
                         </div>
                         <div className="rightbutton">
                             <button className="alt_login">

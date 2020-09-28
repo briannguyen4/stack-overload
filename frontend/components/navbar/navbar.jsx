@@ -3,17 +3,23 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-
-
 class Navbar extends React.Component {
     constructor(props) {
         super(props);
         this.dropDown = this.dropDown.bind(this);
+        this.updateSearch = this.updateSearch.bind(this);
+        this.state = {
+            search: ''
+        }
     }
 
     dropDown(e) {
         e.preventDefault();
         document.getElementById("dropdown").classList.toggle("change");
+    }
+
+    updateSearch(e) {
+        this.setState({ search: e.target.value.substr(0, 50) });
     }
     
     render() {
@@ -43,7 +49,12 @@ class Navbar extends React.Component {
                         <div className="search-icon">
                                 {/* <FontAwesomeIcon icon={faSearch} /> */}
                         </div>
-                        <input className="searchbar" type="text" placeholder="Search..."></input>
+                        <input className="searchbar" 
+                        type="text" 
+                        placeholder="Search..."
+                        value={this.state.search} 
+                        onChange={this.updateSearch}>
+                        </input>
                     </div>
                     <div className="nav-right">
                         <div className="nav-right__loginbtn">

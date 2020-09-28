@@ -10,6 +10,7 @@ class Answer extends React.Component {
     }
 
     componentDidMount() {
+      debugger
       this.props.getAnswer(this.props.answer.id, this.props.questionId);
     }
 
@@ -22,6 +23,7 @@ class Answer extends React.Component {
     }
 
     render() {
+      debugger
       if (this.props.answer === undefined) {
         return null;
       } else {

@@ -3,6 +3,7 @@ import Answer from './answer';
 import { upvoteAnswer, downvoteAnswer, getAnswer } from "./../../actions/answer_actions";
 
 const mapStateToProps = (state, ownProps) => {
+    debugger
     const answerId = ownProps.answerId
     const answer = state.entities.answers[answerId] || {};
     // let score = 0;

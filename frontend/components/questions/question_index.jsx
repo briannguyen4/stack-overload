@@ -32,7 +32,7 @@ class QuestionIndex extends React.Component {
                                 <Link to="questions/new">Ask Question</Link>
                             </div>   
                         {this.props.questions.map((question, idx) => (
-                            <div className="question-container">
+                            <div key={`question${idx}`} className="question-container">
                                 <div className="q-vav">
                                     <span className="q-num">{question.score}</span>
                                     <p>votes</p>
@@ -41,7 +41,7 @@ class QuestionIndex extends React.Component {
                                 </div>
                                 <ul className="question">
                                     <Link to={`/questions/${question.id}`}>
-                                        <li key={question.id}>
+                                        <li>
                                             <span>{question.title}</span>
                                             <br/>
                                         </li>
