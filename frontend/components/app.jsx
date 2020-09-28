@@ -8,6 +8,7 @@ import QuestionIndexContainer from './questions/question_index_container';
 import PostQuestion from './questions/post_question_form';
 import UpdateQuestion from './questions/update_question_form';
 import QuestionShowContainer from './questions/question_show_container';
+import QuestionSearchContainer from './questions/question_search_container';
 
 const App = () => (
     <>
@@ -15,6 +16,7 @@ const App = () => (
         <AuthRoute exact path='/login' component={LoginFormContainer} />
         <AuthRoute exact path='/signup' component={SignupFormContainer}/>
         <ProtectedRoute exact path='/' component={QuestionIndexContainer}/>
+        <Route path="/search/q=:searchQuery" component={QuestionSearchContainer} />
         <Switch>
             <ProtectedRoute exact path="/questions/:questionId/edit" component={UpdateQuestion} />
             <ProtectedRoute exact path='/questions/new' component={PostQuestion} />

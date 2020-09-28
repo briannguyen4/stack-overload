@@ -7,18 +7,18 @@ class AltNavbar extends React.Component {
         this.updateSearch = this.updateSearch.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
-            search: ''
+            searchQuery: ''
         }
     }
 
     updateSearch(e) {
-        this.setState({ search: e.target.value.substr(0, 100) });
+        this.setState({ searchQuery: e.target.value.substr(0, 100) });
     }
 
     handleSubmit() {
         e.preventDefault();
         this.props.search
-        this.props.history.push(`/search/q=${this.state.searchTerm}`)
+        this.props.history.push(`/search/q=${this.state.searchQuery}`)
         this.setState({ searchTerm: '' });
     }
  
@@ -42,8 +42,9 @@ class AltNavbar extends React.Component {
                                 className="searchbar" 
                                 type="text" 
                                 placeholder="Search..."
-                                value={this.state.search} 
-                                onChange={this.updateSearch}>
+                                value={this.state.searchQuery} 
+                                onChange={this.updateSearch}
+                                onSubmit={this.handleSubmit}>
                             </input>
                         </div>
                         <div className="rightbutton">

@@ -4,8 +4,8 @@ import { getQuestions } from './../../actions/question_actions';
 
 const mapStateToProps = (state) => {
     return {
-        questions: Object.values(state.entities.questions).reverse()
-    };
+        searchQuery: ownProps.match.params.searchQuery
+        };
 };
 
 const mapDispatchToProps = dispatch => {
