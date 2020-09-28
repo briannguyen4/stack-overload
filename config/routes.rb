@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get :search, controller: :main
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create, :show]
     resource :session, only: [:create, :destroy]
