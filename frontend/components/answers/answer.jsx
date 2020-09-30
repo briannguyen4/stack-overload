@@ -10,7 +10,6 @@ class Answer extends React.Component {
     }
 
     componentDidMount() {
-      debugger
       this.props.getAnswer(this.props.answer.id, this.props.questionId);
     }
 
