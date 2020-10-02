@@ -61,6 +61,13 @@ export const updateQuestion = (question) => dispatch => {
     );
 }
 
+export const searchQuestions = (searchQuery) => {
+    return dispatch => {
+        return APIUtil.searchQuestions(searchQuery)
+            .then((questions) => dispatch(receiveQuestions(questions)))
+    }
+}
+
 export const deleteQuestion = (questionId) => dispatch => {
     return (
         APIUtil.deleteQuestion(questionId)
@@ -81,6 +88,8 @@ export const downvoteQuestion = (questionId) => {
             .then((question) => dispatch(receiveQuestion(question)))
     }
 }
+
+
 
 
 
