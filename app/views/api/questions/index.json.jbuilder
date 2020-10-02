@@ -1,5 +1,10 @@
-@questions.each do |ques|
-    json.set! ques.id do
-        json.extract! ques, :id, :title, :body, :author_id, :answers, :score
+@questions.each do |question|
+    json.set! question.id do
+        json.id question.id
+        json.author_id question.author_id
+        json.title question.title
+        json.body question.body
+        json.score question.score
+        json.answers question.answers.length
     end
 end
