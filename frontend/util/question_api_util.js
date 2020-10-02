@@ -36,4 +36,11 @@ export const deleteQuestion = (questionId) => (
     })
 );
 
+export const searchQuestions = (searchQuery) => (
+    $.ajax({
+        url: `/search/?q=${searchQuery}`,
+        method: 'GET'
+    })
+);
+
 
