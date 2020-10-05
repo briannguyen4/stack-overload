@@ -11,5 +11,3 @@ class MainController < ActionController::Base
         request.format = :json
     end
 end
-
-  
