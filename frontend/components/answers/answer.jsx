@@ -23,7 +23,6 @@ class Answer extends React.Component {
     }
 
     render() {
-      debugger
       if (this.props.answer === undefined) {
         return null;
       } else {
