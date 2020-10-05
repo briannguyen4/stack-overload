@@ -36,7 +36,7 @@ class QuestionIndex extends React.Component {
                                 <div className="q-vav">
                                     <span className="q-num">{question.score}</span>
                                     <p>votes</p>
-                                    <span className="q-num">{question.answers}</span>
+                                    <span className="q-num">{question.answers.length}</span>
                                     <p>answers</p>
                                 </div>
                                 <ul className="question">

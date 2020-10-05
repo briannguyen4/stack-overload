@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+// import { Route, Link, HashRouter, withRouter } from "react-router-dom";
 
 class AltNavbar extends React.Component {
     constructor(props) {
@@ -15,11 +16,11 @@ class AltNavbar extends React.Component {
         this.setState({ searchQuery: e.target.value.substr(0, 100) });
     }
 
-    handleSubmit() {
+    handleSubmit(e) {
         e.preventDefault();
-        this.props.search
-        this.props.history.push(`/search/q=${this.state.searchQuery}`)
-        this.setState({ searchTerm: '' });
+        // this.props.search
+        this.props.history.push(`/questions`)
+        // this.setState({ searchTerm: '' });
     }
  
     render() {
@@ -34,19 +35,21 @@ class AltNavbar extends React.Component {
                                 </span>
                             </Link>
                         </div>
-                        <div className="searchbar-container">
-                            <div className="search-icon">
-                                    {/* <FontAwesomeIcon icon={faSearch} /> */}
+                        <form onSubmit={this.handleSubmit}>
+                            <div className="searchbar-container">
+                                <div className="search-icon">
+                                        {/* <FontAwesomeIcon icon={faSearch} /> */}
+                                </div>
+                                <input 
+                                    className="searchbar" 
+                                    type="text" 
+                                    placeholder="Search..."
+                                    value={this.state.searchQuery} 
+                                    onChange={this.updateSearch}
+                                    >
+                                </input>
                             </div>
-                            <input 
-                                className="searchbar" 
-                                type="text" 
-                                placeholder="Search..."
-                                value={this.state.searchQuery} 
-                                onChange={this.updateSearch}
-                                onSubmit={this.handleSubmit}>
-                            </input>
-                        </div>
+                        </form>
                         <div className="rightbutton">
                             <button className="alt_login">
                                 Profile
@@ -85,4 +88,4 @@ class AltNavbar extends React.Component {
         }
 }
 
-export default AltNavbar;
+export default withRouter(AltNavbar); 

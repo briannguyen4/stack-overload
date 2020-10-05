@@ -5,6 +5,6 @@
         json.title question.title
         json.body question.body
         json.score question.score
-        json.answers question.answers.length
+        json.answers question.answers
     end
 end

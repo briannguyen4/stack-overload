@@ -3,7 +3,6 @@ import QuestionShow from './question_show';
 import { getQuestion, deleteQuestion, upvoteQuestion, downvoteQuestion } from './../../actions/question_actions';
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
     const questionId = parseInt(ownProps.match.params.questionId);
     const question = state.entities.questions[questionId] || {};
 
