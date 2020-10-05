@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
-// import { Route, Link, HashRouter, withRouter } from "react-router-dom";
+import { Link, HashRouter, withRouter } from 'react-router-dom';
 
 class AltNavbar extends React.Component {
     constructor(props) {
@@ -18,9 +17,8 @@ class AltNavbar extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // this.props.search
-        this.props.history.push(`/questions`)
-        // this.setState({ searchTerm: '' });
+        this.props.history.push(`/search/q=${this.state.searchQuery}`)
+        this.setState({ searchQuery: '' });
     }
  
     render() {
