@@ -25,39 +25,36 @@ class QuestionIndex extends React.Component {
                 <div className="questions-container">
                     <Sidebar />
                     <div className="questions-body">
-                        <div className="questions-main">
-                            <div className="questions-top">
-                                <h1>All Questions</h1>
-                                <div className="ask-question">
-                                    <Link to="questions/new">Ask Question</Link>
-                                </div> 
-                            </div>  
-                            <p>{this.props.questions.length} questions</p>
-                        {this.props.questions.map((question, idx) => (
-                            <div key={`question${idx}`} className="question-container">
-                                <div className="q-vav">
-                                    <span className="q-num">{question.score}</span>
-                                    <p>votes</p>
-                                    <span className="q-num">{question.answers.length}</span>
-                                    <p>answers</p>
-                                </div>
-                                <ul className="question">
-                                    <Link to={`/questions/${question.id}`}>
-                                        <li>
-                                            <span>{question.title}</span>
-                                            <br/>
-                                        </li>
-                                    </Link>
-                                    <li>
-                                        <div className="question-body">{parse(this.truncate(question.body))}</div>
-                                    </li>
-                                </ul>
-                                <div>
-                                    {question.author}
-                                </div>
+                        <div className="questions-main"></div>
+                        <div className="questions-top">
+                            <h1>All Questions</h1>
+                            <div className="ask-question">
+                                <Link to="questions/new">Ask Question</Link>
+                            </div> 
+                        </div>  
+                        <p className="questions">{this.props.questions.length} questions</p>
+                    <div>
+                    {this.props.questions.map((question, idx) => (
+                        <div key={`question${idx}`} className="question-container">
+                            <div className="q-vav">
+                                <span className="q-num">{question.score}</span>
+                                <p>votes</p>
+                                <span className="q-num">{question.answers.length}</span>
+                                <p>answers</p>
                             </div>
-                            ))}
+                            <div className="question">
+                                <Link to={`/questions/${question.id}`}>
+                                    <span>{question.title}</span>
+                                    <br/>
+                                </Link>
+                                <div className="question-body">{parse(this.truncate(question.body))}</div>
+                            </div>
+                            <div>
+                                {question.author}
+                            </div>
                         </div>
+                        ))}
+                    </div>
                     </div>
                 </div>
                 <Footer/>
