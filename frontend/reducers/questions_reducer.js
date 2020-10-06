@@ -1,4 +1,4 @@
-import { RECEIVE_QUESTION, RECEIVE_QUESTIONS, REMOVE_QUESTION } from '../actions/question_actions';
+import { RECEIVE_QUESTION, RECEIVE_QUESTIONS, REMOVE_QUESTION, CLEAR_QUESTION_SEARCH } from '../actions/question_actions';
 
 const questionReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -14,6 +14,8 @@ const questionReducer = (state = {}, action) => {
             newState = Object.assign({}, state);
             delete newState[action.question.id];
             return newState;
+        case CLEAR_QUESTION_SEARCH: 
+            return [];
         default:
             return state;
     }

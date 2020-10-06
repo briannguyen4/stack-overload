@@ -7,6 +7,7 @@ export const DELETE_QUESTION = "DELETE_QUESTION";
 export const RECEIVE_QUESTION_ERRORS = "RECEIEVE_QUESTION_ERRORS";
 export const REMOVE_QUESTION = 'REMOVE_QUESTION';
 export const CLEAR_QUESTION_ERRORS = 'CLEAR_QUESTION_ERRORS';
+export const CLEAR_QUESTION_SEARCH = 'CLEAR_QUESTION_SEARCH';
 
 export const receiveQuestions = questions => ({
     type: RECEIVE_QUESTIONS,
@@ -30,6 +31,10 @@ export const receiveQuestionErrors = errors => ({
 
 export const clearQuestionErrors = () => ({
     type: CLEAR_QUESTION_ERRORS
+});
+
+export const clearQuestionSearch = () => ({
+    type: CLEAR_QUESTION_SEARCH
 });
 
 export const getQuestions = () => dispatch => {

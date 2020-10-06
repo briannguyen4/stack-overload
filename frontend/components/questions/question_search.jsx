@@ -7,16 +7,46 @@ import Footer from '../main/footer';
 class QuestionSearch extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            searchQuery: this.props.searchQuery,
+        }
     }
-    
+
     componentDidMount() {
-        this.props.getQuestions();
+        this.props.clearSearch();
+        this.props.search(this.props.searchQuery);
+    }
+
+    componentDidUpdate() {
+        if (this.state.searchQuery !== this.props.match.params.searchQuery) {
+            this.props.clearSearch();
+            this.setState({
+                searchQuery: this.props.searchQuery
+            });
+            this.props.search(this.props.searchQuery)
+        } 
     }
 
     render() {
-        // return (
-              
-        //         );
+        var parse = require('html-react-parser');
+
+        if (this.props.questions === undefined) {
+            return null;
+          } else {
+            return (
+                <>
+                <AltNavbarContainer />
+                <div className="questions-search">
+                    {this.props.questions.map((question, idx) => (
+                        <div key={`question${idx}`}>
+                            <h4>{question.title}</h4>
+                            <div>{parse(question.body)}</div>
+                        </div>
+                    ))}
+                </div>
+                </>
+            );
+        }
     }
 }
 
