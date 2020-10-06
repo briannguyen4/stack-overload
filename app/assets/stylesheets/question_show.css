@@ -10,6 +10,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
+  padding-left: 210px;
 }
 
 .question-show {
