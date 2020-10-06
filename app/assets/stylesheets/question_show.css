@@ -56,14 +56,14 @@
   background-color: #0077CC;
 }
 
-.question-show-left {
+.question-show-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-top: 1px solid #e4e6e8;
 }
 
-.question-show-left__votes {
+.question-show-body__votes {
   margin-top: 25px;
   width: 36px;
   height: 100px;
@@ -79,7 +79,7 @@
           align-items: center;
 }
 
-.question-show-left__votes__upvote {
+.question-show-body__votes__upvote {
   width: 0;
   height: 0;
   border-left: 16px solid transparent;
@@ -88,13 +88,13 @@
   cursor: pointer;
 }
 
-.question-show-left__votes__score {
+.question-show-body__votes__score {
   color: #6A737C;
   font-size: 22px;
   margin: 15px 0px;
 }
 
-.question-show-left__votes__downvote {
+.question-show-body__votes__downvote {
   width: 0;
   height: 0;
   border-left: 16px solid transparent;

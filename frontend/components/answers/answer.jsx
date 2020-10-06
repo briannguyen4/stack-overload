@@ -29,10 +29,10 @@ class Answer extends React.Component {
           <>
             <div className="answer-show">
             {this.props.answer ? 
-              (<div className="question-show-left__votes">
-                  <div className="question-show-left__votes__upvote" onClick={this.upvote}></div>
-                  <div className="question-show-left__votes__score">{this.props.score}</div>
-                  <div className="question-show-left__votes__downvote" onClick={this.downvote}></div>
+              (<div className="question-show-body__votes">
+                  <div className="question-show-body__votes__upvote" onClick={this.upvote}></div>
+                  <div className="question-show-body__votes__score">{this.props.score}</div>
+                  <div className="question-show-body__votes__downvote" onClick={this.downvote}></div>
                 </div>
                 ) : null}
               <ReactQuill

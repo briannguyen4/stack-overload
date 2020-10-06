@@ -14,7 +14,7 @@ class QuestionIndex extends React.Component {
     }
 
     truncate(str) {
-        return (str.length > 225) ? str.substr(0, 224) + ' ...' : str;
+        return (str.length > 300) ? str.substr(0, 299) + ' ...' : str;
     }
 
     render() {
@@ -26,11 +26,13 @@ class QuestionIndex extends React.Component {
                     <Sidebar />
                     <div className="questions-body">
                         <div className="questions-main">
-                            <h1>All Questions</h1>
+                            <div className="questions-top">
+                                <h1>All Questions</h1>
+                                <div className="ask-question">
+                                    <Link to="questions/new">Ask Question</Link>
+                                </div> 
+                            </div>  
                             <p>{this.props.questions.length} questions</p>
-                            <div className="ask-question">
-                                <Link to="questions/new">Ask Question</Link>
-                            </div>   
                         {this.props.questions.map((question, idx) => (
                             <div key={`question${idx}`} className="question-container">
                                 <div className="q-vav">
