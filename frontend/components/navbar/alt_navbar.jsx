@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, HashRouter, withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class AltNavbar extends React.Component {
     constructor(props) {

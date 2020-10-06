@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,8 +8,9 @@ class Navbar extends React.Component {
         super(props);
         this.dropDown = this.dropDown.bind(this);
         this.updateSearch = this.updateSearch.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
-            search: ''
+            searchQuery: ''
         }
     }
 
@@ -19,7 +20,13 @@ class Navbar extends React.Component {
     }
 
     updateSearch(e) {
-        this.setState({ search: e.target.value.substr(0, 50) });
+        this.setState({ searchQuery: e.target.value.substr(0, 100) });
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.history.push(`/search/q=${this.state.searchQuery}`)
+        this.setState({ searchQuery: '' });
     }
     
     render() {
@@ -45,17 +52,19 @@ class Navbar extends React.Component {
                             </span>
                         </Link>
                     </div>
-                    <div className="searchbar-container">
-                        <div className="search-icon">
-                                {/* <FontAwesomeIcon icon={faSearch} /> */}
+                    <form onSubmit={this.handleSubmit}>
+                        <div className="searchbar-container">
+                            <div className="search-icon">
+                                    {/* <FontAwesomeIcon icon={faSearch} /> */}
+                            </div>
+                            <input className="searchbar" 
+                            type="text" 
+                            placeholder="Search..."
+                            value={this.state.search} 
+                            onChange={this.updateSearch}>
+                            </input>
                         </div>
-                        <input className="searchbar" 
-                        type="text" 
-                        placeholder="Search..."
-                        value={this.state.search} 
-                        onChange={this.updateSearch}>
-                        </input>
-                    </div>
+                    </form>
                     <div className="nav-right">
                         <div className="nav-right__loginbtn">
                             <Link to="login" >Log in</Link>
@@ -71,4 +80,4 @@ class Navbar extends React.Component {
     }
 }
 
-export default Navbar;
+export default withRouter(Navbar);
