@@ -48,8 +48,8 @@ class AltNavbar extends React.Component {
                                 </input>
                             </div>
                         </form>
-                        <div className="rightbutton">
-                            <button className="alt_login">
+                        <div className="nav-right">
+                            <button className="altlogin">
                                 Profile
                             </button>
                             <div>

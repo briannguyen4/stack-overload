@@ -43,13 +43,38 @@ class QuestionSearch extends React.Component {
             return (
                 <>
                 {navbar}
-                <div className="questions-search">
-                    {this.props.questions.map((question, idx) => (
-                        <div key={`question${idx}`}>
-                            <h4>{question.title}</h4>
-                            <div>{parse(question.body)}</div>
+                <div className="questions-search-container">
+                    <Sidebar />
+                    <div className="questions-search">
+                        <div className="questions-search-top">
+                            <h1>Search Results</h1>
+                            <div className="ask-question">
+                                <Link to="questions/new">Ask Question</Link>
+                            </div> 
+                        </div>  
+                        <div className="questions-search-top-results">Results for {this.props.searchQuery}</div>
+                        <div className="questions-search-top-number">{this.props.questions.length} results</div>
+                        <div>
+                        {this.props.questions.map((question, idx) => (
+                            <div className="questions-search__question" key={`question${idx}`}>
+                                <div className="q-vav">
+                                    <span className="q-num">{question.score}</span>
+                                    <p>votes</p>
+                                    <span className="q-num">{question.answers.length}</span>
+                                    <p>answers</p>
+                                </div>
+                                <div className="question">
+                                    <Link to={`/questions/${question.id}`}>
+                                        <span>{question.title}</span>
+                                        <br/>
+                                    </Link>
+                                    <div>{parse(question.body)}</div>
+                                </div>
+                            </div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
+                    
                 </div>
                 </>
             );

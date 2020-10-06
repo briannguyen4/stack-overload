@@ -6,16 +6,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: auto;
   padding-left: 210px;
+  padding-top: 50px;
 }
 
 .question-show {
   padding: 24px;
-  padding-top: 74px;
 }
 
 .question-show-top {

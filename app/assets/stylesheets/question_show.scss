@@ -1,14 +1,12 @@
 .question-show-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin: auto;
     padding-left: 210px;
+    padding-top: 50px;
 }
 
 .question-show {
     padding: 24px;
-    padding-top: 74px;
     &-top {
         display: flex;
         justify-content: space-between;
