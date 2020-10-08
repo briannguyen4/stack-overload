@@ -7,9 +7,11 @@
  *= require_tree .
  *= require_self
  */
-*, html, body {
+*, html, body, p {
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html, body {
@@ -17,8 +19,6 @@ html, body {
   background-color: #FFFFFF;
   height: 100%;
   width: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .body {
