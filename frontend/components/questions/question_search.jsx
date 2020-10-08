@@ -56,19 +56,19 @@ class QuestionSearch extends React.Component {
                         <div className="questions-search-top-number">{this.props.questions.length} results</div>
                         <div>
                         {this.props.questions.map((question, idx) => (
-                            <div className="questions-search__question" key={`question${idx}`}>
+                            <div className="questions-search-question" key={`question${idx}`}>
                                 <div className="q-vav">
                                     <span className="q-num">{question.score}</span>
                                     <p>votes</p>
                                     <span className="q-num">{question.answers.length}</span>
                                     <p>answers</p>
                                 </div>
-                                <div className="question">
+                                <div className="questions-search-question__container">
                                     <Link to={`/questions/${question.id}`}>
-                                        <span>{question.title}</span>
+                                        <span className="questions-search-question__title">{question.title}</span>
                                         <br/>
                                     </Link>
-                                    <div>{parse(question.body)}</div>
+                                    <div className="questions-search-question__body">{parse(question.body)}</div>
                                 </div>
                             </div>
                             ))}

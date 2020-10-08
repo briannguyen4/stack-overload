@@ -28,7 +28,7 @@
             margin-bottom: 16px;
         }
     }
-    &__question {
+    &-question {
         height: 162px;
         width: 800px;
         padding: 12px 8px;
@@ -36,6 +36,23 @@
         display: flex;
         &:first-child {
             border-top: 1px solid #d6d9dc;
+        }
+        &__container {
+            list-style: none;
+            min-width: 740px;
+            a {
+                font-size: 16px;
+                color: #0077CC;
+                text-decoration: none;
+                &:hover {
+                    color: #0095ff;
+                }
+            }
+        }
+        &__title {
+            font-weight: 400;
+            line-height: 1.4;
+            padding-bottom: 16px;
         }
     }
 }
