@@ -48,13 +48,8 @@ class AltNavbar extends React.Component {
                                 </input>
                             </div>
                         </form>
-                        <div className="nav-right">
-                            <button className="altlogin">
-                                Profile
-                            </button>
-                            <div>
-                                <button className="logout" onClick={this.props.logout}>Log Out</button>    
-                            </div>
+                        <div className="alt-nav-logout">
+                            <button onClick={this.props.logout}>Log Out</button>    
                         </div>
                     </div>
                 </header>
