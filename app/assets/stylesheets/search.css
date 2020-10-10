@@ -8,6 +8,7 @@
           flex-direction: row;
   padding-left: 210px;
   padding-top: 50px;
+  min-height: 80vh;
 }
 
 .questions-search {
@@ -39,7 +40,7 @@
 }
 
 .questions-search-top-number {
-  font-size: 18px;
+  font-size: 22px;
   margin-left: 2px;
   margin-bottom: 16px;
 }
