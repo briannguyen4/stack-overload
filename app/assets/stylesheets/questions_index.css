@@ -63,6 +63,7 @@
 
 .question {
     list-style: none;
+    min-width: 740px;
 }
 
 .question a {
@@ -87,7 +88,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 58px;
+    min-width: 58px;
     margin-left: -21px;
     margin-right: 16px;
 }

@@ -16,9 +16,12 @@ class AltNavbar extends React.Component {
     }
 
     handleSubmit(e) {
+        debugger
         e.preventDefault();
-        this.props.history.push(`/search/q=${this.state.searchQuery}`)
-        this.setState({ searchQuery: '' });
+        if (this.state.searchQuery.length > 0) {
+            this.props.history.push(`/search/q=${this.state.searchQuery}`)
+            this.setState({ searchQuery: '' });
+        }
     }
  
     render() {

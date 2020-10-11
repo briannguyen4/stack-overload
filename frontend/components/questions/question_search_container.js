@@ -5,7 +5,7 @@ import { searchQuestions, clearQuestionSearch } from './../../actions/question_a
 const mapStateToProps = (state, ownProps) => {
     return {
         searchQuery: ownProps.match.params.searchQuery,
-        questions: Object.values(state.entities.questions),
+        questions: Object.values(state.entities.questions).reverse(),
         currentUser: state.entities.users[state.session.id]
         };
 };
