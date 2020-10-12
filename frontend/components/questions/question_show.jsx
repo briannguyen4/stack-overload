@@ -14,7 +14,6 @@ class QuestionShow extends React.Component {
       this.deleteQuestion = this.deleteQuestion.bind(this);
       this.upvote = this.upvote.bind(this);
       this.downvote = this.downvote.bind(this);
-      this.rerender = this.rerender.bind(this);
     }
 
     componentDidMount() {
@@ -33,11 +32,6 @@ class QuestionShow extends React.Component {
 
     downvote() {
       this.props.downvote(this.props.questionId)
-    }
-
-    rerender() {
-      debugger
-      this.setState({ rerender: !this.state.rerender })
     }
 
     render() {
@@ -102,7 +96,7 @@ class QuestionShow extends React.Component {
                         </ul>
                       </div>): null}
 
-                <AnswerFormContainer questionId={this.props.questionId} rerenderParent={this.rerender}/>
+                <AnswerFormContainer questionId={this.props.questionId}/>
             </div>
           </div>
           <Footer/>

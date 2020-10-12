@@ -29,10 +29,9 @@ class AnswerForm extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
         e.preventDefault();
         this.props.action(this.state, this.props.questionId);
-        this.props.rerenderParent();
+        this.setState({body: ""});
     }
     
     render() {
