@@ -34,7 +34,7 @@ class Navbar extends React.Component {
             <header className="main-nav-container">
                 <div className="main-nav">
                     <div className="main-nav__left">
-                        <span className="dropdown" onClick={this.dropDown}>
+                        <div className="dropdown" onClick={this.dropDown}>
                             <div id="dropdown" className="dropdown__button">
                                 <div className="bar1"></div>
                                 <div className="bar2"></div>
@@ -45,7 +45,7 @@ class Navbar extends React.Component {
                                 <a href="#about">About</a>
                                 <a href="#contact">Contact</a>
                             </div>
-                        </span>
+                        </div>
                         <Link to="/">
                             <span className="logo" href="#">
                                 <img src={window.logoURL} />
