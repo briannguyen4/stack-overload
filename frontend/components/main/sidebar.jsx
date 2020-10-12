@@ -18,9 +18,9 @@ const Sidebar = () => (
         <Link to="/questions">
           <li>Stack Overload</li>
         </Link>
+      </div>
     </div>
   </div>
-    </div>
   </>
 );
 

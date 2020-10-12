@@ -11,12 +11,14 @@
 .main-nav {
 	display: flex;
 	height: 100%;
+	margin: auto;
 	align-items: center;
 	max-width: 1280px;
 	&__left { 
 		height: 100%;
 		display: flex;
 		align-items: center;
+		
 	}
 }
 
@@ -31,6 +33,7 @@
 	}
 	&__button {
 		margin: auto;
+		
 	}
 }
 
@@ -54,6 +57,25 @@
 .change .bar3 {
 	-webkit-transform: rotate(45deg) translate(-4px, -4px);
 	transform: rotate(45deg) translate(-4px, -4px);
+}
+
+.dropdown-menu {
+	position: absolute;
+	margin-top: 50px;
+	height: 288px;
+	width: 240px;
+	display: flex;
+	flex-direction: column;
+	background-color: #FFFFFF;
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(-3px);
+	box-shadow: 0 3px 4px rgba(12,13,14,0.08), 0 1px 4px rgba(12, 13, 14, 0.08), 0 2px 8px rgba(12,13,14,0.08);
+}
+
+.change .dropdown-menu {
+	opacity: 1;
+	pointer-events: all;
 }
 
 .logo img{
@@ -113,7 +135,7 @@
 }
 
 .searchbar-container {
-	margin-left: 302.5px;
+	margin-left: 240px;
 
 }
 
@@ -122,11 +144,8 @@
 }
 
 .nav-right {
-    display: flex;
-    padding-left: 4px;
-    padding-right: 8px;
-	margin-left: auto;
-	margin-right: 8.5px;
+	display: flex;
+	margin-left: 48px;
 	&__loginbtn {
 		background-color: #E1ECF4;
 		font-size: 13px;

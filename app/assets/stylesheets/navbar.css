@@ -14,6 +14,7 @@
   display: -ms-flexbox;
   display: flex;
   height: 100%;
+  margin: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -69,6 +70,32 @@
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-4px, -4px);
   transform: rotate(45deg) translate(-4px, -4px);
+}
+
+.dropdown-menu {
+  position: absolute;
+  margin-top: 50px;
+  height: 288px;
+  width: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #FFFFFF;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 3px 4px rgba(12, 13, 14, 0.08), 0 1px 4px rgba(12, 13, 14, 0.08), 0 2px 8px rgba(12, 13, 14, 0.08);
+          box-shadow: 0 3px 4px rgba(12, 13, 14, 0.08), 0 1px 4px rgba(12, 13, 14, 0.08), 0 2px 8px rgba(12, 13, 14, 0.08);
+}
+
+.change .dropdown-menu {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .logo img {
@@ -132,7 +159,7 @@
 }
 
 .searchbar-container {
-  margin-left: 302.5px;
+  margin-left: 240px;
 }
 
 #altsearch {
@@ -143,10 +170,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 4px;
-  padding-right: 8px;
-  margin-left: auto;
-  margin-right: 8.5px;
+  margin-left: 48px;
 }
 
 .nav-right__loginbtn {

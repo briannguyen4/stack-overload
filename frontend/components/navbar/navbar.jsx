@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 class Navbar extends React.Component {
@@ -16,7 +17,8 @@ class Navbar extends React.Component {
 
     dropDown(e) {
         e.preventDefault();
-        document.getElementById("dropdown").classList.toggle("change");
+        document.getElementById("dropdown-button").classList.toggle("change");
+        document.getElementById("dropdown-menu").classList.toggle("change");
     }
 
     updateSearch(e) {
@@ -34,16 +36,25 @@ class Navbar extends React.Component {
             <header className="main-nav-container">
                 <div className="main-nav">
                     <div className="main-nav__left">
-                        <div className="dropdown" onClick={this.dropDown}>
-                            <div id="dropdown" className="dropdown__button">
+                        <div id="dropdown-button" className="dropdown" onClick={this.dropDown}>
+                            <div className="dropdown__button">
                                 <div className="bar1"></div>
                                 <div className="bar2"></div>
                                 <div className="bar3"></div>
                             </div>
-                            <div id="my-drop" className="drop-down">
-                                <a href="#home">Home</a>
-                                <a href="#about">About</a>
-                                <a href="#contact">Contact</a>
+                            <div id="dropdown-menu" className="dropdown-menu">
+                                <div className="home">
+                                    <Link to="/questions">
+                                    <li>Home</li>
+                                    </Link>
+                                </div>
+                                <p>PUBLIC</p>
+                                <div className="public">
+                                    <FontAwesomeIcon icon={faGlobeAmericas} />
+                                    <Link to="/questions">
+                                    <li>Stack Overload</li>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                         <Link to="/">
