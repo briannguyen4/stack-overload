@@ -30,7 +30,7 @@ class AnswerForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.action(this.state, this.props.questionId);
+        this.props.createAnswer(this.state, this.props.questionId);
         this.setState({body: ""});
     }
     

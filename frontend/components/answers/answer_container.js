@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Answer from './answer';
-import { upvoteAnswer, downvoteAnswer, getAnswer } from "./../../actions/answer_actions";
+import { upvoteAnswer, downvoteAnswer } from "./../../actions/answer_actions";
 
 const mapStateToProps = (state, ownProps) => {
     const answerId = ownProps.answerId
@@ -19,7 +19,6 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        getAnswer: (answerId, questionId) => dispatch(getAnswer(answerId, questionId)),
         upvote: (questionId, answerId) => dispatch(upvoteAnswer(questionId, answerId)),
         downvote: (questionId, answerId) => dispatch(downvoteAnswer(questionId, answerId))
     };

@@ -9,10 +9,6 @@ class Answer extends React.Component {
       this.downvote = this.downvote.bind(this);
     }
 
-    componentDidMount() {
-      this.props.getAnswer(this.props.answer.id, this.props.questionId);
-    }
-
     upvote() {
       this.props.upvote(this.props.questionId, this.props.answer.id)
     }
