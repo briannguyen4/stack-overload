@@ -6,11 +6,13 @@ import { getAnswers } from './../../actions/answer_actions'
 const mapStateToProps = (state, ownProps) => {
     const questionId = parseInt(ownProps.match.params.questionId);
     const question = state.entities.questions[questionId] || {};
+    const answers = Object.values(state.entities.answers) || {};
 
     return {
         questionId: questionId,
         question: question,
-        currentUserId: state.session.id 
+        currentUserId: state.session.id,
+        answers: answers
     };
 };
 

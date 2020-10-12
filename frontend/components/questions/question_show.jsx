@@ -85,16 +85,16 @@ class QuestionShow extends React.Component {
                 </div>
 
               </div>
-                  {this.props.question.answers ? 
+                  {this.props.answers ? 
                     (<div className="question-show__answers">
-                      {this.props.question.answers.length === 1 ? (
+                      {this.props.answers.length === 1 ? (
                         <p className="question-show__answers__header">1 Answer</p>
                       ) : null}
-                      {this.props.question.answers.length > 1 ? (
+                      {this.props.answers.length > 1 ? (
                         <p className="question-show__answers__header">{this.props.question.answers.length} Answers</p>
                       ) : null}
                         <ul>
-                          {this.props.question.answers.map((answer, idx) => (
+                          {this.props.answers.map((answer, idx) => (
                           <li className="question-show__answers__answer" key={`answer${idx}`}>
                             <AnswerContainer questionId={this.props.questionId} answer={answer} answerId={answer.id}/>
                           </li>

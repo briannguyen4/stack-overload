@@ -24,10 +24,6 @@ class AnswerForm extends React.Component {
         }
     }
 
-    componentDidMount() {
-        this.props.getQuestion(this.props.questionId);
-    }
-
     handleChange(value) {
         this.setState({ body: value });
     }
