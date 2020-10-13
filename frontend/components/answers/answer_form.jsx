@@ -33,8 +33,10 @@ class AnswerForm extends React.Component {
     }
 
     handleSubmit(e) {
+        debugger
         e.preventDefault();
-        this.props.action(this.state, this.props.questionId)
+        this.props.action(this.state, this.props.questionId);
+        this.props.rerenderParent();
     }
     
     render() {

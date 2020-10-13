@@ -2,10 +2,16 @@ import * as APIUtil from './../util/answer_api_util';
 import * as VoteAPIUtil from '../util/vote_api_util';
 
 export const RECEIVE_ANSWER = 'RECEIVE_ANSWER';
+export const RECEIVE_ANSWERS = 'RECEIVE_ANSWERS';
 
 const receiveAnswer = (answer) => ({
     type: RECEIVE_ANSWER,
     answer,
+});
+
+const receiveAnswers = (answers) => ({
+    type: RECEIVE_ANSWERS,
+    answers
 });
 
 export const createAnswer = (answer, questionId) => dispatch => {
@@ -17,6 +23,12 @@ export const createAnswer = (answer, questionId) => dispatch => {
 export const getAnswer = (answerId, questionId) => dispatch => {
     return (APIUtil.getAnswer(answerId, questionId)
         .then(answer => dispatch(receiveAnswer(answer)))
+    );
+}
+
+export const getAnswers = (questionId) => dispatch => {
+    return (APIUtil.getAnswers(questionId)
+        .then(answers => dispatch(receiveAnswers(answers)))
     );
 }
 

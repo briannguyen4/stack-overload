@@ -10,14 +10,16 @@ import ReactQuill from 'react-quill';
 class QuestionShow extends React.Component {
     constructor(props) {
       super(props);
+      this.state = {rerender: false}
       this.deleteQuestion = this.deleteQuestion.bind(this);
       this.upvote = this.upvote.bind(this);
       this.downvote = this.downvote.bind(this);
-
+      this.rerender = this.rerender.bind(this);
     }
 
     componentDidMount() {
       this.props.getQuestion(this.props.questionId);
+      this.props.getAnswers(this.props.questionId);
     }
 
     deleteQuestion() {
@@ -31,6 +33,11 @@ class QuestionShow extends React.Component {
 
     downvote() {
       this.props.downvote(this.props.questionId)
+    }
+
+    rerender() {
+      debugger
+      this.setState({ rerender: !this.state.rerender })
     }
 
     render() {
@@ -95,7 +102,7 @@ class QuestionShow extends React.Component {
                         </ul>
                       </div>): null}
 
-                <AnswerFormContainer questionId={this.props.questionId}/>
+                <AnswerFormContainer questionId={this.props.questionId} rerenderParent={this.rerender}/>
             </div>
           </div>
           <Footer/>
