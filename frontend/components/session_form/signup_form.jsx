@@ -112,7 +112,6 @@ class SignupForm extends React.Component {
                             <div className="button-area">
                                 {this.renderErrors()}
                                 <button className="form-button sb">{this.props.formType}</button>
-                                
                             </div>
                         </form>
                         <p>By clicking “Sign up”, you agree to our terms of service, privacy policy and cookie policy</p>
