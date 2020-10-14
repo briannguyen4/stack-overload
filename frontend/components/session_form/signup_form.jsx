@@ -46,11 +46,11 @@ class SignupForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
+            <div className="auth_errors">
                 {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>{error}</li>
+                    <div key={`error-${i}`}>{error}</div>
                 ))}
-            </ul> 
+            </div> 
         )
     }
     
@@ -63,7 +63,7 @@ class SignupForm extends React.Component {
                     <h1 className="signup-left__header">Join the Stack Overload community</h1>
                     <div className="signup-left__snippet">
                         <div className="signup-left__icon"><FontAwesomeIcon icon={faQuestionCircle} /></div>
-                        <p className="signup-left__text">Get unstuck - ask a question</p>
+                        <p className="signup-left__text">Need technical help? Ask a question</p>
                     </div>
                     <div className="signup-left__snippet">
                         <div className="signup-left__icon"><FontAwesomeIcon icon={faCommentDots} /></div>
@@ -71,11 +71,11 @@ class SignupForm extends React.Component {
                     </div>
                     <div className="signup-left__snippet">
                         <div className="signup-left__icon"><FontAwesomeIcon icon={faLaptopCode} /></div>
-                        <p className="signup-left__text">Home to a large community of programmers</p>
+                        <p className="signup-left__text">Interact with a growing community of programmers</p>
                     </div>
                     <div className="signup-left__snippet">
                         <div className="signup-left__icon"><FontAwesomeIcon icon={faSearchPlus} /></div>
-                        <p className="signup-left__text">Search through an extensive collection of questions</p>
+                        <p className="signup-left__text">Search among a wide collection of questions</p>
                     </div>
                 </div>
                 <div className="signup-right">
@@ -84,7 +84,6 @@ class SignupForm extends React.Component {
                         <button className="signup-right__git">Visit the Github Page</button>
                     </a>
                     <div className="signup-right__form">
-                        {this.renderErrors()}
                         <form onSubmit={this.handleSubmit}>
                             <label>Display name
                                 <br/>
@@ -109,11 +108,14 @@ class SignupForm extends React.Component {
                                 onChange={this.handleInput('password')}
                                 />
                             </label>
-                            <br/>
                             <p>Passwords must contain at least eight characters, including at least 1 letter and 1 number.</p>
-                            <button className="form-button sb">{this.props.formType}</button>
+                            <div className="button-area">
+                                {this.renderErrors()}
+                                <button className="form-button sb">{this.props.formType}</button>
+                                
+                            </div>
                         </form>
-                            <p>By clicking “Sign up”, you agree to our terms of service, privacy policy and cookie policy</p>
+                        <p>By clicking “Sign up”, you agree to our terms of service, privacy policy and cookie policy</p>
                     </div>
                     <div className="signup-right__login">
                         <p>Already have an account? {this.props.link}</p>
