@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 
 class Navbar extends React.Component {
     constructor(props) {
@@ -66,8 +65,8 @@ class Navbar extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                         <div className="searchbar-container">
                             <div className="search-icon">
-                                    {/* <FontAwesomeIcon icon={faSearch} /> */}
-                            </div>
+                                    <FontAwesomeIcon icon={faSearch} />
+                            </div> 
                             <input className="searchbar" 
                             type="text" 
                             placeholder="Search..."

@@ -1,9 +1,9 @@
 .main-nav-container {
+  position: fixed;
   background-color: #fafafb;
   height: 50px;
   width: 100vw;
   border-top: 3px solid #f48024;
-  position: fixed;
   -webkit-box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15);
           box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15);
   z-index: 2;
@@ -103,41 +103,6 @@
   height: auto;
 }
 
-.header-wrapper span:hover {
-  background-color: #e4e6e8;
-  color: black;
-}
-
-.inline {
-  position: relative;
-  display: inline;
-}
-
-.drop-down {
-  top: 47px;
-  position: absolute;
-  overflow: auto;
-  z-index: 1;
-  display: none;
-}
-
-.drop-down a {
-  background-color: white;
-  display: block;
-  width: 240px;
-  height: 31px;
-  margin: auto;
-  padding: 4px 4px 4px 8px;
-}
-
-.drop-down a:hover {
-  background-color: #e4e6e8;
-}
-
-.show {
-  display: block;
-}
-
 .logo {
   padding: 0px 8px;
   display: -webkit-box;
@@ -150,85 +115,32 @@
   width: 166px;
 }
 
+.searchbar-container {
+  position: relative;
+  margin-left: 240px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+
+.search-icon svg {
+  font-size: 20px;
+}
+
 .searchbar {
   width: 607px;
+  padding-left: 32px;
   color: #3c4146;
   border: 0.8px solid #bbc0c4;
   border-radius: 3px;
   height: 33px;
 }
 
-.searchbar-container {
-  margin-left: 240px;
-}
-
 #altsearch {
   margin-right: 100px;
-}
-
-.nav-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 48px;
-}
-
-.nav-right__loginbtn {
-  background-color: #E1ECF4;
-  font-size: 13px;
-  width: 58px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 1px solid #7aa7c7;
-  border-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
-          box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
-  padding: 8px;
-}
-
-.nav-right__loginbtn a {
-  color: #39739d;
-  text-decoration: none;
-}
-
-.nav-right__loginbtn:hover {
-  background-color: #b3d3ea;
-}
-
-.nav-right__signupbtn {
-  background-color: #0095ff;
-  font-size: 13px;
-  width: 67px;
-  margin-left: 3.5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
-          box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
-}
-
-.nav-right__signupbtn a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-right__signupbtn:hover {
-  background-color: #0077cc;
 }
 
 .alt-nav-container {
