@@ -4,11 +4,12 @@ import { Link, withRouter } from 'react-router-dom';
 class AltNavbar extends React.Component {
     constructor(props) {
         super(props);
-        this.updateSearch = this.updateSearch.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             searchQuery: ''
         }
+        this.updateSearch = this.updateSearch.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.logout = this.logout.bind(this);
     }
 
     updateSearch(e) {
@@ -17,8 +18,13 @@ class AltNavbar extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.history.push(`/search/q=${this.state.searchQuery}`)
+        this.props.history.push(`/search/q=${this.state.searchQuery}`);
         this.setState({ searchQuery: '' });
+    }
+
+    logout() {
+        this.props.logout();
+        this.props.history.push(``);
     }
  
     render() {
@@ -49,7 +55,7 @@ class AltNavbar extends React.Component {
                             </div>
                         </form>
                         <div className="alt-nav-logout">
-                            <button onClick={this.props.logout}>Log Out</button>    
+                            <button onClick={this.logout}>Log Out</button>    
                         </div>
                     </div>
                 </header>
