@@ -63,17 +63,17 @@ class Navbar extends React.Component {
                         </Link>
                     </div>
                     <form onSubmit={this.handleSubmit}>
-                        <div className="searchbar-container">
-                            <div className="search-icon">
-                                    <FontAwesomeIcon icon={faSearch} />
-                            </div> 
-                            <input className="searchbar" 
-                            type="text" 
-                            placeholder="Search..."
-                            value={this.state.search} 
-                            onChange={this.updateSearch}>
-                            </input>
-                        </div>
+                    <div className="searchbar-container">
+                        <div className="search-icon">
+                            <FontAwesomeIcon icon={faSearch} />
+                        </div> 
+                        <input className="searchbar" 
+                        type="text" 
+                        placeholder="Search..."
+                        value={this.state.search} 
+                        onChange={this.updateSearch}>
+                        </input>
+                    </div>
                     </form>
                     <div className="nav-right">
                         <div className="nav-right__loginbtn">
