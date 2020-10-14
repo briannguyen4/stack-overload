@@ -119,6 +119,49 @@
 	margin-right: 100px;
 }
 
+.nav-right {
+	display: flex;
+	margin-left: 48px;
+	&__loginbtn {
+		background-color: #E1ECF4;
+		font-size: 13px;
+		width: 58px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid #7aa7c7;
+		border-radius: 3px;
+		box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.7);
+		padding:  8px;
+		a {
+			color: #39739d;
+			text-decoration: none;
+		}
+		&:hover {
+			background-color: #b3d3ea;
+		}
+	}
+	&__signupbtn {
+		background-color: #0095ff;
+		font-size: 13px;
+		width: 67px;
+		margin-left: 3.5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid transparent;
+		border-radius: 3px;
+		box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.4);
+		a {
+			color: white;
+			text-decoration: none; 
+		}
+		&:hover {
+			background-color: #0077cc;
+		} 
+	}
+}
+
 .alt-nav-container {
 	background-color: #fafafb;
 	height: 50px;
