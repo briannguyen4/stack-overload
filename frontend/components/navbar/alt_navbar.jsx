@@ -35,7 +35,7 @@ class AltNavbar extends React.Component {
                 <header className="alt-nav-container">
                     <div className="alt-nav">
                         <div className="alt-nav-container__left">
-                            <Link to="/signup">
+                            <Link to="/">
                                 <span className="logo" href="#">
                                     <img src={window.logoURL} />
                                 </span>
@@ -64,24 +64,38 @@ class AltNavbar extends React.Component {
                 )
         } else {
             return (
-                <header className="top-bar altbar">
-                    <div className="header-wrapper">
-                        <div className="main-nav">
-                            <span className="logo" href="#">
-                                <img src={window.logoURL} />
-                            </span>
+                <header className="alt-nav-container">
+                    <div className="alt-nav">
+                        <div className="alt-nav-container__left">
+                            <Link to="/signup">
+                                <span className="logo" href="#">
+                                    <img src={window.logoURL} />
+                                </span>
+                            </Link>
                         </div>
-                        <div className="searchbar-container">
-                            <input className="searchbar" type="text" placeholder="Search..."></input>
-                        </div>
-                        <div className="rightbutton">
-                            <div className="login">
+                        <form onSubmit={this.handleSubmit}>
+                            <div className="searchbar-container">
+                                <div className="search-icon">
+                                    <FontAwesomeIcon icon={faSearch} />
+                                </div> 
+                                <input 
+                                    className="searchbar" 
+                                    type="text" 
+                                    placeholder="Search..."
+                                    value={this.state.searchQuery} 
+                                    onChange={this.updateSearch}
+                                    >
+                                </input>
+                            </div>
+                        </form>
+                        <div className="nav-right">
+                            <div className="nav-right__loginbtn">
                                 <Link to="login" >Log in</Link>
                             </div>
-                            <div className="signup">
+                            <div className="nav-right__signupbtn">
                                 <Link to="signup" >Sign up</Link>
                             </div>   
-                            </div>
+                        </div>
                     </div>
                 </header>
                 )

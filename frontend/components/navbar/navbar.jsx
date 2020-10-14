@@ -82,7 +82,7 @@ class Navbar extends React.Component {
                         <div className="nav-right__signupbtn">
                             <Link to="signup" >Sign up</Link>
                         </div>   
-                        </div>
+                    </div>
                 </div>
             </header>
         )
