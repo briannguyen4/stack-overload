@@ -42,17 +42,13 @@ class Navbar extends React.Component {
                                 <div className="bar3"></div>
                             </div>
                             <div id="dropdown-menu" className="dropdown-menu">
-                                <div className="home">
-                                    <Link to="/questions">
-                                    <li>Home</li>
-                                    </Link>
+                                <div className="dropdown-menu__home">
+                                    <Link to="/">Home</Link>
                                 </div>
-                                <p>PUBLIC</p>
-                                <div className="public">
+                                <p className="dropdown-menu__public">PUBLIC</p>
+                                <div className="dropdown-menu__globe">
                                     <FontAwesomeIcon icon={faGlobeAmericas} />
-                                    <Link to="/questions">
-                                    <li>Stack Overload</li>
-                                    </Link>
+                                    <Link to="/questions">Stack Overload</Link>
                                 </div>
                             </div>
                         </div>

@@ -7,6 +7,7 @@ import Footer from '../main/footer';
 class QuestionIndex extends React.Component {
     constructor(props) {
         super(props);
+        this.askQuestion = this.askQuestion.bind(this);
     }
     
     componentDidMount() {
@@ -15,6 +16,10 @@ class QuestionIndex extends React.Component {
 
     truncate(str) {
         return (str.length > 300) ? str.substr(0, 299) + ' ...' : str;
+    }
+
+    askQuestion() {
+        this.props.history.push(`/questions/new`);
     }
 
     render() {
@@ -29,7 +34,7 @@ class QuestionIndex extends React.Component {
                         <div className="questions-top">
                             <h1>All Questions</h1>
                             <div className="ask-question">
-                                <Link to="questions/new">Ask Question</Link>
+                                <div onClick={this.askQuestion}>Ask Question</div>
                             </div> 
                         </div>  
                         <p className="questions">{this.props.questions.length} questions</p>

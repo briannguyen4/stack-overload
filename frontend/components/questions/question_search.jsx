@@ -11,6 +11,7 @@ class QuestionSearch extends React.Component {
         this.state = {
             searchQuery: this.props.searchQuery,
         }
+        this.askQuestion = this.askQuestion.bind(this);
     }
 
     componentDidMount() {
@@ -26,6 +27,10 @@ class QuestionSearch extends React.Component {
             this.props.clearSearch();
             this.props.search(this.props.searchQuery)
         } 
+    }
+
+    askQuestion() {
+        this.props.history.push(`/questions/new`);
     }
 
     render() {
@@ -49,7 +54,7 @@ class QuestionSearch extends React.Component {
                         <div className="questions-search-top">
                             <h1>Search Results</h1>
                             <div className="ask-question">
-                                <Link to="questions/new">Ask Question</Link>
+                                <div onClick={this.askQuestion}>Ask Question</div>
                             </div> 
                         </div>  
                         <div className="questions-search-top-results">Results for {this.props.searchQuery}</div>
