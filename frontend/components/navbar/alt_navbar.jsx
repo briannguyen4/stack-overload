@@ -36,7 +36,7 @@ class AltNavbar extends React.Component {
                     <div className="alt-nav">
                         <div className="alt-nav-container__left">
                             <Link to="/">
-                                <span className="logo" href="#">
+                                <span className="logo altlogo" href="#">
                                     <img src={window.logoURL} />
                                 </span>
                             </Link>

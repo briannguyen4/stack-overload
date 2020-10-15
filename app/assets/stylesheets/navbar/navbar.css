@@ -1,4 +1,5 @@
-.main-nav-container {
+.main-nav-container,
+.alt-nav-container {
   position: fixed;
   background-color: #fafafb;
   height: 50px;
@@ -9,19 +10,21 @@
   z-index: 2;
 }
 
-.main-nav {
+.main-nav,
+.alt-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  margin: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: auto;
   max-width: 1280px;
 }
 
-.main-nav__left {
+.main-nav__left,
+.alt-nav__left {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,11 +145,6 @@
   pointer-events: all;
 }
 
-.logo img {
-  max-width: 100%;
-  height: auto;
-}
-
 .logo {
   padding: 0px 8px;
   display: -webkit-box;
@@ -157,13 +155,23 @@
           align-items: center;
   height: 100%;
   width: 166px;
+  margin-right: 64px;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.altlogo {
+  margin-right: 108px;
 }
 
 .searchbar-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 240px;
+  margin-left: 48px;
 }
 
 .search-icon {
@@ -178,7 +186,7 @@
 }
 
 .searchbar {
-  width: 607px;
+  width: 640px;
   padding-left: 30px;
   color: #3c4146;
   border: 0.8px solid #bbc0c4;
@@ -200,7 +208,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 48px;
+  margin-left: 148px;
 }
 
 .nav-right__loginbtn {
@@ -261,29 +269,8 @@
   background-color: #0077cc;
 }
 
-.alt-nav-container {
-  background-color: #fafafb;
-  height: 50px;
-  width: 100%;
-  border-top: 3px solid #f48024;
-  position: fixed;
-  -webkit-box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15);
-          box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15);
-  z-index: 2;
-}
-
-.alt-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .alt-nav-logout {
-  margin-left: 64px;
+  margin-left: 188px;
 }
 
 .alt-nav-logout button {
