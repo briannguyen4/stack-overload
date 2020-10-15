@@ -31,28 +31,6 @@
   padding-top: 4px;
 }
 
-.question-show-top div {
-  background-color: #0095FF;
-  font-size: 13px;
-  width: 100px;
-  height: 35px;
-  margin-left: 12px;
-  border-radius: 3px;
-  padding: 8px;
-  text-align: center;
-  border: 1px solid transparent;
-  cursor: pointer;
-}
-
-.question-show-top div a {
-  color: white;
-  text-decoration: none;
-}
-
-.question-show-top div:hover {
-  background-color: #0077CC;
-}
-
 .question-show-body {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -17,25 +17,6 @@
             color: #3c4146;
             padding-top: 4px;
         }
-        div {
-            background-color: #0095FF;
-            font-size: 13px;
-            width: 100px;
-            height: 35px;
-            margin-left: 12px;
-            border-radius: 3px;
-            padding: 8px;
-            text-align: center;
-            border: 1px solid transparent;
-            cursor: pointer; 
-            a {
-                color: white;
-                text-decoration: none;
-            }
-            &:hover {
-                background-color: #0077CC;
-            }
-        }
     }
     &-body {
         display: flex;

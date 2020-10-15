@@ -11,6 +11,7 @@ class QuestionShow extends React.Component {
     constructor(props) {
       super(props);
       this.state = {rerender: false}
+      this.askQuestion = this.askQuestion.bind(this);
       this.deleteQuestion = this.deleteQuestion.bind(this);
       this.upvote = this.upvote.bind(this);
       this.downvote = this.downvote.bind(this);
@@ -19,6 +20,10 @@ class QuestionShow extends React.Component {
     componentDidMount() {
       this.props.getQuestion(this.props.questionId);
       this.props.getAnswers(this.props.questionId);
+    }
+
+    askQuestion() {
+      this.props.history.push(`/questions/new`);
     }
 
     deleteQuestion() {
@@ -46,8 +51,8 @@ class QuestionShow extends React.Component {
             <div className="question-show">
               <div className="question-show-top">
                 <p className="question-show-top__title">{this.props.question.title}</p>
-                <div>
-                    <Link to="questions/new">Ask Question</Link>
+                <div className="ask-question">
+                  <div onClick={this.askQuestion}>Ask Question</div>
                 </div>   
               </div>
               
