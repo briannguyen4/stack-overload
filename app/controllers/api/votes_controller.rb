@@ -23,7 +23,6 @@ class Api::VotesController < ApplicationController
             else  
                 @vote = current_user.votes.create({value: val, voteable: @answer})
             end
-            @score = @answer.score
             render '/api/answers/show'
         elsif params[:question_id].present?
                 @question = Question.includes(:votes).find(params[:question_id])
@@ -37,7 +36,6 @@ class Api::VotesController < ApplicationController
                 else
                     @vote = current_user.votes.create({value: val, voteable: @question})
                 end
-                @score = @question.score
                 render '/api/questions/show'
         end
     end
