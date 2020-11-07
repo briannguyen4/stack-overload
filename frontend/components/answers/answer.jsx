@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactQuill from 'react-quill';
+import VoteContainer from '../main/vote'
 
 class Answer extends React.Component {
     constructor(props) {
