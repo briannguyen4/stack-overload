@@ -27,7 +27,7 @@ export const getAnswers = (questionId) => dispatch => {
     );
 }
 
-export const clearAnswere = () => ({
+export const clearAnswers = () => ({
     type: CLEAR_ANSWERS
 });
 
