@@ -4,14 +4,15 @@ import { upvoteAnswer, downvoteAnswer } from "./../../actions/answer_actions";
 
 const mapStateToProps = (state, ownProps) => {
     const answerId = ownProps.answerId
-    const answer = state.entities.answers[answerId] || {};
+    const users = state.entities.users;
     // let score = 0;
     // if (typeof state.entities.answers != "undefined ") {
     //     score = state.entities.answers[answerId].score
     // }
     return {
         questionId: ownProps.questionId,
-        answer: ownProps.answer
+        answer: ownProps.answer,
+        currentUser: state.entities.users[state.session.id]
     };
 };
 
