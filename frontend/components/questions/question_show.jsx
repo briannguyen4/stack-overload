@@ -22,6 +22,10 @@ class QuestionShow extends React.Component {
       this.props.getAnswers(this.props.questionId);
     }
 
+    componentWillUnmount() {
+      this.props.clearAnswers();
+    }
+
     askQuestion() {
       this.props.history.push(`/questions/new`);
     }

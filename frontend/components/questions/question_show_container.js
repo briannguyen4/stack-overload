@@ -23,7 +23,7 @@ const mapDispatchToProps = dispatch => {
         upvote: questionId => dispatch(upvoteQuestion(questionId)),
         downvote: questionId => dispatch(downvoteQuestion(questionId)),
         getAnswers: questionId => dispatch(getAnswers(questionId)),
-        clearAnswers: questionId => dispatch(getAnswers(questionId))     
+        clearAnswers: () => dispatch(clearAnswers())     
     };
 }
 

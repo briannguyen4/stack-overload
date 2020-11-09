@@ -9,8 +9,8 @@ const answersReducer = (state = {}, action) => {
             return Object.assign({}, state, answer);
         case RECEIVE_ANSWERS:
             return Object.assign({}, state, action.answers);
-        case CLEAR_ERRORS:
-            return [];
+        case CLEAR_ANSWERS:
+            return {};
         default:
             return state;
     }
