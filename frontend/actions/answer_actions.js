@@ -3,6 +3,7 @@ import * as VoteAPIUtil from '../util/vote_api_util';
 
 export const RECEIVE_ANSWER = 'RECEIVE_ANSWER';
 export const RECEIVE_ANSWERS = 'RECEIVE_ANSWERS';
+export const CLEAR_ANSWERS = 'CLEAR_ANSWERS';
 
 const receiveAnswer = (answer) => ({
     type: RECEIVE_ANSWER,
@@ -25,6 +26,10 @@ export const getAnswers = (questionId) => dispatch => {
         .then(answers => dispatch(receiveAnswers(answers)))
     );
 }
+
+export const clearAnswere = () => ({
+    type: CLEAR_ANSWERS
+});
 
 export const upvoteAnswer = (questionId, answerId) => {
     return dispatch => {

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import QuestionShow from './question_show';
 import { getQuestion, deleteQuestion, upvoteQuestion, downvoteQuestion } from './../../actions/question_actions';
-import { getAnswers } from './../../actions/answer_actions'
+import { getAnswers, clearAnswers } from './../../actions/answer_actions'
 
 const mapStateToProps = (state, ownProps) => {
     const questionId = parseInt(ownProps.match.params.questionId);
@@ -22,7 +22,8 @@ const mapDispatchToProps = dispatch => {
         getQuestion: questionId => dispatch(getQuestion(questionId)),
         upvote: questionId => dispatch(upvoteQuestion(questionId)),
         downvote: questionId => dispatch(downvoteQuestion(questionId)),
-        getAnswers: questionId => dispatch(getAnswers(questionId))   
+        getAnswers: questionId => dispatch(getAnswers(questionId)),
+        clearAnswers: questionId => dispatch(getAnswers(questionId))     
     };
 }
 

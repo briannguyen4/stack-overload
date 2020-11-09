@@ -1,4 +1,4 @@
-import { RECEIVE_ANSWER, RECEIVE_ANSWERS } from './../actions/answer_actions';
+import { RECEIVE_ANSWER, RECEIVE_ANSWERS, CLEAR_ANSWERS } from './../actions/answer_actions';
 
 const answersReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -9,6 +9,8 @@ const answersReducer = (state = {}, action) => {
             return Object.assign({}, state, answer);
         case RECEIVE_ANSWERS:
             return Object.assign({}, state, action.answers);
+        case CLEAR_ERRORS:
+            return [];
         default:
             return state;
     }
