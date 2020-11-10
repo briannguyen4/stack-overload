@@ -6,6 +6,7 @@ import VoteContainer from '../main/vote'
 class Answer extends React.Component {
     constructor(props) {
       super(props);
+      this.state = { upvoted: false, downvoted: false };
       this.upvote = this.upvote.bind(this);
       this.downvote = this.downvote.bind(this);
     }
@@ -15,6 +16,17 @@ class Answer extends React.Component {
         this.props.history.push(`/signup`);
       } else {
         this.props.upvote(this.props.questionId, this.props.answer.id);
+        const upvoteButton = document.getElementById("answer-upvote");
+        const downvoteButton = document.getElementById("answer-downvote");
+        downvoteButton.style.borderTop = "16px solid #BBC0C4";
+        this.setState({ downvoted: false });
+        if (this.state.upvoted === false) {
+          upvoteButton.style.borderBottom = "16px solid #F48024";
+          this.setState({ upvoted: true });
+        } else {
+          upvoteButton.style.borderBottom = "16px solid #BBC0C4";
+          this.setState({ upvoted: false });
+        }
       }
     }
 
@@ -23,6 +35,17 @@ class Answer extends React.Component {
         this.props.history.push(`/signup`);
       } else {
         this.props.downvote(this.props.questionId, this.props.answer.id);
+        const upvoteButton = document.getElementById("answer-upvote");
+        const downvoteButton = document.getElementById("answer-downvote");
+        upvoteButton.style.borderBottom = "16px solid #BBC0C4";
+        this.setState({ upvoted: false });
+        if (this.state.downvoted === false) {
+          downvoteButton.style.borderTop = "16px solid #F48024";
+          this.setState({ downvoted: true });
+        } else {
+          downvoteButton.style.borderTop = "16px solid #BBC0C4";
+          this.setState({ downvoted: false });
+        }
       }
     }
 
@@ -35,9 +58,9 @@ class Answer extends React.Component {
               <div className="answer-show">
               {this.props.answer ? 
                 (<div className="question-show-body__votes">
-                    <div className="question-show-body__votes__upvote" onClick={this.upvote}></div>
+                    <div className="question-show-body__votes__upvote" id="answer-upvote" onClick={this.upvote}></div>
                     <div className="question-show-body__votes__score">{this.props.answer.score}</div>
-                    <div className="question-show-body__votes__downvote" onClick={this.downvote}></div>
+                    <div className="question-show-body__votes__downvote" id="answer-downvote" onClick={this.downvote}></div>
                   </div>
                   ) : null}
                 <ReactQuill

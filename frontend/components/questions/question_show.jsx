@@ -10,7 +10,7 @@ import ReactQuill from 'react-quill';
 class QuestionShow extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {rerender: false}
+      this.state = { rerender: false, upvoted: false, downvoted: false };
       this.askQuestion = this.askQuestion.bind(this);
       this.deleteQuestion = this.deleteQuestion.bind(this);
       this.upvote = this.upvote.bind(this);
@@ -40,6 +40,17 @@ class QuestionShow extends React.Component {
         this.props.history.push(`/signup`);
       } else {
         this.props.upvote(this.props.questionId);
+        const upvoteButton = document.getElementById("question-upvote");
+        const downvoteButton = document.getElementById("question-downvote");
+        downvoteButton.style.borderTop = "16px solid #BBC0C4";
+        this.setState({ downvoted: false });
+        if (this.state.upvoted === false) {
+          upvoteButton.style.borderBottom = "16px solid #F48024";
+          this.setState({ upvoted: true });
+        } else {
+          upvoteButton.style.borderBottom = "16px solid #BBC0C4";
+          this.setState({ upvoted: false });
+        }
       }
     }
 
@@ -48,7 +59,18 @@ class QuestionShow extends React.Component {
         this.props.history.push(`/signup`);
       } else {
         this.props.downvote(this.props.questionId);
-      }    
+        const upvoteButton = document.getElementById("question-upvote");
+        const downvoteButton = document.getElementById("question-downvote");
+        upvoteButton.style.borderBottom = "16px solid #BBC0C4";
+        this.setState({ upvoted: false });
+        if (this.state.downvoted === false) {
+          downvoteButton.style.borderTop = "16px solid #F48024";
+          this.setState({ downvoted: true });
+        } else {
+          downvoteButton.style.borderTop = "16px solid #BBC0C4";
+          this.setState({ downvoted: false });
+        }
+      }
     }
 
     render() {
@@ -71,9 +93,9 @@ class QuestionShow extends React.Component {
               <div className="question-show-body">
                     {this.props.question ? 
                       (<div className="question-show-body__votes">
-                        <div className="question-show-body__votes__upvote" onClick={this.upvote}></div>
+                        <div className="question-show-body__votes__upvote" id="question-upvote" onClick={this.upvote}></div>
                         <div className="question-show-body__votes__score">{this.props.question.score}</div>
-                        <div className="question-show-body__votes__downvote" onClick={this.downvote}></div>
+                        <div className="question-show-body__votes__downvote" id="question-downvote" onClick={this.downvote}></div>
                       </div>
                       ) : null}
             
@@ -126,3 +148,5 @@ class QuestionShow extends React.Component {
 }
 
 export default QuestionShow;
+
+
