@@ -36,11 +36,19 @@ class QuestionShow extends React.Component {
     }
 
     upvote() {
-      this.props.upvote(this.props.questionId);
+      if (!this.props.currentUser) {
+        this.props.history.push(`/signup`);
+      } else {
+        this.props.upvote(this.props.questionId);
+      }
     }
 
     downvote() {
-      this.props.downvote(this.props.questionId);
+      if (!this.props.currentUser) {
+        this.props.history.push(`/signup`);
+      } else {
+        this.props.downvote(this.props.questionId);
+      }    
     }
 
     render() {
