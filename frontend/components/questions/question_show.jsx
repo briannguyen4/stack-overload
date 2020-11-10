@@ -36,7 +36,7 @@ class QuestionShow extends React.Component {
     }
 
     upvote() {
-      if (!this.props.currentUser) {
+      if (!this.props.currentUserId) {
         this.props.history.push(`/signup`);
       } else {
         this.props.upvote(this.props.questionId);
@@ -44,7 +44,7 @@ class QuestionShow extends React.Component {
     }
 
     downvote() {
-      if (!this.props.currentUser) {
+      if (!this.props.currentUserId) {
         this.props.history.push(`/signup`);
       } else {
         this.props.downvote(this.props.questionId);
