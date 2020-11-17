@@ -10,8 +10,8 @@ const Footer = () => (
             <Link to="/">
                 <img src={window.iconURL}/>
             </Link>
-            <Link to="/">
-                <p className="footer-title">STACK OVERLOAD</p>
+            <Link to="/" className="footer-title">
+                <p>STACK OVERLOAD</p>
             </Link>
           </div>
         <div className="disclaimer">
