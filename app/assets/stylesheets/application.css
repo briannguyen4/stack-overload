@@ -50,12 +50,12 @@ footer {
   text-decoration: none;
 }
 
-.footer a p {
+.footer-title {
   font-size: 13px;
   font-weight: bold;
   color: #BBC0C4;
-  margin-left: 28px;
-  margin-top: 12px;
+  margin-left: 16px;
+  margin-top: 16px;
 }
 
 .footer a p:hover {
@@ -72,6 +72,13 @@ footer {
   margin-top: 20px;
   font-size: 11px;
   color: #5F6467;
+}
+
+#github {
+  font-size: 11px;
+  color: #5F6467;
+  margin-left: 780px;
+  margin-top: 16px;
 }
 
 #github {
