@@ -31,8 +31,8 @@ class QuestionShow extends React.Component {
     }
 
     deleteQuestion() {
-      this.props.deleteQuestion(this.props.questionId)
-       .then( () => this.props.history.push('/questions'));
+      this.props.deleteQuestion(this.props.questionId);
+      this.props.history.push('/questions');
     }
 
     upvote() {
