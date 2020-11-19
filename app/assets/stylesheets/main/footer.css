@@ -9,8 +9,13 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    justify-content: space-between;
     padding-left: 50px;
     padding-top: 20px;
+  }
+
+  .footer-images {
+      display: flex;
   }
   
   .footer a {
@@ -33,10 +38,14 @@ footer {
     height: 44px;
     width: 44px;
   }
+
+  .disclaimer {
+      display: flex;
+      flex-direction: column;
+      padding: 8px;
+  }
   
   .disclaimer p {
-    margin-left: 780px;
-    margin-top: 16px;
     font-size: 11px;
     color: #5F6467;
   }
@@ -44,6 +53,5 @@ footer {
   .link {
     font-size: 11px;
     color: #5F6467;
-    margin-left: 780px;
-    margin-top: 16px;
+    margin-bottom: 8px;
   }

@@ -6,12 +6,14 @@ const Footer = () => (
   <>
   <footer>
       <div className="footer">
-        <Link to="/">
-            <img src={window.iconURL}/>
-        </Link>
-        <Link to="/">
-            <p className="footer-title">STACK OVERLOAD</p>
-        </Link>
+          <div className="footer-images">
+            <Link to="/">
+                <img src={window.iconURL}/>
+            </Link>
+            <Link to="/">
+                <p className="footer-title">STACK OVERLOAD</p>
+            </Link>
+          </div>
         <div className="disclaimer">
             <a href="https://briannguyen4.github.io/">
                 <p class="link">Portfolio</p>
