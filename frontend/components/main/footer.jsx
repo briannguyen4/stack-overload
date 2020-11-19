@@ -15,13 +15,13 @@ const Footer = () => (
             </Link>
           </div>
         <div className="disclaimer">
-            <a href="https://briannguyen4.github.io/">
+            <a href="https://briannguyen4.github.io/" target="_blank">
                 <p class="link">Portfolio</p>
             </a>
-            <a href="https://github.com/briannguyen4/stack-overload/">
+            <a href="https://github.com/briannguyen4/stack-overload/" target="_blank">
                 <p class="link">Github</p>
             </a>
-            <a href="https://www.linkedin.com/in/brian-nguyen-1293bb148/">
+            <a href="https://www.linkedin.com/in/brian-nguyen-1293bb148/" target="_blank">
                 <p class="link">LinkedIn</p>
             </a>
             <p>site design / logo © 2020 Stack Overload</p>
