@@ -51,7 +51,7 @@ class QuestionForm extends React.Component {
     
     renderErrors() {
         return (
-          <ul className="qerrors">
+          <ul className="errors">
             {this.props.errors.map((error, i) => (
               <li key={i}>{error}</li>
             ))}

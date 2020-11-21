@@ -1,6 +1,6 @@
 .question-form-page-container {
     background-color: #EFF0F1;
-    margin-bottom: 80px;
+    margin-bottom: 64px;
 }
 
 .question-form-page {
@@ -19,7 +19,7 @@
 
 .qform-container {
     margin-top: 52px;
-    height: 464px;
+    height: 472px;
     width: 875px;
     border: 1px solid lightgray;
     background-color: #FFFFFF;
@@ -57,8 +57,7 @@
 
 .questionquill {
     height: 250px;
-    border: 1px solid #E8E9EA;
-}
+} 
 
 #qform-button {
     position: relative;
