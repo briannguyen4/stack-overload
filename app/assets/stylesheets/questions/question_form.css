@@ -1,3 +1,8 @@
+.question-form-page-container {
+    background-color: #EFF0F1;
+    margin-bottom: 80px;
+}
+
 .question-form-page {
     padding-top: 50px;
     margin-left: 68.5px;
@@ -14,7 +19,7 @@
 
 .qform-container {
     margin-top: 52px;
-    height: 515px;
+    height: 464px;
     width: 875px;
     border: 1px solid lightgray;
     background-color: #FFFFFF;
@@ -52,19 +57,19 @@
 
 .questionquill {
     height: 250px;
+    border: 1px solid #E8E9EA;
 }
 
 #qform-button {
     position: relative;
     height: 37px;
     width: 146px;
-    margin-top: 110px;
-    margin-left: -17px;
     background-color: #0095ff;
     border: 1px solid transparent;
     border-radius: 3px;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.4);
     color: white;
+    top: 24px;
 }
 
 #qform-button:hover {
@@ -73,8 +78,4 @@
 
 .qerrors {
     margin-top: 60px;
-}
-
-.qformfooter {
-    margin-top: 150px;
 }

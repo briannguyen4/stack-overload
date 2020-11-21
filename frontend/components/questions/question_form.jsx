@@ -62,6 +62,7 @@ class QuestionForm extends React.Component {
     render() {
         return (
         <>
+        <div className="question-form-page-container">
             <AltNavbarContainer />
             <div className="question-form-page">
                 <div className='form-header'>
@@ -102,7 +103,8 @@ class QuestionForm extends React.Component {
 
                 </div>
             </div>
-            <div className="qformfooter"><Footer/></div>
+        </div>
+        <div className="qformfooter"><Footer/></div>
 
         </>
         );
