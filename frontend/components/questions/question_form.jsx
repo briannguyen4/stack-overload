@@ -51,11 +51,11 @@ class QuestionForm extends React.Component {
     
     renderErrors() {
         return (
-          <ul className="errors">
+            <div className="qerrors">
             {this.props.errors.map((error, i) => (
-              <li key={i}>{error}</li>
+                <div key={`error-${i}`}>{error}</div>
             ))}
-          </ul>
+        </div> 
         );
     }
 
@@ -94,12 +94,11 @@ class QuestionForm extends React.Component {
                                 value={this.state.body}
                             />
                         </div> 
-                        {this.renderErrors()}
+                        <div className="button-area">
+                            {this.renderErrors()}
+                        </div>
                         <button id="qform-button">{this.props.formType}</button>
                     </form>
-
-                </div>
-                <div className="qform-tips">
 
                 </div>
             </div>
