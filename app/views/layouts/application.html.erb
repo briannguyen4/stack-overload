@@ -16,9 +16,20 @@
     <%= favicon_link_tag 'icon.png' %>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Stack Overload" />
+    <meta property='og:image' content="<%= image_url('image.png') %>"/>
+    <meta property="og:description"
+      content="A full-stack single-page application inspired by Stack Overflow where users can ask, answer, and vote on questions."
+    />
+    <meta property="og:url"
+      content="http://stackoverload.herokuapp.com/"
+    />
   </head>
 
   <body>
     <%= yield %>
   </body>
 </html>
+
+
