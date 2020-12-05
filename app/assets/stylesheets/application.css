@@ -31,6 +31,20 @@ html, body {
           flex-direction: column;
 }
 
+footer {
+  height: 160px;
+  width: 100%;
+  background-color: #242729;
+  z-index: 1;
+}
+
+#github {
+  font-size: 11px;
+  color: #5F6467;
+  margin-left: 780px;
+  margin-top: 16px;
+}
+
 .error {
   list-style: none;
   color: #d1383d;

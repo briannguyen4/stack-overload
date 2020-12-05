@@ -112,4 +112,8 @@
 .question-show__answers ul {
   list-style-type: none;
 }
+
+.downvoted {
+  border-top: 16px solid #F48024;
+}
 /*# sourceMappingURL=question_show.css.map */

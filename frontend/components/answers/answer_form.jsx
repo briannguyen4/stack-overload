@@ -44,6 +44,7 @@ class AnswerForm extends React.Component {
                     modules={this.modules}
                     onChange={this.handleChange}
                     value={this.state.body || ""}
+                    className="answer-quill"
                 />
                 <br/>
                 <button type="submit">Submit</button>
