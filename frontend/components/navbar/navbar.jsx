@@ -32,50 +32,50 @@ class Navbar extends React.Component {
     
     render() {
         return (
-            <header className="main-nav-container">
-                <div className="main-nav">
-                    <div className="main-nav__left">
+            <header className="nav-container">
+                <div className="nav">
+                    <div className="nav__left">
                         <div id="dropdown-button" className="dropdown" onClick={this.dropDown}>
                             <div className="dropdown__button">
                                 <div className="bar1"></div>
                                 <div className="bar2"></div>
                                 <div className="bar3"></div>
                             </div>
-                            <div id="dropdown-menu" className="dropdown-menu">
-                                <div className="dropdown-menu__home">
+                            <div id="dropdown-menu" className="dropdown__menu">
+                                <div className="dropdown__menu__home">
                                     <Link to="/">Home</Link>
                                 </div>
-                                <p className="dropdown-menu__public">PUBLIC</p>
-                                <div className="dropdown-menu__globe">
+                                <p className="dropdown__menu__public">PUBLIC</p>
+                                <div className="dropdown__menu__globe">
                                     <FontAwesomeIcon icon={faGlobeAmericas} />
                                     <Link to="/questions">Stack Overload</Link>
                                 </div>
                             </div>
                         </div>
                         <Link to="/">
-                            <span className="logo" href="#">
+                            <span className="nav__left__logo" href="#">
                                 <img src={window.logoURL} />
                             </span>
                         </Link>
                     </div>
-                    <form onSubmit={this.handleSubmit}>
-                    <div className="searchbar-container">
-                        <div className="search-icon">
-                            <FontAwesomeIcon icon={faSearch} />
-                        </div> 
-                        <input className="searchbar" 
-                        type="text" 
-                        placeholder="Search..."
-                        value={this.state.search} 
-                        onChange={this.updateSearch}>
-                        </input>
-                    </div>
+                    <form className="nav__searchbar" onSubmit={this.handleSubmit}>
+                        <div className="nav__searchbar__container">
+                            <div className="nav__searchbar__container__icon">
+                                <FontAwesomeIcon icon={faSearch} />
+                            </div> 
+                            <input className="nav__searchbar__container__input" 
+                            type="text" 
+                            placeholder="Search..."
+                            value={this.state.search} 
+                            onChange={this.updateSearch}>
+                            </input>
+                        </div>
                     </form>
-                    <div className="nav-right">
-                        <div className="nav-right__loginbtn">
+                    <div className="nav__right">
+                        <div className="nav__right__loginbtn">
                             <Link to="login" >Log in</Link>
                         </div>
-                        <div className="nav-right__signupbtn">
+                        <div className="nav__right__signupbtn">
                             <Link to="signup" >Sign up</Link>
                         </div>   
                     </div>
