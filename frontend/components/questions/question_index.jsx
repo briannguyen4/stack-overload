@@ -29,37 +29,34 @@ class QuestionIndex extends React.Component {
                 <AltNavbarContainer />
                 <div className="questions-container">
                     <Sidebar />
-                    <div className="questions-body">
-                        <div className="questions-main"></div>
-                        <div className="questions-top">
+                    <div className="questions-index">
+                        <div className="questions-index__top">
                             <h1>All Questions</h1>
-                            <div className="ask-question">
+                            <div className="questions-index__top__btn">
                                 <div onClick={this.askQuestion}>Ask Question</div>
                             </div> 
                         </div>  
-                        <p className="questions">{this.props.questions.length} questions</p>
-                    <div>
-                    {this.props.questions.map((question, idx) => (
-                        <div key={`question${idx}`} className="question-container">
-                            <div className="q-vav">
-                                <span className="q-num">{question.score}</span>
+                        <p className="questions-index__number">{this.props.questions.length} questions</p>
+                        {this.props.questions.map((question, idx) => (
+                        <div key={`question${idx}`} className="questions-index__question">
+                            <div className="questions-index__question__left">
+                                <span>{question.score}</span>
                                 <p>votes</p>
-                                <span className="q-num">{question.answers.length}</span>
+                                <span>{question.answers.length}</span>
                                 <p>answers</p>
                             </div>
-                            <div className="question">
+                            <div className="questions-index__question__info">
                                 <Link to={`/questions/${question.id}`}>
                                     <span>{question.title}</span>
                                     <br/>
                                 </Link>
-                                <div className="question-body">{parse(this.truncate(question.body))}</div>
+                                <div className="questions-index__question__info__body">{parse(this.truncate(question.body))}</div>
                             </div>
                             <div>
                                 {question.author}
                             </div>
                         </div>
                         ))}
-                    </div>
                     </div>
                 </div>
                 <Footer/>

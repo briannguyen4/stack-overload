@@ -1,0 +1,94 @@
+.questions-container {
+    display: flex;
+    padding-top: 50px;
+    padding-left: 210px;
+}
+
+.questions-index {
+    padding: 24px;
+    width: 727px;
+    &__top {
+        display: flex;
+        width: inherit;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        h1 {
+            font-size: 27px;
+            font-weight: 400;
+            color: #242729;
+        }
+        &__btn {
+            background-color: #0095ff;
+            font-size: 13px;
+            color: white;
+            height: 38px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.4);
+            &:hover {
+                background-color: #0077cc;
+            }
+            }
+        }
+    &__number {
+        font-size: 1.30769231rem;
+        margin-bottom: 12px;
+    }
+    &__question {
+        height: 162px;
+        width: 800px;
+        padding: 12px 8px;
+        border-bottom: 1px solid #e4e6e8;
+        display: flex;
+        &__left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 58px;
+            margin-left: -21px;
+            margin-right: 16px;
+            span {
+                font-size: 20px;
+                color: #6a737c;
+                margin-top: 15px;
+            }
+            p {
+                color: #6a737c;
+                font-size: 11px;
+                margin-top: 3px;
+            }
+        }
+        &__info {
+            list-style: none;
+            min-width: 740px;
+            a {
+                font-size: 16px;
+                color: #0077CC;
+                text-decoration: none;
+                &:hover {
+                    color: #0095ff;
+                }
+            }
+            &__body {
+                padding-top: 8px;
+                font-size: 14px;
+                color: #242729;
+            }
+        }
+    }
+}
+
+// @media (max-width: 900px) {
+//     .nav__searchbar, .alt-nav__searchbar {
+// 		margin: 0 8px;
+// 	}
+
+// 	.alt-nav__logout {
+// 		margin-left: 48px;
+// 	}
+// }
