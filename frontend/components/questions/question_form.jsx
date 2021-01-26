@@ -51,7 +51,7 @@ class QuestionForm extends React.Component {
     
     renderErrors() {
         return (
-            <div className="qerrors">
+            <div className="question-form__container__form__errors">
             {this.props.errors.map((error, i) => (
                 <div key={`error-${i}`}>{error}</div>
             ))}
@@ -62,32 +62,30 @@ class QuestionForm extends React.Component {
     render() {
         return (
         <>
-        <div className="question-form-page-container">
+        <div className="question-form-page">
             <AltNavbarContainer />
-            <div className="question-form-page">
-                <div className='form-header'>
+            <div className="question-form">
+                <div className='question-form__header'>
                 {this.props.formType === "Post your question" ? (
                     <p>Ask a public question</p>) : null}
                 </div>
-                <div className="qform-container">
-                    <form className="qform" onSubmit={this.handleSubmit}>
-                        <div className="qform-title">
-                            <label className="qform-label"><strong>Title</strong>
-                                <p>Be specific and imagine you're asking a question to another person</p>
-                                <input type="text" 
-                                name="title"
-                                onChange={this.handleInput("title")} 
-                                value={this.state.title} 
-                                placeholder="e.g. Is there an R function for finding the index of an element in a vector?"
-                                />
-                            </label>
-                        </div>
-                        <div className="qform-body">
-                            <label className="qform-label"><strong>Body</strong>
+                <div className="question-form__container">
+                    <form className="question-form__container__form" onSubmit={this.handleSubmit}>
+                        <label className="question-form__container__form__label"><strong>Title</strong>
+                            <p>Be specific and imagine you're asking a question to another person</p>
+                            <input type="text" 
+                            name="title"
+                            onChange={this.handleInput("title")} 
+                            value={this.state.title} 
+                            placeholder="e.g. Is there an R function for finding the index of an element in a vector?"
+                            />
+                        </label>
+                        <div>
+                            <label className="question-form__container__form__label"><strong>Body</strong>
                                 <p>Include all the information someone would need to answer your question</p>
                             </label>
                             <ReactQuill
-                                className="questionquill"
+                                className="question-form__container__form__quill"
                                 theme="snow"
                                 modules={this.modules}
                                 onChange={this.handleChange}
@@ -97,7 +95,7 @@ class QuestionForm extends React.Component {
                         <div className="button-area">
                             {this.renderErrors()}
                         </div>
-                        <button id="qform-button">{this.props.formType}</button>
+                        <button className="question-form__container__form__btn">{this.props.formType}</button>
                     </form>
 
                 </div>

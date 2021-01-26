@@ -1,0 +1,77 @@
+.question-form-page {
+    background-color: #EFF0F1;
+}
+
+.question-form {
+    padding-top: 50px;
+    margin-left: 68.5px;
+    &__header {
+        margin-top: 50px;
+        p {
+            font-size: 27px;
+            color: #242729;
+        }
+    }
+    &__container {
+        margin-top: 52px;
+        margin-bottom: 5rem;
+        height: 496px;
+        width: 875px;
+        border: 1px solid lightgray;
+        background-color: #FFFFFF;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05), 0 20px 48px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.1);
+        &__form {
+            padding: 17px;
+            display: flex;
+            flex-direction: column;
+            &__label {
+                font-size: 15px;
+                color: #0c0d0e;
+                margin-left: 1px;
+                p {
+                    color: #3c4146;
+                    font-size: 12px;
+                    margin-top: 4px;
+                    margin-left: 1px;
+                    margin-bottom: 8px;
+                }
+                input {
+                    width: 100%;
+                    height: 33px;
+                    border: 1px solid #BBC0C4;
+                    border-radius: 3px;
+                    margin-bottom: 20px;
+                    padding-left: 14px;
+                }
+            }
+            &__quill {
+                height: 268px;
+                border: 1px solid #BBC0C4;
+            }
+            &__btn {
+                position: relative;
+                height: 37px;
+                width: 146px;
+                background-color: #0095ff;
+                border: 1px solid transparent;
+                border-radius: 3px;
+                box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.4);
+                color: white;
+                &:hover {
+                    background-color: #0077cc;
+                }
+            }
+            &__errors {
+                margin-top: 8px;
+                font-size: 12px;
+                color: #d1383d;
+            }
+        }
+    }
+}
+
+
+
+
+
+
