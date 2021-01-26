@@ -34,20 +34,20 @@ class AltNavbar extends React.Component {
             return (
                 <header className="alt-nav-container">
                     <div className="alt-nav">
-                        <div className="alt-nav-container__left">
+                        <div className="alt-nav__left">
                             <Link to="/">
-                                <span className="logo altlogo" href="#">
+                                <span className="alt-nav__left__logo altlogo" href="#">
                                     <img src={window.logoURL} />
                                 </span>
                             </Link>
                         </div>
-                        <form onSubmit={this.handleSubmit}>
-                            <div className="searchbar-container">
-                                <div className="search-icon">
+                        <form className="alt-nav__searchbar" onSubmit={this.handleSubmit}>
+                            <div className="alt-nav__searchbar__container">
+                                <div className="alt-nav__searchbar__container__icon">
                                     <FontAwesomeIcon icon={faSearch} />
                                 </div> 
                                 <input 
-                                    className="searchbar" 
+                                    className="alt-nav__searchbar__container__input" 
                                     type="text" 
                                     placeholder="Search..."
                                     value={this.state.searchQuery} 
@@ -56,7 +56,7 @@ class AltNavbar extends React.Component {
                                 </input>
                             </div>
                         </form>
-                        <div className="alt-nav-logout">
+                        <div className="alt-nav__logout">
                             <button onClick={this.logout}>Log Out</button>    
                         </div>
                     </div>

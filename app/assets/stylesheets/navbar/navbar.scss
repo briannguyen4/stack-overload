@@ -198,16 +198,9 @@
 	pointer-events: all;
 }
 
-.altlogo {
-	margin-right: 108px;
-}
-
-#altsearch {
-	margin-right: 100px;
-}
-
-.alt-nav-logout {
-	margin-left: 188px;
+.alt-nav__logout {
+	margin-left: 160px;
+	margin-right: 24px;
 	button {
 		background-color: #E1ECF4;
 		font-size: 13px;
@@ -228,18 +221,24 @@
 }
 
 @media (max-width: 900px) {
-    .nav__searchbar {
+    .nav__searchbar, .alt-nav__searchbar {
 		margin: 0 8px;
+	}
+
+	.alt-nav__logout {
+		margin-left: 48px;
 	}
 }
 
 @media (max-width: 695px) {
-    .nav__searchbar {
+    .nav__searchbar, .alt-nav__searchbar {
 		margin: 0;
 		min-width: 144px;
 	}
 	
-	.nav__right {
+	.nav__right, .alt-nav__logout {
 		margin-left: 24px;
 	}
+
+	
 }
