@@ -1,9 +1,7 @@
 .sidebar {
-  position: fixed;
+  grid-area: sidebar;
   width: 164px;
-  height: 100vh;
   border-right: 1px solid #D6D9DC;
-  left: 46px;
 }
 
 .sidebar__content {

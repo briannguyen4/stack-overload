@@ -1,14 +1,26 @@
+.questions-index-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 1fr;
+      grid-template-columns: 0.5fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "sidebar questions";
+}
+
 .questions-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-top: 50px;
   padding-left: 210px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: questions;
 }
 
 .questions-index {
   padding: 24px;
-  width: 727px;
 }
 
 .questions-index__top {
