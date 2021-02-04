@@ -1,6 +1,6 @@
 .questions-index-grid {
     display: grid;
-    grid-template-columns: 0.5fr 1fr ;
+    grid-template-columns: 0.2fr 1fr ;
     grid-template-rows: 1fr;
     grid-template-areas: "sidebar questions"
 }
@@ -8,8 +8,8 @@
 .questions-container {
     display: flex;
     padding-top: 50px;
-    padding-left: 210px;
     grid-area: questions;
+    background-color: peachpuff;
 
 }
 
