@@ -38,6 +38,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 5px;
   margin-left: 1px;
   background-color: #EFF0F1;
@@ -46,15 +49,13 @@
 }
 
 .sidebar__content__public__container svg {
-  margin-top: 8px;
-  margin-left: 8px;
+  margin: 8px;
+  position: relative;
 }
 
 .sidebar__content__public__container a {
   font-size: 13px;
   font-weight: 700;
   color: #0c0d0e;
-  margin-left: 6px;
-  margin-top: 9px;
 }
 /*# sourceMappingURL=sidebar.css.map */
