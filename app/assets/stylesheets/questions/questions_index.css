@@ -18,19 +18,15 @@
   grid-area: questions;
 }
 
-.questions-index {
-  padding: 24px;
-}
-
 .questions-index__top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: inherit;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 24px;
+  padding: 16px;
 }
 
 .questions-index__top h1 {
@@ -40,6 +36,7 @@
 }
 
 .questions-index__top__btn {
+  margin-right: 160px;
   background-color: #0095ff;
   font-size: 13px;
   color: white;
@@ -68,12 +65,13 @@
   font-size: 1.30769231rem;
   padding-bottom: 12px;
   border-bottom: 1px solid #e4e6e8;
+  padding-left: 16px;
 }
 
 .questions-index__question {
   height: 162px;
-  width: 800px;
   padding: 12px 8px;
+  padding-right: 40px;
   border-bottom: 1px solid #e4e6e8;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -111,7 +109,7 @@
 
 .questions-index__question__info {
   list-style: none;
-  min-width: 740px;
+  min-width: 480px;
 }
 
 .questions-index__question__info a {

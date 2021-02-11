@@ -12,18 +12,18 @@
 }
 
 .questions-index {
-    padding: 24px;
     &__top {
         display: flex;
-        width: inherit;
         justify-content: space-between;
         margin-bottom: 24px;
+        padding: 16px;
         h1 {
             font-size: 27px;
             font-weight: 400;
             color: #242729;
         }
         &__btn {
+            margin-right: 160px;
             background-color: #0095ff;
             font-size: 13px;
             color: white;
@@ -44,12 +44,12 @@
         font-size: 1.30769231rem;
         padding-bottom: 12px;
         border-bottom: 1px solid #e4e6e8;
-
+        padding-left: 16px;
     }
     &__question {
         height: 162px;
-        width: 800px;
         padding: 12px 8px;
+        padding-right: 40px;
         border-bottom: 1px solid #e4e6e8;
         display: flex;
         &__left {
@@ -71,7 +71,7 @@
         }
         &__info {
             list-style: none;
-            min-width: 740px;
+            min-width: 480px;
             a {
                 font-size: 16px;
                 color: #0077CC;
