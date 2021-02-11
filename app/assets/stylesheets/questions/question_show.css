@@ -114,10 +114,6 @@
   cursor: pointer;
 }
 
-.question-show-body__question {
-  width: 100%;
-}
-
 .question-show-body__question__buttons {
   color: #848d95;
   font-size: 13px;
