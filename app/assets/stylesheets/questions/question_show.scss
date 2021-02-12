@@ -1,8 +1,15 @@
+.questions-show-grid {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr ;
+    grid-template-rows: 1fr;
+    grid-template-areas: "sidebar question"
+}
+
 .question-show-container {
     display: flex;
     flex-direction: row;
-    padding-left: 210px;
     padding-top: 50px;
+    grid-area: question;
 }
 
 .question-show {

@@ -80,8 +80,9 @@ class QuestionShow extends React.Component {
         return (
           <>
           <AltNavbarContainer/>
+          <div className="questions-show-grid">
+          <Sidebar />
           <div className="question-show-container">
-            <Sidebar />
             <div className="question-show">
               <div className="question-show-top">
                 <p className="question-show-top__title">{this.props.question.title}</p>
@@ -137,6 +138,7 @@ class QuestionShow extends React.Component {
 
                 <AnswerFormContainer questionId={this.props.questionId}/>
             </div>
+          </div>
           </div>
           <Footer/>
           </>

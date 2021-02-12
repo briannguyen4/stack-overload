@@ -1,3 +1,13 @@
+.questions-show-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.2fr 1fr;
+      grid-template-columns: 0.2fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "sidebar question";
+}
+
 .question-show-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,8 +16,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-left: 210px;
   padding-top: 50px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: question;
 }
 
 .question-show {
