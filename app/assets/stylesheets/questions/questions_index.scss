@@ -23,7 +23,7 @@
             color: #242729;
         }
         &__btn {
-            margin-right: 160px;
+            margin-right: 120px;
             background-color: #0095ff;
             font-size: 13px;
             color: white;
@@ -89,12 +89,8 @@
     }
 }
 
-// @media (max-width: 900px) {
-//     .nav__searchbar, .alt-nav__searchbar {
-// 		margin: 0 8px;
-// 	}
-
-// 	.alt-nav__logout {
-// 		margin-left: 48px;
-// 	}
-// }
+@media (max-width: 695px) {
+    .sidebar {
+        display: none;
+    }
+}

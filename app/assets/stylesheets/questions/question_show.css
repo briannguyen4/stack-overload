@@ -148,4 +148,15 @@
 .downvoted {
   border-top: 16px solid #F48024;
 }
+
+@media (max-width: 695px) {
+  .sidebar {
+    display: none;
+  }
+  .questions-show-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 /*# sourceMappingURL=question_show.css.map */

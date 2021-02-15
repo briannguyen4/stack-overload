@@ -36,7 +36,7 @@
 }
 
 .questions-index__top__btn {
-  margin-right: 160px;
+  margin-right: 120px;
   background-color: #0095ff;
   font-size: 13px;
   color: white;
@@ -126,5 +126,11 @@
   padding-top: 8px;
   font-size: 14px;
   color: #242729;
+}
+
+@media (max-width: 695px) {
+  .sidebar {
+    display: none;
+  }
 }
 /*# sourceMappingURL=questions_index.css.map */
