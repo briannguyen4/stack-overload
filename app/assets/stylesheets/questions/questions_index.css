@@ -16,7 +16,6 @@
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: questions;
-  background-color: peachpuff;
 }
 
 .questions-index {
@@ -67,7 +66,8 @@
 
 .questions-index__number {
   font-size: 1.30769231rem;
-  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e4e6e8;
 }
 
 .questions-index__question {
@@ -95,8 +95,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   min-width: 58px;
-  margin-left: -21px;
-  margin-right: 16px;
 }
 
 .questions-index__question__left span {

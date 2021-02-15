@@ -1,6 +1,6 @@
 .sidebar {
   grid-area: sidebar;
-  background-color: powderblue;
+  padding-left: 24px;
   border-right: 1px solid #D6D9DC;
 }
 
