@@ -114,11 +114,11 @@
   cursor: pointer;
 }
 
-.question-show__question {
+.question-show-body__question {
   width: 800px;
 }
 
-.question-show__question__buttons {
+.question-show-body__question__buttons {
   color: #848d95;
   font-size: 13px;
   cursor: pointer;
@@ -126,13 +126,13 @@
   padding-top: 4px;
 }
 
-.question-show__question__buttons a {
+.question-show-body__question__buttons a {
   text-decoration: none;
   color: #848d95;
   margin-right: 6px;
 }
 
-.question-show__question__buttons a:hover {
+.question-show-body__question__buttons a:hover {
   color: #3C4656;
 }
 

@@ -92,15 +92,15 @@ class QuestionShow extends React.Component {
               </div>
               
               <div className="question-show-body">
-                    {this.props.question ? 
-                      (<div className="question-show-body__votes">
-                        <div className="question-show-body__votes__upvote" id="question-upvote" onClick={this.upvote}></div>
-                        <div className="question-show-body__votes__score">{this.props.question.score}</div>
-                        <div className="question-show-body__votes__downvote" id="question-downvote" onClick={this.downvote}></div>
-                      </div>
-                      ) : null}
+                {this.props.question ? 
+                  (<div className="question-show-body__votes">
+                    <div className="question-show-body__votes__upvote" id="question-upvote" onClick={this.upvote}></div>
+                    <div className="question-show-body__votes__score">{this.props.question.score}</div>
+                    <div className="question-show-body__votes__downvote" id="question-downvote" onClick={this.downvote}></div>
+                  </div>
+                  ) : null}
             
-                <div className="question-show__question">
+                <div className="question-show-body__question">
                  <ReactQuill
                     value={this.props.question.body}
                     readOnly={true}
@@ -108,7 +108,7 @@ class QuestionShow extends React.Component {
                   />
 
                   {this.props.question.author_id === this.props.currentUserId ? 
-                  (<div className="question-show__question__buttons">
+                  (<div className="question-show-body__question__buttons">
                     <Link to={`/questions/${this.props.questionId}/edit`}>
                       edit
                     </Link>

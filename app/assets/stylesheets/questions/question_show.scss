@@ -72,21 +72,21 @@
                 cursor: pointer;
             }
         }
-    }
-    &__question {
-        width: 800px;
-        &__buttons {
-            color: #848d95;
-            font-size: 13px;
-            cursor: pointer;
-            margin: 16px;
-            padding-top: 4px;
-            a {
-                text-decoration: none;
+        &__question {
+            width: 800px;
+            &__buttons {
                 color: #848d95;
-                margin-right: 6px;
-                &:hover  {
-                    color: #3C4656;
+                font-size: 13px;
+                cursor: pointer;
+                margin: 16px;
+                padding-top: 4px;
+                a {
+                    text-decoration: none;
+                    color: #848d95;
+                    margin-right: 6px;
+                    &:hover  {
+                        color: #3C4656;
+                    }
                 }
             }
         }
