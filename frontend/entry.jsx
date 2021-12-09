@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import {questionUpvote} from './util/vote_api_util'
-
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;

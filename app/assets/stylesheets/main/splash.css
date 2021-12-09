@@ -3,6 +3,7 @@
   width: 98.9vw;
 }
 
+
 .splash-img {
   text-align: center;
   position: relative;
@@ -46,15 +47,22 @@
   margin: auto;
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .splash-img img {
     width: 900px;
   }
+  
 }
 
-@media (max-width: 695px) {
+@media screen and (max-width: 695px) {
   .splash-img img {
     width: 0px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .splash-img img {
+    display: none;
   }
 }
 
