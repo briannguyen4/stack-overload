@@ -21,7 +21,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
-  max-width: 1280px;
+  width: 99.8vw;
 }
 
 .nav__left,
@@ -33,6 +33,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.nav__left__icon,
+.alt-nav__left__icon {
+  display: none;
 }
 
 .nav__left__logo,
@@ -57,7 +62,6 @@
 
 .nav__searchbar,
 .alt-nav__searchbar {
-  width: 100%;
   margin-left: 64px;
   margin-right: 32px;
 }
@@ -85,7 +89,7 @@
 
 .nav__searchbar__container__input,
 .alt-nav__searchbar__container__input {
-  width: 100%;
+  width: 50vw;
   padding-left: 30px;
   color: #3c4146;
   border: 0.8px solid #bbc0c4;
@@ -327,10 +331,36 @@
 @media (max-width: 695px) {
   .nav__searchbar, .alt-nav__searchbar {
     margin: 0;
-    min-width: 144px;
   }
   .nav__right, .alt-nav__logout {
     margin-left: 24px;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav__left__icon {
+    display: block;
+    height: 32px;
+    width: 32px;
+    margin: 0px 5px;
+  }
+  .nav__left__logo {
+    margin: 0px;
+    padding: 0px;
+    display: none;
+  }
+  .nav__searchbar__container__input {
+    width: 70%;
+    padding: 4px;
+  }
+  .nav__searchbar__container__icon {
+    display: none;
+  }
+  .dropdown {
+    display: none;
+  }
+  .nav__right {
+    margin: 0px;
   }
 }
 /*# sourceMappingURL=navbar.css.map */
