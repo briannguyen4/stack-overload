@@ -32,76 +32,46 @@ class AltNavbar extends React.Component {
     render() {
         if (this.props.currentUser) {
             return (
-                <header className="alt-nav-container">
-                    <div className="alt-nav">
-                        <div className="alt-nav__left">
-                            <img className="nav__left__icon" src={window.iconURL}/>
-                            <Link to="/">
-                                <span className="alt-nav__left__logo altlogo" href="#">
-                                    <img src={window.logoURL} />
-                                </span>
-                            </Link>
-                        </div>
-                        <div className="nav__middle">
-                            <div className="nav__searchbar__container">
-                                <form className="nav__searchbar__container__form" onSubmit={this.handleSubmit}>
-                                    <input className="nav__searchbar__container__form__input" 
-                                    type="text" 
-                                    placeholder="Search..."
-                                    value={this.state.search} 
-                                    onChange={this.updateSearch}>
-                                    </input>
-                                </form>
-                                <div className="nav__searchbar__container__icon">
-                                    <FontAwesomeIcon icon={faSearch} />
-                                </div> 
-                            </div>
-                        </div>
-                        <div className="alt-nav__logout">
-                                <button onClick={this.logout}>Log Out</button>    
-                        </div>
+                <header className="nav-container">
+                <div className="nav">
+                    <div className="nav__left">
+                        <Link to="/" className="nav__left__icon">
+                            <img src={window.iconURL} />
+                        </Link>
+                        <Link to="/">
+                            <span className="nav__left__logo" href="#">
+                                <img src={window.logoURL} />
+                            </span>
+                        </Link>
                     </div>
-                </header>
-                )
-        } else {
-            return (
-                <header className="alt-nav-container">
-                    <div className="alt-nav">
-                        <div className="alt-nav-container__left">
-                            <Link to="/signup">
-                                <span className="logo" href="#">
-                                    <img src={window.logoURL} />
-                                </span>
-                            </Link>
-                        </div>
-                        <form onSubmit={this.handleSubmit}>
-                            <div className="searchbar-container">
-                                <div className="search-icon">
-                                    <FontAwesomeIcon icon={faSearch} />
-                                </div> 
-                                <input 
-                                    className="searchbar" 
-                                    type="text" 
-                                    placeholder="Search..."
-                                    value={this.state.searchQuery} 
-                                    onChange={this.updateSearch}
-                                    >
+
+                    <div className="nav__middle">
+                        <div className="nav__searchbar__container">
+                            <form className="nav__searchbar__container__form" onSubmit={this.handleSubmit}>
+                                <input className="nav__searchbar__container__form__input" 
+                                type="text" 
+                                placeholder="Search..."
+                                value={this.state.search} 
+                                onChange={this.updateSearch}>
                                 </input>
-                            </div>
-                        </form>
-                        <div className="nav-right">
-                            <div className="nav-right__loginbtn">
-                                <Link to="login" >Log in</Link>
-                            </div>
-                            <div className="nav-right__signupbtn">
-                                <Link to="signup" >Sign up</Link>
-                            </div>   
+                            </form>
+                            <div className="nav__searchbar__container__icon">
+                                <FontAwesomeIcon icon={faSearch} />
+                            </div> 
                         </div>
                     </div>
-                </header>
+
+                    <div className="nav__right">
+                        <div className="alt-nav__logout">
+                            <button onClick={this.logout}>Log Out</button>    
+                        </div>
+                    </div>
+                </div>
+            </header>
                 )
             }
         }
 }
 
 export default withRouter(AltNavbar); 
+

@@ -35,7 +35,9 @@ class Navbar extends React.Component {
             <header className="nav-container">
                 <div className="nav">
                     <div className="nav__left">
-                        <img className="nav__left__icon" src={window.iconURL}/>
+                        <Link to="/" className="nav__left__icon">
+                            <img src={window.iconURL} />
+                        </Link>
                         <div id="dropdown-button" className="dropdown" onClick={this.dropDown}>
                             <div className="dropdown__button">
                                 <div className="bar1"></div>

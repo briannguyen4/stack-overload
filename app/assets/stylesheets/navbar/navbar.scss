@@ -1,5 +1,4 @@
-.nav-container,
-.alt-nav-container {
+.nav-container {
 	position: fixed;
 	background-color: #fafafb;
 	height: 50px;
@@ -10,8 +9,7 @@
 	min-width: auto;
 }
 
-.nav, 
-.alt-nav {
+.nav {
 	display: flex;
 	height: 100%;
 	align-items: center;
@@ -220,8 +218,9 @@
 	}
 }
 
+
 @media (max-width: 900px) {
-    .nav__searchbar, .alt-nav__searchbar {
+    .nav__searchbar {
 		margin: 0 8px;
 	}
 
@@ -231,7 +230,7 @@
 }
 
 @media (max-width: 695px) {
-    .nav__searchbar, .alt-nav__searchbar {
+    .nav__searchbar {
 		margin: 0;
 	}
 	
@@ -243,13 +242,19 @@
 }
 
 @media (max-width: 380px) {
-	.nav, .alt-nav{
+	.dropdown {
+		display: none;
+	}
+
+	.nav {
 		&__left {
 			&__icon{
 				display: block;
-				height: 32px;
-				width: 32px;
 				margin: 0px 5px;
+				img {
+					height: 32px;
+					width: 32px;
+				}
 			}
 			&__logo {
 				margin: 0px;
@@ -269,9 +274,7 @@
 			right: 200px;
 		}
 	}
-	.dropdown {
-		display: none;
-	}
+
     .nav__right {
 		margin: 0px;
 		&__loginbtn {
@@ -283,3 +286,4 @@
 // .nav__middle { 
 // 	background-color: green;;
 // }
+

@@ -1,5 +1,4 @@
-.nav-container,
-.alt-nav-container {
+.nav-container {
   position: fixed;
   background-color: #fafafb;
   height: 50px;
@@ -11,8 +10,7 @@
   min-width: auto;
 }
 
-.nav,
-.alt-nav {
+.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,8 +25,7 @@
   width: 99.8vw;
 }
 
-.nav__left,
-.alt-nav__left {
+.nav__left {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,13 +35,11 @@
           align-items: center;
 }
 
-.nav__left__icon,
-.alt-nav__left__icon {
+.nav__left__icon {
   display: none;
 }
 
-.nav__left__logo,
-.alt-nav__left__logo {
+.nav__left__logo {
   padding: 0px 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,14 +52,12 @@
   margin-right: 32px;
 }
 
-.nav__left__logo img,
-.alt-nav__left__logo img {
+.nav__left__logo img {
   max-width: 100%;
   height: auto;
 }
 
-.nav__searchbar__container,
-.alt-nav__searchbar__container {
+.nav__searchbar__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,20 +67,17 @@
   position: relative;
 }
 
-.nav__searchbar__container__icon,
-.alt-nav__searchbar__container__icon {
+.nav__searchbar__container__icon {
   position: absolute;
   left: 5px;
 }
 
-.nav__searchbar__container__icon svg,
-.alt-nav__searchbar__container__icon svg {
+.nav__searchbar__container__icon svg {
   font-size: 18px;
   color: #D4D7DA;
 }
 
-.nav__searchbar__container__form__input,
-.alt-nav__searchbar__container__form__input {
+.nav__searchbar__container__form__input {
   padding-left: 32px;
   width: 50vw;
   color: #3c4146;
@@ -96,15 +86,13 @@
   height: 33px;
 }
 
-.nav__searchbar__container__form__input:focus,
-.alt-nav__searchbar__container__form__input:focus {
+.nav__searchbar__container__form__input:focus {
   border: 0.5px solid rgba(108, 187, 247, 0.98);
   -webkit-box-shadow: rgba(0, 149, 255, 0.15) 0px 0px 0px 4px;
           box-shadow: rgba(0, 149, 255, 0.15) 0px 0px 0px 4px;
 }
 
-.nav__right,
-.alt-nav__right {
+.nav__right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,8 +100,7 @@
   margin-right: 24px;
 }
 
-.nav__right__loginbtn,
-.alt-nav__right__loginbtn {
+.nav__right__loginbtn {
   background-color: #E1ECF4;
   font-size: 13px;
   width: 58px;
@@ -133,19 +120,16 @@
   padding: 8px;
 }
 
-.nav__right__loginbtn a,
-.alt-nav__right__loginbtn a {
+.nav__right__loginbtn a {
   color: #39739d;
   text-decoration: none;
 }
 
-.nav__right__loginbtn:hover,
-.alt-nav__right__loginbtn:hover {
+.nav__right__loginbtn:hover {
   background-color: #b3d3ea;
 }
 
-.nav__right__signupbtn,
-.alt-nav__right__signupbtn {
+.nav__right__signupbtn {
   background-color: #0095ff;
   font-size: 13px;
   width: 67px;
@@ -165,14 +149,12 @@
           box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
 }
 
-.nav__right__signupbtn a,
-.alt-nav__right__signupbtn a {
+.nav__right__signupbtn a {
   color: white;
   text-decoration: none;
 }
 
-.nav__right__signupbtn:hover,
-.alt-nav__right__signupbtn:hover {
+.nav__right__signupbtn:hover {
   background-color: #0077cc;
 }
 
@@ -319,7 +301,7 @@
 }
 
 @media (max-width: 900px) {
-  .nav__searchbar, .alt-nav__searchbar {
+  .nav__searchbar {
     margin: 0 8px;
   }
   .alt-nav__logout {
@@ -328,7 +310,7 @@
 }
 
 @media (max-width: 695px) {
-  .nav__searchbar, .alt-nav__searchbar {
+  .nav__searchbar {
     margin: 0;
   }
   .nav__right, .alt-nav__logout {
@@ -337,13 +319,18 @@
 }
 
 @media (max-width: 380px) {
-  .nav__left__icon, .alt-nav__left__icon {
+  .dropdown {
+    display: none;
+  }
+  .nav__left__icon {
     display: block;
-    height: 32px;
-    width: 32px;
     margin: 0px 5px;
   }
-  .nav__left__logo, .alt-nav__left__logo {
+  .nav__left__icon img {
+    height: 32px;
+    width: 32px;
+  }
+  .nav__left__logo {
     margin: 0px;
     padding: 0px;
     display: none;
@@ -354,9 +341,6 @@
   }
   .nav__searchbar__container__icon {
     right: 200px;
-  }
-  .dropdown {
-    display: none;
   }
   .nav__right {
     margin: 0px;
