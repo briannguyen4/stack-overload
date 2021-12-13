@@ -20,6 +20,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: auto;
   width: 99.8vw;
 }
@@ -60,25 +63,21 @@
   height: auto;
 }
 
-.nav__searchbar,
-.alt-nav__searchbar {
-  margin-left: 64px;
-  margin-right: 32px;
-}
-
 .nav__searchbar__container,
 .alt-nav__searchbar__container {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
 }
 
 .nav__searchbar__container__icon,
 .alt-nav__searchbar__container__icon {
-  position: relative;
-  left: 25px;
-  top: 7px;
+  position: absolute;
+  left: 5px;
 }
 
 .nav__searchbar__container__icon svg,
@@ -87,18 +86,18 @@
   color: #D4D7DA;
 }
 
-.nav__searchbar__container__input,
-.alt-nav__searchbar__container__input {
+.nav__searchbar__container__form__input,
+.alt-nav__searchbar__container__form__input {
+  padding-left: 32px;
   width: 50vw;
-  padding-left: 30px;
   color: #3c4146;
   border: 0.8px solid #bbc0c4;
   border-radius: 3px;
   height: 33px;
 }
 
-.nav__searchbar__container__input:focus,
-.alt-nav__searchbar__container__input:focus {
+.nav__searchbar__container__form__input:focus,
+.alt-nav__searchbar__container__form__input:focus {
   border: 0.5px solid rgba(108, 187, 247, 0.98);
   -webkit-box-shadow: rgba(0, 149, 255, 0.15) 0px 0px 0px 4px;
           box-shadow: rgba(0, 149, 255, 0.15) 0px 0px 0px 4px;
@@ -338,13 +337,13 @@
 }
 
 @media (max-width: 380px) {
-  .nav__left__icon {
+  .nav__left__icon, .alt-nav__left__icon {
     display: block;
     height: 32px;
     width: 32px;
     margin: 0px 5px;
   }
-  .nav__left__logo {
+  .nav__left__logo, .alt-nav__left__logo {
     margin: 0px;
     padding: 0px;
     display: none;
@@ -354,13 +353,16 @@
     padding: 4px;
   }
   .nav__searchbar__container__icon {
-    display: none;
+    right: 200px;
   }
   .dropdown {
     display: none;
   }
   .nav__right {
     margin: 0px;
+  }
+  .nav__right__loginbtn {
+    right: 400px;
   }
 }
 /*# sourceMappingURL=navbar.css.map */

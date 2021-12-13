@@ -35,29 +35,30 @@ class AltNavbar extends React.Component {
                 <header className="alt-nav-container">
                     <div className="alt-nav">
                         <div className="alt-nav__left">
+                            <img className="nav__left__icon" src={window.iconURL}/>
                             <Link to="/">
                                 <span className="alt-nav__left__logo altlogo" href="#">
                                     <img src={window.logoURL} />
                                 </span>
                             </Link>
                         </div>
-                        <form className="alt-nav__searchbar" onSubmit={this.handleSubmit}>
-                            <div className="alt-nav__searchbar__container">
-                                <div className="alt-nav__searchbar__container__icon">
-                                    <FontAwesomeIcon icon={faSearch} />
-                                </div> 
-                                <input 
-                                    className="alt-nav__searchbar__container__input" 
+                        <div className="nav__middle">
+                            <div className="nav__searchbar__container">
+                                <form className="nav__searchbar__container__form" onSubmit={this.handleSubmit}>
+                                    <input className="nav__searchbar__container__form__input" 
                                     type="text" 
                                     placeholder="Search..."
-                                    value={this.state.searchQuery} 
-                                    onChange={this.updateSearch}
-                                    >
-                                </input>
+                                    value={this.state.search} 
+                                    onChange={this.updateSearch}>
+                                    </input>
+                                </form>
+                                <div className="nav__searchbar__container__icon">
+                                    <FontAwesomeIcon icon={faSearch} />
+                                </div> 
                             </div>
-                        </form>
+                        </div>
                         <div className="alt-nav__logout">
-                            <button onClick={this.logout}>Log Out</button>    
+                                <button onClick={this.logout}>Log Out</button>    
                         </div>
                     </div>
                 </header>

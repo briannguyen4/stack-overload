@@ -48,7 +48,7 @@
     border-radius: 10px;
     flex-direction: column;
     align-items: center;
-    margin-top: 24px;
+    margin-top: 44px;
     &__header {
         font-family: 'Roboto Slab', serif; 
         font-size: 34px;
@@ -115,8 +115,12 @@
         &__text {
             padding: 0;
             font-size: 13px;
-            line-height: normal;
+            line-height: 14px;
         }
+    }
+    .splash-message__bar {
+        height: 4px;
+        width: 24px;
     }
 }
 

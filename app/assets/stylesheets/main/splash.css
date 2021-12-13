@@ -80,7 +80,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 24px;
+  margin-top: 44px;
 }
 
 .splash-message__header {
@@ -135,7 +135,11 @@
   .splash-message__text {
     padding: 0;
     font-size: 13px;
-    line-height: normal;
+    line-height: 14px;
+  }
+  .splash-message__bar {
+    height: 4px;
+    width: 24px;
   }
 }
 /*# sourceMappingURL=splash.css.map */
