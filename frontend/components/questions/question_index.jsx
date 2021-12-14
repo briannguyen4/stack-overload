@@ -46,19 +46,19 @@ class QuestionIndex extends React.Component {
                         </div>  
                         <p className="questions-index__number">{this.props.questions.length} questions</p>
                         {this.props.questions.map((question, idx) => (
-                        <div key={`question${idx}`} className="questions-index__question">
-                            <div className="questions-index__question__left">
+                        <div key={`question${idx}`} className="questions-index__questions">
+                            <div className="questions-index__questions__left">
                                 <span>{question.score}</span>
                                 <p>votes</p>
                                 <span>{question.answers.length}</span>
                                 <p>answers</p>
                             </div>
-                            <div className="questions-index__question__info">
+                            <div className="questions-index__questions__info">
                                 <Link to={`/questions/${question.id}`}>
                                     <span>{question.title}</span>
                                     <br/>
                                 </Link>
-                                <div className="questions-index__question__info__body">{parse(this.truncate(question.body))}</div>
+                                <div className="questions-index__questions__info__body">{parse(this.truncate(question.body))}</div>
                             </div>
                             <div>
                                 {question.author}

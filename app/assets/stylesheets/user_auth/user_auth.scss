@@ -238,7 +238,7 @@
     }
 }
 
-@media (max-width: 380px) {
+@media screen and (max-width: 380px) {
      .signup-left {
          display: none;
      }
@@ -247,9 +247,8 @@
          &__form {
             margin: 15px 0px;
         }
-     }
-     
-  }
+    }
+}
 
 
 

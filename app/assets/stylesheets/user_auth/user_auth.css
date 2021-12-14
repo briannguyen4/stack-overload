@@ -343,7 +343,7 @@
   color: #d1383d;
 }
 
-@media (max-width: 380px) {
+@media screen and (max-width: 380px) {
   .signup-left {
     display: none;
   }

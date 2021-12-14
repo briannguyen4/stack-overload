@@ -47,7 +47,7 @@
         border-bottom: 1px solid #e4e6e8;
         padding-left: 16px;
     }
-    &__question {
+    &__questions {
         height: 162px;
         padding: 12px 8px;
         padding-right: 40px;
@@ -72,7 +72,6 @@
         }
         &__info {
             list-style: none;
-            min-width: 480px;
             a {
                 font-size: 16px;
                 color: #0077CC;
@@ -93,5 +92,20 @@
 @media (max-width: 695px) {
     .sidebar {
         display: none;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .questions-index__questions {
+        height: 120px;
+        &__info {
+            a {
+                margin-top: 10px;
+                font-size: 20px;
+            }
+            &__body {
+                display: none;
+            }
+        }
     }
 }
