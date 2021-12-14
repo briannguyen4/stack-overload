@@ -2,10 +2,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   padding-top: 50px;
   min-height: 80vh;
 }
@@ -21,12 +17,12 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 727px;
-  margin-bottom: 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .questions-search-top h1 {
-  padding-top: 2px;
   font-size: 27px;
   font-weight: 400;
   color: #242729;
@@ -42,5 +38,18 @@
   font-size: 22px;
   margin-left: 2px;
   margin-bottom: 16px;
+}
+
+@media screen and (max-width: 380px) {
+  .sidebar {
+    display: none;
+  }
+  .question-show-top__title {
+    font-size: 22px;
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    margin-left: 10px;
+  }
 }
 /*# sourceMappingURL=question_search.css.map */

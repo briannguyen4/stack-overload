@@ -1,6 +1,5 @@
 .questions-search-container {
     display: flex;
-    flex-direction: row;
     padding-top: 50px;
     min-height: 80vh;
 }
@@ -10,10 +9,8 @@
     &-top {
         display: flex;
         justify-content: space-between;
-        width: 727px;
-        margin-bottom: 24px;
+        align-items: center;
         h1 {
-            padding-top: 2px;
             font-size: 27px;
             font-weight: 400;
             color: #242729;
@@ -28,6 +25,17 @@
             margin-left: 2px;
             margin-bottom: 16px;
         }
+    }  
+}
+
+@media screen and (max-width: 380px) {
+    .sidebar {
+        display: none;
+    }
+    .question-show-top__title {
+        font-size: 22px;
+        flex: 3;
+        margin-left: 10px;
     }
     
 }

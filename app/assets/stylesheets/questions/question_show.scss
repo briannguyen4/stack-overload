@@ -8,19 +8,19 @@
     padding: 24px;
     &-top {
         display: flex;
-        justify-content: space-between;
-        height: 74px;
+        min-height: 74px;
         &__title {
             font-size: 27px;
             color: #3c4146;
-            padding-top: 4px;
+            margin-bottom: 16px;
+            flex: 6;
         }
         &__btn {
             background-color: #0095ff;
             font-size: 13px;
             color: white;
             height: 38px;
-            width: 100px;
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -101,6 +101,14 @@
 @media (max-width: 695px) {
     .sidebar {
         display: none;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .question-show-top__title {
+        font-size: 22px;
+        flex: 3;
+        margin-left: 10px;
     }
 }
   
