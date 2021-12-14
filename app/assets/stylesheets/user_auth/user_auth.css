@@ -197,9 +197,17 @@
 
 .signup-right {
   width: 316px;
-  margin-top: 14px;
-  margin-left: 58px;
-  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 16px 0px;
 }
 
 .signup-right__demo {
@@ -239,7 +247,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 65px;
+  margin-top: 55px;
   margin-bottom: 24px;
   border-radius: 7px;
   -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 20px 48px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.1);
@@ -314,7 +322,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 16px;
 }
 
 .button-area {
@@ -328,11 +335,23 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 80px;
+  min-height: 70px;
 }
 
 .button-area .auth_errors {
   font-size: 12px;
   color: #d1383d;
+}
+
+@media (max-width: 380px) {
+  .signup-left {
+    display: none;
+  }
+  .signup-right {
+    margin: 5px;
+  }
+  .signup-right__form {
+    margin: 15px 0px;
+  }
 }
 /*# sourceMappingURL=user_auth.css.map */
