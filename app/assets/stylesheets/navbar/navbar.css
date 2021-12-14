@@ -272,12 +272,12 @@
   pointer-events: all;
 }
 
-.alt-nav__logout {
-  margin-left: 160px;
+.nav__logout {
   margin-right: 24px;
+  cursor: pointer;
 }
 
-.alt-nav__logout button {
+.nav__logout button {
   background-color: #E1ECF4;
   font-size: 13px;
   width: 68px;
@@ -299,7 +299,7 @@
   color: #39739d;
 }
 
-.alt-nav__logout button:hover {
+.nav__logout button:hover {
   background-color: #b3d3ea;
 }
 

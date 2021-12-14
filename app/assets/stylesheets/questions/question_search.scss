@@ -1,7 +1,6 @@
 .questions-search-container {
     display: flex;
     flex-direction: row;
-    padding-left: 210px;
     padding-top: 50px;
     min-height: 80vh;
 }
@@ -38,25 +37,6 @@
         display: flex;
         &:first-child {
             border-top: 1px solid #d6d9dc;
-        }
-        &__container {
-            list-style: none;
-            min-width: 740px;
-            a {
-                font-size: 16px;
-                color: #0077CC;
-                text-decoration: none;
-                &:hover {
-                    color: #0095ff;
-                }
-            }
-        }
-        &__title {
-            font-weight: 400;
-            line-height: 1.4;
-        }
-        &__body {
-            padding-top: 8px;
         }
     }
 }

@@ -1,10 +1,10 @@
 .sidebar {
-    grid-area: sidebar;
-    padding-left: 24px;
+    padding-left: 44px;
     border-right: 1px solid #D6D9DC;
     &__content {
-        width: auto;
-        padding-top: 24px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
         li {
             list-style: none;
         }
@@ -14,26 +14,26 @@
         &__home li {
             font-size: 13px;
             color: #535a60;
-            margin-left: 9.5px;
+            margin-bottom: 20px;
             &:hover {
                 color: black;
             }
         }
         &__public {
+            display: flex;
+            flex-direction: column;
             &__text {
                 font-size: 11px;
                 color: #6a737c;
-                margin-top: 24px;
-                margin-left: 9.5px;
             }
             &__container {
                 display: flex;
                 align-items: center;
+                justify-content: flex-end;
                 margin-top: 5px;
-                margin-left: 1px;
                 background-color: #EFF0F1;
-                height: 33px;
                 border-right: 3px solid #f48024;
+                padding-right: 10px;
                 svg {
                     margin: 8px;
                     position: relative;

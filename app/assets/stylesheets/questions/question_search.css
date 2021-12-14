@@ -6,7 +6,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-left: 210px;
   padding-top: 50px;
   min-height: 80vh;
 }
@@ -57,29 +56,5 @@
 
 .questions-search-question:first-child {
   border-top: 1px solid #d6d9dc;
-}
-
-.questions-search-question__container {
-  list-style: none;
-  min-width: 740px;
-}
-
-.questions-search-question__container a {
-  font-size: 16px;
-  color: #0077CC;
-  text-decoration: none;
-}
-
-.questions-search-question__container a:hover {
-  color: #0095ff;
-}
-
-.questions-search-question__title {
-  font-weight: 400;
-  line-height: 1.4;
-}
-
-.questions-search-question__body {
-  padding-top: 8px;
 }
 /*# sourceMappingURL=question_search.css.map */

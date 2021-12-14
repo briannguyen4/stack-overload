@@ -101,7 +101,7 @@ class Navbar extends React.Component {
             
         } else {
             navright = <div className="nav__right">
-            <div className="alt-nav__logout">
+            <div className="nav__logout">
                 <button onClick={this.logout}>Log Out</button>    
             </div>
         </div>
