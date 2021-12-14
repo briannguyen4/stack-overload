@@ -43,7 +43,7 @@ class QuestionSearch extends React.Component {
                 <div className="questions-search">
                     <div className="questions-search-top">
                         <h1>Search Results</h1>
-                        <div className="ask-question">
+                        <div className="questions-index__top__btn">
                             <div onClick={this.askQuestion}>Ask Question</div>
                         </div> 
                     </div>  
