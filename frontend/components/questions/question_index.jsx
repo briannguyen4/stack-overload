@@ -35,8 +35,8 @@ class QuestionIndex extends React.Component {
                 <>
                 {/* {navbar} */}
                 <NavBarContainer/>
-                <div className="questions-index-grid">
                 <div className="questions-container">
+                    <Sidebar/>
                     <div className="questions-index">
                         <div className="questions-index__top">
                             <h1>All Questions</h1>
@@ -66,7 +66,6 @@ class QuestionIndex extends React.Component {
                         </div>
                         ))}
                     </div>
-                </div>
                 </div>
                 <Footer/>
                 </>

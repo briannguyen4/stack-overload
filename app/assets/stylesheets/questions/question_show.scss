@@ -1,15 +1,7 @@
-.questions-show-grid {
-    display: grid;
-    grid-template-columns: 0.2fr 1fr ;
-    grid-template-rows: 1fr;
-    grid-template-areas: "sidebar question"
-}
-
 .question-show-container {
     display: flex;
     flex-direction: row;
     padding-top: 50px;
-    grid-area: question;
 }
 
 .question-show {
@@ -109,10 +101,6 @@
 @media (max-width: 695px) {
     .sidebar {
         display: none;
-    }
-
-    .questions-show-grid {
-        display: flex;
     }
 }
   

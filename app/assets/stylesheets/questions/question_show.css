@@ -1,13 +1,3 @@
-.questions-show-grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 0.2fr 1fr;
-      grid-template-columns: 0.2fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas: "sidebar question";
-}
-
 .question-show-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,9 +7,6 @@
       -ms-flex-direction: row;
           flex-direction: row;
   padding-top: 50px;
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: question;
 }
 
 .question-show {
@@ -152,11 +139,6 @@
 @media (max-width: 695px) {
   .sidebar {
     display: none;
-  }
-  .questions-show-grid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 }
 /*# sourceMappingURL=question_show.css.map */
