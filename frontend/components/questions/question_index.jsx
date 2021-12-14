@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AltNavbarContainer from '../navbar/alt_navbar_container';
+import AltNavBar from '../navbar/alt_navbar_container';
+import NavBar from '../navbar/navbar_container';
 import Sidebar from '../main/sidebar';
 import Footer from '../main/footer';
 
@@ -24,11 +25,16 @@ class QuestionIndex extends React.Component {
 
     render() {
         var parse = require('html-react-parser');
+        let navbar;
+        if(this.props.session.id === null) {
+            navbar = <NavBar/>;
+        } else {
+            navbar = <AltNavBar/>
+        }
         return (
                 <>
-                <AltNavbarContainer />
+                {navbar}
                 <div className="questions-index-grid">
-                <Sidebar />
                 <div className="questions-container">
                     <div className="questions-index">
                         <div className="questions-index__top">
