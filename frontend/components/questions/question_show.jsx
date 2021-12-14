@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AltNavbarContainer from '../navbar/alt_navbar_container';
+import NavbarContainer from '../navbar/navbar_container';
 import Sidebar from '../main/sidebar';
 import Footer from '../main/footer';
 import AnswerContainer from '../answers/answer_container';
@@ -79,7 +79,7 @@ class QuestionShow extends React.Component {
       } else {
         return (
           <>
-          <AltNavbarContainer/>
+          <NavbarContainer/>
           <div className="questions-show-grid">
           <Sidebar />
           <div className="question-show-container">

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from "react-dom";
-import AltNavbarContainer from '../navbar/alt_navbar_container';
+import NavbarContainer from '../navbar/navbar_container';
 import Footer from '../main/footer'; 
 import ReactQuill, { Quill } from "react-quill";
 
@@ -63,7 +63,7 @@ class QuestionForm extends React.Component {
         return (
         <>
         <div className="question-form-page">
-            <AltNavbarContainer />
+            <NavbarContainer />
             <div className="question-form">
                 <div className='question-form__header'>
                 {this.props.formType === "Post your question" ? (
