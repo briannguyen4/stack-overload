@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import NavbarContainer from '../navbar/navbar_container';
 import Footer from '../main/footer'; 
-import ReactQuill, { Quill } from "react-quill";
+import ReactQuill, { Quill } from "react-quill"; 
 
 class QuestionForm extends React.Component {
     constructor(props) {
