@@ -21,19 +21,9 @@ class SignupForm extends React.Component {
 
     }
 
-    handleInput(type) {
-        return (e) => {
-            this.setState({
-                [type]: e.target.value
-            })
-        };
-    }
+   
 
-    handleSubmit(e) {
-        e.preventDefault();
-        const user = Object.assign({}, this.state);
-        this.props.processForm(user);
-    }
+    
 
     componentWillUnmount() {
         this.props.clearErrors();
@@ -52,6 +42,20 @@ class SignupForm extends React.Component {
                 ))}
             </div> 
         )
+    }
+
+    handleInput(type) {
+        return (e) => {
+            this.setState({
+                [type]: e.target.value
+            })
+        };
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const user = Object.assign({}, this.state);
+        this.props.processForm(user);
     }
     
     render() {
