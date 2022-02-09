@@ -4,7 +4,6 @@ import NavbarContainer from '../navbar/navbar_container';
 import Footer from '../main/footer'; 
 import ReactQuill, { Quill } from "react-quill";
 
-
 class QuestionForm extends React.Component {
     constructor(props) {
         super(props);
